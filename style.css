@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #A09B8C;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header {
+    height: 8vh;
+    width: 100vw;
+    background-image: url('assets/FundoHeader.png');
+    background-position: center;
+    align-items: center;
+    display: flex;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.titulo {
+    color: #e2c12d;
+    width: fit-content;
+    font-weight: 500;
+}
+
+.navbar {
+    width: 300px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a{
+    color: black;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #32b9cd;
+    cursor: pointer;
+}
+
+.header {
+    border-bottom: 3px solid #e2c12d;;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.header .container {
+    justify-content: space-between;
+} */
