@@ -1,74 +1,67 @@
-body {
+body{cursor: url('assets/normal.cur'), auto}
+a{cursor: url('assets/link.cur'), auto}
+
+*{
     margin: 0;
     padding: 0;
-}
-
-a {
-    color: #A09B8C;
-    text-decoration: none;
-    font-size: 20px;
+    box-sizing: border-box;
 }
 
 header {
-    height: 8vh;
-    width: 100vw;
+    /* background-color: aqua; */
+    display: flex;
+    height: 3.5rem;
     background-image: url('assets/FundoHeader.png');
     background-position: center;
-    align-items: center;
-    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 0;
+    justify-content: space-between;
 }
 
 header img {
-    width: 50px;
-    height: 50px;
+    transform: scale(0.8);
 }
 
-header nav{
+header nav {
+    /* background-color: antiquewhite; */
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    line-height: 60px;
+}
+
+a {
+    /* background-color: red; */
+    color: #A09B8C;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 17rem;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+a:hover{
+    color: #C89B3C;
+    text-shadow: 0 0 5px #C89B3C;
+}
+
+.container1{
     display: flex;
+    /* background-color: #C89B3C; */
+    width: 100vw;
+    height: 85vh;
+    background-image: url('assets/ionia.jpg');
+    background-position: center;
+    background-size: cover;
+    align-items: center;
     justify-content: center;
 }
 
-
-/* body {
-    margin: 0;
-    padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.container1 h1{
+    font-size: 80px;
+    color: white;
+    text-shadow: 10px 10px 10px black;
 }
 
-.titulo {
-    color: #e2c12d;
-    width: fit-content;
-    font-weight: 500;
-}
-
-.navbar {
-    width: 300px;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar a{
-    color: black;
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    color: #32b9cd;
-    cursor: pointer;
-}
-
-.header {
-    border-bottom: 3px solid #e2c12d;;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    display: flex;
-}
-
-.header .container {
-    justify-content: space-between;
-} */
+/* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent); */
