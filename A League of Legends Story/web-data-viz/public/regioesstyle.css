@@ -1,0 +1,394 @@
+@font-face { /*FONTE GERAL*/
+    font-family: 'Beaufort';
+    src: url(./assets/Fonts_Package/BeaufortForLoL-OTF/BeaufortforLOL-Medium.otf);
+}
+
+@font-face {
+    font-family: 'BeaufortTitulos';
+    src: url(./assets/Fonts_Package/Spiegel-OTF/Spiegel-Regular.otf);
+}
+
+body {
+    cursor: url('../assets/normal.cur'), auto;
+    font-family: 'Beaufort';
+    word-wrap: break-word;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: url('../assets/link.cur'), auto;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 800;
+    color: black;
+}
+
+header .navbar {
+    width: 100%;
+    height: 8vh;
+    background-color: rgba(0, 0, 0, 0.445);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    z-index: 10;
+    transition: .5s;
+}
+
+/* atenção - tags criadas no java script */
+header .rolagem{
+    background-color: black;
+}
+
+header .rolagem a{
+    color: #A09B8C;
+}
+/* atenção - tags criadas no java script */
+
+header .navbar .esquerda, header .navbar .direita {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar .logo img{
+    width: 50px;
+    height: 50px;
+}
+
+header .navbar .links{
+    display: flex;
+}
+
+header .nav-itens {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+header .navbar .nav-itens li{
+    margin: 0 15px;
+}
+
+header .navbar .nav-itens li a:hover {
+    color: #c89c3c;
+    text-shadow: 0 0 3px #c89c3ca9;
+    transition: .7s;
+}
+
+.esquerda .links {
+    margin-left: 50px;
+}
+
+.esquerda .links li:first-child {
+    margin-left: 0;
+}
+
+.direita {
+    margin-right: 60px;
+}
+
+
+section {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.logoGold{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logoGold img{
+    height: auto;
+    width: 45%;
+    z-index: 9;
+}
+
+.imgs {
+    height: 93vh;
+    z-index: 7;   
+}
+
+.tituloRuneterra{
+    height: 100vh;
+    /* background-image: url(./assets/inclusaoLGBT.jpg); */
+    font-size: 145px;
+    font-family: 'Beaufort';
+    color: rgba(255, 255, 255, 0.863);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img1 {
+    height: 100vh;
+    background-image: url(./assets/mapa\ sem\ as\ regioes.png);
+    /* background-image: url(./assets/FundoHeader.png); */
+    background-attachment: unset;
+}
+
+.img2 {
+    background-image: url(./assets/mapa.png);
+    background-attachment: unset;
+    background-color: #09161D;
+    /* mask-image: linear-gradient(to right, transparent 10%, black 25%, black 75%, transparent 90%); */
+}
+
+.img3 {
+    background-image: url(./assets/tiersFinal.png);
+    background-attachment: unset;
+    background-size: cover;
+    background-color: #09161D;
+}
+
+.img4 {
+    background-image: url(./assets/campeonatos.png);
+    background-attachment: unset;
+}
+
+.imgs video{
+    object-fit: cover;
+    position: absolute;
+    width: 100vw;
+    height: 93vh;
+}
+
+.img6{
+    background-image: url(./assets/inclusaoLGBT2.jpg);
+    /* background-attachment: fixed; */
+}
+
+.img7{
+    background-image: url(./assets/sustentavel.jpg);
+    /* background-attachment: fixed; */
+}
+
+.textos{
+    font-family: 'Beaufort';
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    background-color: #DBD8D6;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    text-align: justify;
+}
+
+
+.textos p{
+    margin-top: 22px;
+    margin-left: 270px; /*150px inicialmente*/
+    margin-right: 270px; /*150px inicialmente*/
+    margin-bottom: 0;
+}
+
+.textos p:first-child{
+    margin-top: 55px;
+}
+
+.textos p:last-child{
+    margin-bottom: 55px;
+}
+
+.tips{
+    background-color: #284352ac;
+    color: white;
+    width: 17%;
+    height: 42%; /*fitcontent talvez */
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 14%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+}
+
+.tips h1{
+    font-family: 'BeaufortTitulos';
+    color: #E0C97B;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.imgs .lgbt{
+    height: 93vh;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 120px;
+    padding: 0;
+    margin: 0;
+}
+
+.tituloDiferente{
+    height: 45vh;
+    background-color: #DBD8D6;
+    /* background-image: url(./assets/inclusaoLGBT.jpg); */
+    font-size: 145px;
+    font-family: 'Beaufort';
+    color: rgba(0, 0, 0, 0.795);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloDiferente p:hover {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.664), rgba(255, 165, 0, 0.664), rgba(255, 255, 0, 0.774), rgba(0, 128, 0, 0.719), rgba(0, 0, 255, 0.664), rgba(75, 0, 130, 0.664), rgba(238, 130, 238, 0.76));
+    background-clip: text;
+    color: transparent;    
+}
+
+.textos a{
+    color: rgba(0, 0, 0, 0.664);
+    cursor: inherit;
+    text-decoration: underline;
+    font-size: 25px;
+    transition: color 0.3s;
+}
+
+.textos6 p:last-child{
+    width: 71vw;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    display: flex;
+    cursor: inherit;
+    align-items: flex-start;
+    padding: 0;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+footer .footerPai{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+footer .rodape2{
+    width: 50%;
+    height: 50vh;
+    background-image: url(./assets/porofeliz.png);
+    background-color: #DBD8D6;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    /* background-color: #67cce0; */
+}
+
+footer .rodape1{
+    width: 51%;
+    height: 50vh;
+    background-image: url(./assets/porofeliz.png);
+    background-color: #DBD8D6;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    /* background-color: #67cce0; */
+    transform: scaleX(-1);
+}
+
+.img2 .seta{
+    display: flex;
+    width: 70px;
+    height: 100px;
+    /* background-color: white; */
+    background-image: url(./assets/setaTips.png);
+    background-repeat: no-repeat;
+    z-index: 9;
+    padding: 0;
+    margin-top: 20%;
+    margin-left: 95%;
+    position: absolute;
+}
+
+
+
+.maskMapa{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: #c89c3c;
+    position: absolute;
+}
+
+.freljord{
+    margin-top: 10vh;
+    margin-left: 29.6vw;
+}
+
+.noxus{
+    margin-top: 20vh;
+    margin-left: 44vw;
+}
+
+.demacia{
+    margin-top: 29vh;
+    margin-left: 26.6vw;
+}
+
+.ionia{
+    margin-top: 14.8vh;
+    margin-left: 66vw;
+}
+
+.piltover{
+    margin-top: 40vh;
+    margin-left: 51.95vw;
+}
+
+.zaun{
+    margin-top: 48.4vh;
+    margin-left: 51.95vw;
+}
+
+.aguasdesentina{
+    margin-top: 50.5vh;
+    margin-left: 67.1vw;
+}
+
+.shurima{
+    /* margin-top: 40vh;
+    margin-left: 51.95vw; */
+}
+
+.ilhadassombras{
+
+}
+
+.targon{
+
+}
+
+.ixtal{
+
+}
