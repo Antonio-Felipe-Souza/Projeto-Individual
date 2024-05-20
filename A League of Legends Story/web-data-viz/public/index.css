@@ -240,8 +240,7 @@ section {
 .tituloDiferente{
     height: 45vh;
     background-color: #DBD8D6;
-    /* background-image: url(./assets/inclusaoLGBT.jpg); */
-    font-size: 145px;
+    font-size: 920%; /*145px anteriormente*/
     font-family: 'Beaufort';
     color: rgba(0, 0, 0, 0.795);
     display: flex;

@@ -1,4 +1,5 @@
-@font-face { /*FONTE GERAL*/
+@font-face {
+    /*FONTE GERAL*/
     font-family: 'Beaufort';
     src: url(./assets/Fonts_Package/BeaufortForLoL-OTF/BeaufortforLOL-Medium.otf);
 }
@@ -12,7 +13,7 @@ body {
     cursor: url('../assets/normal.cur'), auto;
     font-family: 'Beaufort';
     word-wrap: break-word;
-    overflow-x: hidden;
+    overflow-x: hidden; /*ESCONDER DEPOIS*/
     margin: 0;
     padding: 0;
 }
@@ -24,10 +25,6 @@ a {
     font-size: 18px;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-weight: 800;
-    color: black;
-}
 
 header .navbar {
     width: 100%;
@@ -43,26 +40,28 @@ header .navbar {
 }
 
 /* atenção - tags criadas no java script */
-header .rolagem{
+header .rolagem {
     background-color: black;
 }
 
-header .rolagem a{
+header .rolagem a {
     color: #A09B8C;
 }
+
 /* atenção - tags criadas no java script */
 
-header .navbar .esquerda, header .navbar .direita {
+header .navbar .esquerda,
+header .navbar .direita {
     display: flex;
     align-items: center;
 }
 
-header .navbar .logo img{
+header .navbar .logo img {
     width: 50px;
     height: 50px;
 }
 
-header .navbar .links{
+header .navbar .links {
     display: flex;
 }
 
@@ -74,7 +73,7 @@ header .nav-itens {
     padding: 0;
 }
 
-header .navbar .nav-itens li{
+header .navbar .nav-itens li {
     margin: 0 15px;
 }
 
@@ -106,7 +105,7 @@ section {
     background-attachment: fixed;
 }
 
-.logoGold{
+.logoGold {
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -114,7 +113,7 @@ section {
     position: relative;
 }
 
-.logoGold img{
+.logoGold img {
     height: auto;
     width: 45%;
     z-index: 9;
@@ -122,12 +121,11 @@ section {
 
 .imgs {
     height: 93vh;
-    z-index: 7;   
+    z-index: 7;
 }
 
-.tituloRuneterra{
+.tituloRuneterra {
     height: 100vh;
-    /* background-image: url(./assets/inclusaoLGBT.jpg); */
     font-size: 145px;
     font-family: 'Beaufort';
     color: rgba(255, 255, 255, 0.863);
@@ -139,7 +137,6 @@ section {
 .img1 {
     height: 100vh;
     background-image: url(./assets/mapa\ sem\ as\ regioes.png);
-    /* background-image: url(./assets/FundoHeader.png); */
     background-attachment: unset;
 }
 
@@ -147,7 +144,6 @@ section {
     background-image: url(./assets/mapa.png);
     background-attachment: unset;
     background-color: #09161D;
-    /* mask-image: linear-gradient(to right, transparent 10%, black 25%, black 75%, transparent 90%); */
 }
 
 .img3 {
@@ -162,24 +158,24 @@ section {
     background-attachment: unset;
 }
 
-.imgs video{
+.imgs video {
     object-fit: cover;
     position: absolute;
     width: 100vw;
     height: 93vh;
 }
 
-.img6{
+.img6 {
     background-image: url(./assets/inclusaoLGBT2.jpg);
     /* background-attachment: fixed; */
 }
 
-.img7{
+.img7 {
     background-image: url(./assets/sustentavel.jpg);
     /* background-attachment: fixed; */
 }
 
-.textos{
+.textos {
     font-family: 'Beaufort';
     font-size: 25px;
     display: flex;
@@ -192,26 +188,34 @@ section {
 }
 
 
-.textos p{
+.textos p {
     margin-top: 22px;
-    margin-left: 270px; /*150px inicialmente*/
-    margin-right: 270px; /*150px inicialmente*/
+    margin-left: 270px;
+    /*150px inicialmente*/
+    margin-right: 270px;
+    /*150px inicialmente*/
     margin-bottom: 0;
 }
 
-.textos p:first-child{
+.textos p:first-child {
     margin-top: 55px;
 }
 
-.textos p:last-child{
+/*depois trocar o texto2 para todos os textos*/
+.texto2 p:first-child { 
+    margin-top: 0px;
+}
+
+.textos p:last-child {
     margin-bottom: 55px;
 }
 
-.tips{
+.tips {
     background-color: #284352ac;
     color: white;
     width: 17%;
-    height: 42%; /*fitcontent talvez */
+    height: 42%;
+    /*fitcontent talvez */
     position: absolute;
     margin-top: 3%;
     margin-left: 14%;
@@ -225,7 +229,7 @@ section {
     padding: 15px;
 }
 
-.tips h1{
+.tips h1 {
     font-family: 'BeaufortTitulos';
     color: #E0C97B;
     padding: 0;
@@ -234,7 +238,7 @@ section {
 
 
 
-.imgs .lgbt{
+.imgs .lgbt {
     height: 93vh;
     width: 100%;
     position: absolute;
@@ -247,7 +251,7 @@ section {
     margin: 0;
 }
 
-.tituloDiferente{
+.tituloDiferente {
     height: 45vh;
     background-color: #DBD8D6;
     /* background-image: url(./assets/inclusaoLGBT.jpg); */
@@ -262,10 +266,10 @@ section {
 .tituloDiferente p:hover {
     background: linear-gradient(to right, rgba(255, 0, 0, 0.664), rgba(255, 165, 0, 0.664), rgba(255, 255, 0, 0.774), rgba(0, 128, 0, 0.719), rgba(0, 0, 255, 0.664), rgba(75, 0, 130, 0.664), rgba(238, 130, 238, 0.76));
     background-clip: text;
-    color: transparent;    
+    color: transparent;
 }
 
-.textos a{
+.textos a {
     color: rgba(0, 0, 0, 0.664);
     cursor: inherit;
     text-decoration: underline;
@@ -273,7 +277,7 @@ section {
     transition: color 0.3s;
 }
 
-.textos6 p:last-child{
+.textos6 p:last-child {
     width: 71vw;
     margin-bottom: 10px;
     margin-top: 5px;
@@ -286,7 +290,7 @@ section {
     margin-right: 0;
 }
 
-footer .footerPai{
+footer .footerPai {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -294,7 +298,7 @@ footer .footerPai{
     padding: 0;
 }
 
-footer .rodape2{
+footer .rodape2 {
     width: 50%;
     height: 50vh;
     background-image: url(./assets/porofeliz.png);
@@ -305,7 +309,7 @@ footer .rodape2{
     /* background-color: #67cce0; */
 }
 
-footer .rodape1{
+footer .rodape1 {
     width: 51%;
     height: 50vh;
     background-image: url(./assets/porofeliz.png);
@@ -317,7 +321,7 @@ footer .rodape1{
     transform: scaleX(-1);
 }
 
-.img2 .seta{
+.img2 .seta {
     display: flex;
     width: 70px;
     height: 100px;
@@ -331,64 +335,621 @@ footer .rodape1{
     position: absolute;
 }
 
+/* CRIANDO A MASCARA EM CIMA DO MAPA PARA CLICK */
 
-
-.maskMapa{
+.maskMapa {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
-    background-color: #c89c3c;
+    background-color: #c9972b34;
     position: absolute;
 }
 
-.freljord{
-    margin-top: 10vh;
+/* SETANDO EIXO X E Y DE CADA BOLINHA DE CLICK */
+
+.freljord {
+    margin-top: 10.1vh;
     margin-left: 29.6vw;
 }
 
-.noxus{
+.noxus {
     margin-top: 20vh;
     margin-left: 44vw;
 }
 
-.demacia{
+.demacia {
     margin-top: 29vh;
     margin-left: 26.6vw;
 }
 
-.ionia{
+.ionia {
     margin-top: 14.8vh;
     margin-left: 66vw;
 }
 
-.piltover{
+.piltover {
     margin-top: 40vh;
     margin-left: 51.95vw;
 }
 
-.zaun{
+.zaun {
     margin-top: 48.4vh;
     margin-left: 51.95vw;
 }
 
-.aguasdesentina{
+.aguasdesentina {
     margin-top: 50.5vh;
     margin-left: 67.1vw;
 }
 
-.shurima{
-    /* margin-top: 40vh;
-    margin-left: 51.95vw; */
+.shurima {
+    margin-top: 65.3vh;
+    margin-left: 46.7vw;
 }
 
-.ilhadassombras{
-
+.ilhadassombras {
+    margin-top: 68.4vh;
+    margin-left: 72.4vw;
 }
 
-.targon{
-
+.targon {
+    margin-top: 67.5vh;
+    margin-left: 34.3vw;
 }
 
-.ixtal{
-
+.ixtal {
+    margin-top: 63.5vh;
+    margin-left: 55.8vw;
 }
+/* FIM DA MÁSCARA DE CLICKS */
+
+.tituloRegioes {
+    height: 33vh;
+    background-color: #DBD8D6;
+    /* background-image: url(./assets/Regioes/freljord.jpg); */
+    font-size: 145px;
+    font-family: 'Beaufort';
+    color: rgba(0, 0, 0, 0.795);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.champs {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.champs .cards {
+    width: 100%;
+    height: 45vh;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.perso {
+    width: 7.5%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 68%;
+    border: 4px solid #ffffff63; 
+    transition: width 1s ease;
+    border-radius: 15px;
+}
+
+.perso:hover {
+    width: 25%; /* 350px anteriormente */
+    /* scale: 1.2;  PENSAR DEPOIS*/
+}
+
+/* AREA VOLTADA PARA FRELJORD */
+
+.frelj p:hover {
+    background: linear-gradient(to right, rgba(22, 70, 92, 0.664), rgba(43, 98, 160, 0.664), rgba(49, 131, 163, 0.774), rgba(140, 197, 214, 0.719), rgba(149, 164, 172, 0.664), rgba(22, 70, 92, 0.664), rgba(49, 131, 163, 0.774));
+    background-clip: text;
+    color: transparent;
+}
+
+.champsFreljord{
+    background-image: url(./assets/Regioes/freljord.jpg);
+}
+
+.champsFreljord .div1{
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_0.jpg);
+    background-position-x: 68%;
+}
+
+.champsFreljord .div2 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Braum_0.jpg);
+    background-position-x: 80%;
+}
+
+.champsFreljord .div3 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Udyr_0.jpg);
+    background-position-x: 55%;
+}
+
+.champsFreljord .div4 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nunu_0.jpg);
+    background-position-x: 68%;
+}
+
+.champsFreljord .div5 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sejuani_0.jpg);
+    background-position-x: 58%;
+}
+
+.champsFreljord .div6 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gnar_0.jpg);
+    background-position-x: 80%;
+}
+
+.champsFreljord .div7 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_0.jpg);
+    background-position-x: 54%;
+}
+
+.champsFreljord .div8 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Olaf_0.jpg);
+    background-position-x: 65%;
+}
+
+.champsFreljord .div9 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lissandra_0.jpg);
+    background-position-x: 76%;
+}
+
+.champsFreljord .div10 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg);
+    background-position-x: 58%;
+}
+
+.champsFreljord .div11 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ornn_0.jpg);
+    background-position-x: 50%;
+}
+/* FIM DE FRELJORD */
+
+
+/* DEMACIA */
+.dema p:hover {
+    background: linear-gradient(to right, #9189779f, #beb9aea1, #c3b89e98, #9189779f);
+    background-clip: text;
+    color: transparent;
+}
+
+.champsDemacia{
+    background-image: url(./assets/Regioes/demacia.jpg);
+}
+
+.champsDemacia .div1{
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fiora_0.jpg);
+    background-position-x: 73%;
+}
+
+.champsDemacia .div2 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Garen_0.jpg);
+    background-position-x: 84%;
+}
+
+.champsDemacia .div3 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Galio_0.jpg);
+    background-position-x: 50%;
+}
+
+.champsDemacia .div4 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_0.jpg);
+    background-position-x: 70%;
+}
+
+.champsDemacia .div5 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/XinZhao_0.jpg);
+    background-position-x: 52%;
+}
+
+.champsDemacia .div6 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_0.jpg);
+    background-position-x: 64%;
+}
+
+.champsDemacia .div7 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayle_0.jpg);
+    background-position-x: 15%;
+}
+
+.champsDemacia .div8 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayle_0.jpg);
+    background-position-x: 85%;
+}
+
+.champsDemacia .div9 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vayne_0.jpg);
+    background-position-x: 88%;
+}
+
+.champsDemacia .div10 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sona_0.jpg);
+    background-position-x: 73%;
+}
+
+.champsDemacia .div11 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sylas_0.jpg);
+    background-position-x: 53%;
+}
+/* FIM DE DEMACIA */
+
+
+/* NOXUS */
+.nox p:hover {
+    background: linear-gradient(to right,#755e3e, #8f8a6e, #777263, #755e3e);
+    background-clip: text;
+    color: transparent;
+}
+
+.champsNoxus{
+    background-image: url(https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltb0dc30074e6707c9/60ee0ff844ff471db19c909d/noxus-perpetual-conflict.jpg);
+}
+
+.champsNoxus .div1{
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Mordekaiser_0.jpg);
+    background-position-x: 43%;
+}
+
+.champsNoxus .div2 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sion_0.jpg);
+    background-position-x: 70%;
+}
+
+.champsNoxus .div3 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leblanc_0.jpg);
+    background-position-x: 73%;
+}
+
+.champsNoxus .div4 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rell_0.jpg);
+    background-position-x: 46%;
+}
+
+.champsNoxus .div5 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Katarina_0.jpg);
+    background-position-x: 66%;
+}
+
+.champsNoxus .div6 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Swain_0.jpg);
+    background-position-x: 71%;
+}
+
+.champsNoxus .div7 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg);
+    background-position-x: 58%;
+}
+
+.champsNoxus .div8 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Samira_0.jpg);
+    background-position-x: 60%;
+}
+
+.champsNoxus .div9 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Riven_0.jpg);
+    background-position-x: 83%;
+}
+
+.champsNoxus .div10 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Talon_0.jpg);
+    background-position-x: 70%;
+}
+
+.champsNoxus .div11 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Draven_0.jpg );
+    background-position-x: 78%;
+}
+/* FIM DE NOXUS */
+
+
+
+/* IONIA */
+.ion p:hover {
+    background: linear-gradient(to right,#8D6C73, #c99a9a, #b68f8f, #8D6C73);
+    background-clip: text;
+    color: transparent;
+}
+
+.champsIonia{
+    background-image: url(https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt1fb032fa736e5c23/60ee0e21855e1f64f143ef78/ionia-the-placidium-of-navori.jpg);
+}
+
+.champsIonia .div1{
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Irelia_0.jpg);
+    background-position-x: 51%;
+}
+
+.champsIonia .div2 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg);
+    background-position-x: 50%;
+}
+
+.champsIonia .div3 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lillia_0.jpg);
+    background-position-x: 43%;
+}
+
+.champsIonia .div4 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jhin_0.jpg);
+    background-position-x: 61%;
+}
+
+.champsIonia .div5 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg);
+    background-position-x: 64%;
+}
+
+.champsIonia .div6 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yone_0.jpg);
+    background-position-x: 60%;
+}
+
+.champsIonia .div7 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rakan_0.jpg);
+    background-position-x: 33%;
+}
+
+.champsIonia .div8 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rakan_0.jpg);
+    background-position-x: 60%;
+}
+
+.champsIonia .div9 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/LeeSin_0.jpg);
+    background-position-x: 70%;
+}
+
+.champsIonia .div10 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg);
+    background-position-x: 83%;
+}
+
+.champsIonia .div11 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Karma_0.jpg);
+    background-position-x: 78%;
+}
+/* FIM DE IONIA */
+
+/* PILTOVER */
+.pilto p:hover {
+    background: linear-gradient(to right,#a58315,#bbac98, #a59668, #bbac98, #a58315);
+    background-clip: text;
+    color: transparent;
+}
+
+.champsPiltover{
+    background-image: url(https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt2ad2cdb59464bb81/60ee10b591d9e12c4837c1e1/piltover-eclipticvaults.jpg);
+}
+
+.champsPiltover .div1{
+    background-image: url();
+    background-position-x: 51%;
+}
+
+.champsPiltover .div2 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jayce_0.jpg);
+    background-position-x: 82%;
+}
+
+.champsPiltover .div3 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Seraphine_0.jpg);
+    background-position-x: 46%;
+}
+
+.champsPiltover .div4 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Camille_0.jpg);
+    background-position-x: 90%;
+}
+
+.champsPiltover .div5 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vi_0.jpg);
+    background-position-x: 73%;
+}
+
+.champsPiltover .div6 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_0.jpg);
+    background-position-x: 68%;
+}
+
+.champsPiltover .div7 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Viktor_0.jpg);
+    background-position-x: 68%;
+}
+
+.champsPiltover .div8 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Heimerdinger_0.jpg);
+    background-position-x: 74%;
+}
+
+.champsPiltover .div9 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_0.jpg);
+    background-position-x: 67%;
+}
+
+.champsPiltover .div10 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg);
+    background-position-x: 83%;
+}
+
+.champsPiltover .div11 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_0.jpg);
+    background-position-x: 78%;
+}
+/* FIM DE PPILTOVER */
+
+
+/* ZAUN */
+.zau p:hover {
+    background: linear-gradient(to right,#537010,#6c8555, #7b946d, #6c8555, #537010);
+    background-clip: text;
+    color: transparent;
+}
+
+.champsZaun{
+    background-image: url(https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt979f7abee0610fbb/60ee140d94d70a1ef3123841/zaun-bountymarkets.jpg);
+}
+
+.champsZaun .div1{
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zeri_0.jpg);
+    background-position-x: 56%;
+}
+
+.champsZaun .div2 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zac_0.jpg);
+    background-position-x: 73%;
+}
+
+.champsZaun .div3 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Renata_0.jpg);
+    background-position-x: 57%;
+}
+
+.champsZaun .div4 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Blitzcrank_0.jpg);
+    background-position-x: 71%;
+}
+
+.champsZaun .div5 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Urgot_0.jpg);
+    background-position-x: 58%;
+}
+
+.champsZaun .div6 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_0.jpg);
+    background-position-x: 79%;
+}
+
+.champsZaun .div7 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_0.jpg);
+    background-position-x: 70%;
+}
+
+.champsZaun .div8 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ziggs_0.jpg);
+    background-position-x: 77%;
+}
+
+.champsZaun .div9 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Warwick_0.jpg);
+    background-position-x: 71%;
+}
+
+.champsZaun .div10 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/DrMundo_0.jpg);
+    background-position-x: 53%;
+}
+
+.champsZaun .div11 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Janna_0.jpg);
+    background-position-x: 88%;
+}
+/* FIM DE ZAUN */
+
+
+/* AGUAS */
+.aguas p:hover {
+    background: linear-gradient(to right,#0f3772,#1b5a85, #5d7381, #1b5a85, #0f3772);
+    background-clip: text;
+    color: transparent;
+}
+
+.champsAgua{
+    background-image: url(https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5b5f65111350c8f7/60ee0bd543739d6620a572dc/bilgewater-the-slaughter-docks.jpg);
+}
+
+.champsAgua .div1{
+    background-image: url();
+    background-position-x: 56%;
+}
+
+.champsAgua .div2 {
+    background-image: url();
+    background-position-x: 73%;
+}
+
+.champsAgua .div3 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gangplank_0.jpg);
+    background-position-x: 77%;
+}
+
+.champsAgua .div4 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Illaoi_0.jpg);
+    background-position-x: 64%;
+}
+
+.champsAgua .div5 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/MissFortune_0.jpg);
+    background-position-x: 76%;
+}
+
+.champsAgua .div6 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nautilus_0.jpg);
+    background-position-x: 78%;
+}
+
+.champsAgua .div7 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Pyke_0.jpg);
+    background-position-x: 49%;
+}
+
+.champsAgua .div8 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/TahmKench_0.jpg);
+    background-position-x: 62%;
+}
+
+.champsAgua .div9 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/TwistedFate_0.jpg);
+    background-position-x: 73%;
+}
+
+.champsAgua .div10 {
+    background-image: url(https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt5796e3d258e95471/5e83cb29cfad926479634951/Graves_00_Base-Cigar.jpg?quality=80);
+    background-position-x: 80%;
+}
+
+.champsAgua .div11 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fizz_0.jpg);
+    background-position-x: 90%;
+}
+/* FIM DE AGUAS */
+
+
+
+
+
+
+
+
+
+
+
+/* USAR DEPOIS PARA QUE NO MAPA APAREÇA UM CARD SOBRE A REGIÃO
+.freljord:hover::after{
+    content: "Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top ";
+    display: block;
+    position: absolute;
+    top: -100%;
+    right: 150%;
+    margin-left: 0px;
+    background-color: #fff;
+    color: black;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 120px;
+    transition: 5s;
+    z-index: 10;
+} */
