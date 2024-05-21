@@ -413,6 +413,7 @@ footer .rodape1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 500ms;
 }
 
 .champs {
@@ -455,6 +456,7 @@ footer .rodape1 {
 .frelj p:hover {
     background: linear-gradient(to right, rgba(22, 70, 92, 0.664), rgba(43, 98, 160, 0.664), rgba(49, 131, 163, 0.774), rgba(140, 197, 214, 0.719), rgba(149, 164, 172, 0.664), rgba(22, 70, 92, 0.664), rgba(49, 131, 163, 0.774));
     background-clip: text;
+    transition: 500ms;
     color: transparent;
 }
 
@@ -760,8 +762,8 @@ footer .rodape1 {
 }
 
 .champsPiltover .div6 {
-    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_0.jpg);
-    background-position-x: 68%;
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_0.jpg);
+    background-position-x: 78%;
 }
 
 .champsPiltover .div7 {
@@ -785,7 +787,7 @@ footer .rodape1 {
 }
 
 .champsPiltover .div11 {
-    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_0.jpg);
+    background-image: url();
     background-position-x: 78%;
 }
 /* FIM DE PPILTOVER */
@@ -927,9 +929,411 @@ footer .rodape1 {
 /* FIM DE AGUAS */
 
 
+/* IXTAL */
+.ixt p:hover {
+    background: linear-gradient(to right,#433e25,#867970, #6c5049, #867970, #433e25);
+    background-clip: text;
+    color: transparent;
+}
+
+.champsIxtal{
+    background-image: url(https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt7387820b8698be3d/60ee0e36fdc6795ca584847a/ixtal-secrets-04.jpg);
+}
+
+.champsIxtal .div1{
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malphite_0.jpg);
+    background-position-x: 73%;
+}
+
+.champsIxtal .div2 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Milio_0.jpg);
+    background-position-x: 50%;
+}
+
+.champsIxtal .div3 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Neeko_0.jpg);
+    background-position-x: 50%;
+}
+
+.champsIxtal .div4 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nidalee_0.jpg);
+    background-position-x: 83%;
+}
+
+.champsIxtal .div5 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Qiyana_0.jpg);
+    background-position-x: 53%;
+}
+
+.champsIxtal .div6 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rengar_0.jpg);
+    background-position-x: 72%;
+}
+
+.champsIxtal .div7 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Skarner_0.jpg);
+    background-position-x: 51%;
+}
+
+.champsIxtal .div8 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zyra_0.jpg);
+    background-position-x: 83%;
+}
+
+.champsIxtal .div9 {
+    background-image: url();
+    background-position-x: 73%;
+}
+
+.champsIxtal .div10 {
+    background-image: url();
+    background-position-x: 80%;
+}
+
+.champsIxtal .div11 {
+    background-image: url();
+    background-position-x: 90%;
+}
+/* FIM DE IXTAL */
 
 
+/* SHURIMA */
+.shuri p:hover {
+    background: linear-gradient(to right,#796606,#b49e30, #948b5c, #b49e30, #796606);
+    background-clip: text;
+    color: transparent;
+}
 
+.champsShurima{
+    background-image: url(https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltaa8fb689e60622c6/60ee11f425b09b4bfcbdf5a7/shurima-reborn.jpg);
+}
+
+.champsShurima .div1{
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Amumu_0.jpg);
+    background-position-x: 75%;
+}
+
+.champsShurima .div2 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/KSante_0.jpg);
+    background-position-x: 35%;
+}
+
+.champsShurima .div3 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Naafiri_0.jpg);
+    background-position-x: 27%;
+}
+
+.champsShurima .div4 {
+    background-image: url(https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt58b3304a9d38b091/60f5d6e21929bc58854d00a6/072221_AkshanChampionTheme_Banner.jpg?quality=80);
+    background-position-x: 73%;
+}
+
+.champsShurima .div5 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Xerath_0.jpg);
+    background-position-x: 57%;
+}
+
+.champsShurima .div6 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_0.jpg);
+    background-position-x: 78%;
+}
+
+.champsShurima .div7 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sivir_0.jpg);
+    background-position-x: 58%;
+}
+
+.champsShurima .div8 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rammus_0.jpg);
+    background-position-x: 67%;
+}
+
+.champsShurima .div9 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nasus_0.jpg);
+    background-position-x: 70%;
+}
+
+.champsShurima .div10 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Renekton_0.jpg);
+    background-position-x: 60%;
+}
+
+.champsShurima .div11 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Taliyah_0.jpg);
+    background-position-x: 82%;
+}
+/* FIM DE SHURIMA */
+
+/* TARGON */
+.targ p:hover {
+    background: linear-gradient(to right,#2a0a82,#473c86, #c3ba73, #473c86, #2a0a82);
+    background-clip: text;
+    color: transparent;
+}
+
+.champsTargon{
+    background-image: url(https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt68d52af2e5b56e7b/60ee0f7ffdd68748b2b7cd06/mttargon-once-in-a-lifetime.jpg);
+}
+
+.champsTargon .div1{
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_0.jpg);
+    background-position-x: 55%;
+}
+
+.champsTargon .div2 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Pantheon_0.jpg);
+    background-position-x: 50%;
+}
+
+.champsTargon .div3 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Taric_0.jpg);
+    background-position-x: 84%;
+}
+
+.champsTargon .div4 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/AurelionSol_0.jpg);
+    background-position-x: 58%;
+}
+
+.champsTargon .div5 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leona_0.jpg);
+    background-position-x: 83%;
+}
+
+.champsTargon .div6 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Diana_0.jpg);
+    background-position-x: 74%;
+}
+
+.champsTargon .div7 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_0.jpg);
+    background-position-x: 58%;
+}
+
+.champsTargon .div8 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zoe_0.jpg);
+    background-position-x: 53%;
+}
+
+.champsTargon .div9 {
+    background-image: url();
+    background-position-x: 70%;
+}
+
+.champsTargon .div10 {
+    background-image: url();
+    background-position-x: 60%;
+}
+
+.champsTargon .div11 {
+    background-image: url();
+    background-position-x: 82%;
+}
+/* FIM DE TARGON */
+
+
+/* ILHA DAS SOMBRAS */
+.sombras p:hover {
+    background: linear-gradient(to right,#10191E,#214144, #4A8188, #214144, #10191E);
+    background-clip: text;
+    color: transparent;
+}
+
+.champsIlhadasSombras{
+    background-image: url(https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt0f72352ca65d935c/60ee11d5927567256a375e9c/shadow-isles-vaults.jpg);
+}
+
+.champsIlhadasSombras .div1{
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Viego_0.jpg);
+    background-position-x: 78%;
+}
+
+.champsIlhadasSombras .div2 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vex_0.jpg);
+    background-position-x: 67%;
+}
+
+.champsIlhadasSombras .div3 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_0.jpg);
+    background-position-x: 64%;
+}
+
+.champsIlhadasSombras .div4 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Maokai_0.jpg);
+    background-position-x: 63%;
+}
+
+.champsIlhadasSombras .div5 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Karthus_0.jpg);
+    background-position-x: 73%;
+}
+
+.champsIlhadasSombras .div6 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kalista_0.jpg);
+    background-position-x: 66%;
+}
+
+.champsIlhadasSombras .div7 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gwen_0.jpg);
+    background-position-x: 50%;
+}
+
+.champsIlhadasSombras .div8 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Hecarim_0.jpg);
+    background-position-x: 70%;
+}
+
+.champsIlhadasSombras .div9 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Elise_0.jpg);
+    background-position-x: 75%;
+}
+
+.champsIlhadasSombras .div10 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yorick_0.jpg);
+    background-position-x: 66%;
+}
+
+.champsIlhadasSombras .div11 {
+    background-image: url();
+    background-position-x: 91%;
+}
+/* FIM DE ILHA DAS SOMBRAS */
+
+
+/* VAZIO */
+.vaz p:hover {
+    background: linear-gradient(to right,#520d55,#A06695, #b499b6, #A06695, #520d55);
+    background-clip: text;
+    color: transparent;
+}
+
+.champsVazio{
+    background-image: url(https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt482d6fc3a528e886/60ee13a2b81175257178fafe/void-the-touch-of-the-void.jpg);
+}
+
+.champsVazio .div1{
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_0.jpg);
+    background-position-x: 76%;
+}
+
+.champsVazio .div2 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Chogath_0.jpg);
+    background-position-x: 57%;
+}
+
+.champsVazio .div3 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/KogMaw_0.jpg);
+    background-position-x: 76%;
+}
+
+.champsVazio .div4 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malzahar_0.jpg);
+    background-position-x: 65%;
+}
+
+.champsVazio .div5 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/RekSai_0.jpg);
+    background-position-x: 55%;
+}
+
+.champsVazio .div6 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kaisa_0.jpg);
+    background-position-x: 48%;
+}
+
+.champsVazio .div7 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kassadin_0.jpg);
+    background-position-x: 67%;
+}
+
+.champsVazio .div8 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Belveth_0.jpg);
+    background-position-x: 50%;
+}
+
+.champsVazio .div9 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Velkoz_0.jpg);
+    background-position-x: 60%;
+}
+
+.champsVazio .div10 {
+    background-image: url();
+    background-position-x: 66%;
+}
+
+.champsVazio .div11 {
+    background-image: url();
+    background-position-x: 91%;
+}
+/* FIM DO VAZIO */
+
+
+/* BANDÓPOLIS */
+.band p:hover {
+    background: linear-gradient(to right,#83A6BC,#BABFB5, #A9C6D6, #BABFB5, #83A6BC);
+    background-clip: text;
+    color: transparent;
+}
+
+.champsBandopolis{
+    background-image: url(https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltb316bba205bf78ca/60ee0b937b4a95436e1ae018/yordle_portal_03.jpg);
+}
+
+.champsBandopolis .div1{
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Corki_0.jpg);
+    background-position-x: 72%;
+}
+
+.champsBandopolis .div2 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lulu_0.jpg);
+    background-position-x: 72%;
+}
+
+.champsBandopolis .div3 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rumble_0.jpg);
+    background-position-x: 73%;
+}
+
+.champsBandopolis .div4 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Tristana_0.jpg);
+    background-position-x: 66%;
+}
+
+.champsBandopolis .div5 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_0.jpg);
+    background-position-x: 68%;
+}
+
+.champsBandopolis .div6 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Veigar_0.jpg);
+    background-position-x: 67%;
+}
+
+.champsBandopolis .div7 {
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yuumi_0.jpg);
+    background-position-x: 45%;
+}
+
+.champsBandopolis .div8 {
+    background-image: url();
+    background-position-x: 50%;
+}
+
+.champsBandopolis .div9 {
+    background-image: url();
+    background-position-x: 60%;
+}
+
+.champsBandopolis .div10 {
+    background-image: url();
+    background-position-x: 66%;
+}
+
+.champsBandopolis .div11 {
+    background-image: url();
+    background-position-x: 91%;
+}
+/* FIM DE BANDÓPOLIS */
 
 
 
