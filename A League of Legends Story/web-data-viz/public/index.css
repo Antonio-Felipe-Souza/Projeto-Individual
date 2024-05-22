@@ -251,7 +251,8 @@ section {
 .tituloDiferente p:hover {
     background: linear-gradient(to right, rgba(255, 0, 0, 0.664), rgba(255, 165, 0, 0.664), rgba(255, 255, 0, 0.774), rgba(0, 128, 0, 0.719), rgba(0, 0, 255, 0.664), rgba(75, 0, 130, 0.664), rgba(238, 130, 238, 0.76));
     background-clip: text;
-    color: transparent;    
+    color: transparent;
+    transition: 500ms;    
 }
 
 .textos a{

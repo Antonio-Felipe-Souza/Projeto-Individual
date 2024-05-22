@@ -1,0 +1,246 @@
+@font-face {
+    /*FONTE GERAL*/
+    font-family: 'Beaufort';
+    src: url(../assets/Fonts_Package/BeaufortForLoL-OTF/BeaufortforLOL-Medium.otf);
+}
+
+@font-face {
+    font-family: 'BeaufortTitulos';
+    src: url(../assets/Fonts_Package/Spiegel-OTF/Spiegel-Regular.otf);
+}
+
+body {
+    cursor: url('../assets/normal.cur'), auto;
+    font-family: 'Beaufort';
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: url('../assets/link.cur'), auto;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    color: #A09B8C;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+    color: black;
+}
+
+header .navbar {
+    width: 100%;
+    height: 8vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    /* position: fixed; */
+    z-index: 10;
+    transition: .5s;
+}
+
+header .navbar .esquerda,
+header .navbar .direita {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar .logo img {
+    width: 50px;
+    height: 50px;
+}
+
+header .navbar .links {
+    display: flex;
+}
+
+header .nav-itens {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+header .navbar .nav-itens li {
+    margin: 0 15px;
+}
+
+header .navbar .nav-itens li a:hover {
+    color: #c89c3c;
+    text-shadow: 0 0 3px #c89c3ca9;
+    transition: .7s;
+}
+
+.esquerda .links {
+    margin-left: 50px;
+}
+
+.esquerda .links li:first-child {
+    margin-left: 0;
+}
+
+.direita {
+    margin-right: 60px;
+}
+
+
+section {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.imgs {
+    height: 93vh;
+    z-index: 7;
+}
+
+.img2 {
+    background-image: url(../assets/MapaNexus2.png);
+    background-attachment: unset;
+    background-size: contain;
+    background-color: #09161D;
+}
+
+.textos {
+    font-family: 'Beaufort';
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    background-color: #DBD8D6;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    text-align: justify;
+}
+
+
+.textos p {
+    margin-top: 22px;
+    margin-left: 270px;
+    /*150px inicialmente*/
+    margin-right: 270px;
+    /*150px inicialmente*/
+    margin-bottom: 0;
+}
+
+.textos p:first-child {
+    margin-top: 55px;
+}
+
+.textos p:last-child {
+    margin-bottom: 55px;
+}
+
+.tips {
+    background-color: #284352ac;
+    color: white;
+    width: 17%;
+    height: 42%;
+    /*fitcontent talvez */
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 14%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+}
+
+.tips h1 {
+    font-family: 'BeaufortTitulos';
+    color: #E0C97B;
+    padding: 0;
+    margin: 0;
+}
+
+.img2 .seta {
+    display: flex;
+    width: 70px;
+    height: 100px;
+    /* background-color: white; */
+    background-image: url(../assets/setaTips.png);
+    background-repeat: no-repeat;
+    z-index: 9;
+    padding: 0;
+    margin-top: 20%;
+    margin-left: 95%;
+    position: absolute;
+}
+
+.lane{
+    background-color: rgba(255, 255, 255, 0.404);
+    display: flex;
+    width: 5.5rem;
+    height: 5.5rem;
+    position: absolute;
+    border-radius: 15%;
+}
+
+.top {
+    margin-top: 8%;
+    margin-left: 33.7%;
+
+}
+
+.mid{
+    margin-top: 15%;
+    margin-left: 50.7%;
+}
+
+.bot{
+    margin-top: 31.5%;
+    margin-left: 65%;
+}
+
+.champs {
+    background-color: rgba(204, 1, 1, 0.966);
+    display: flex;
+    width: 10%;
+    height: 60%;
+    position: absolute;
+    margin-top: -10%;
+    margin-left: 3%;
+    border-radius: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.foto{
+    background-color: rgba(112, 154, 161, 0.884);
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 15%; 
+    display: flex;
+}
+
+.champ1{
+    width: 150px;
+    height: 150px;
+}
+
+/* 
+.dragging{
+    background-color: #c89c3c;
+} */
