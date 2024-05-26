@@ -1,0 +1,263 @@
+@font-face {
+    /*FONTE GERAL*/
+    font-family: 'Beaufort';
+    src: url(../assets/Fonts_Package/BeaufortForLoL-OTF/BeaufortforLOL-Medium.otf);
+}
+
+@font-face {
+    font-family: 'BeaufortTitulos';
+    src: url(../assets/Fonts_Package/Spiegel-OTF/Spiegel-Regular.otf);
+}
+
+body {
+    cursor: url('../assets/normal.cur'), auto;
+    font-family: 'Beaufort';
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: url('../assets/link.cur'), auto;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    color: #A09B8C;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+    color: black;
+}
+
+header .navbar {
+    width: 100%;
+    height: 8vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    /* position: fixed; */
+    z-index: 10;
+    transition: .5s;
+}
+
+header .navbar .esquerda,
+header .navbar .direita {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar .logo img {
+    width: 50px;
+    height: 50px;
+}
+
+header .navbar .links {
+    display: flex;
+}
+
+header .nav-itens {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+header .navbar .nav-itens li {
+    margin: 0 15px;
+}
+
+header .navbar .nav-itens li a:hover {
+    color: #c89c3c;
+    text-shadow: 0 0 3px #c89c3ca9;
+    transition: .7s;
+}
+
+.esquerda .links {
+    margin-left: 50px;
+}
+
+.esquerda .links li:first-child {
+    margin-left: 0;
+}
+
+.direita {
+    margin-right: 60px;
+}
+
+.imgs {
+    height: 93vh;
+    z-index: 7;
+}
+
+.textos {
+    font-family: 'Beaufort';
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+
+
+input {
+    border-radius: 10px;
+    border: solid 1px black;
+    align-items: center;
+    text-align: center;
+    font-family: 'Beaufort';
+    font-size: 18px;
+    padding: auto;
+    display: flex;
+    align-content: center;
+}
+
+button {
+    cursor: url('../assets/link.cur'), auto;
+    width: 100px;
+    height: 30px;
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: #A09B8C;
+    font-family: 'BeaufortTitulos';
+    font-size: 18px;
+    font-weight: 800;
+    transition: 1s;
+
+}
+
+button:hover{
+    transform: scale(1.2);
+    transition: 1s;
+    background-color: #c89c3c;
+}
+
+#imgfundo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: 0px 0px;
+}
+
+#imgChampion {
+    background-size: cover;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.363), 0 -20px 50px rgba(0, 0, 0, 0.363), 0 25px 50px rgba(0, 0, 0, 0.363), 0 -25px 50px rgba(0, 0, 0, 0.363);
+}
+
+.tela {
+    width: 70%;
+    height: 80%;
+    background-color: #b1a7a77d;
+    border-radius: 10px;
+    border: solid 3px rgba(0, 0, 0, 0.33);
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+
+
+#imgChampion {
+    width: 600px;
+    height: 400px;
+    /* background-color: blue; */
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#resultado{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+#pdl{
+    width: 100%;
+    height:100%;
+    /* display: none; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.paipdl{
+    width: 15%; /*Aqui controla o tamanho do tier*/
+    height: 22%; /*Aqui controla o tamanho do tier*/
+    position: absolute; 
+    margin-top: 5%;
+    margin-left: 16%;
+    z-index: 99;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#pontos {
+    font-family: 'Beaufort';
+    font-weight: 600;
+    font-size: 35px;
+    margin-top: -32px;
+}
+
+#pontos2 {
+    font-family: 'Beaufort';
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.btnipt{
+    /* background-color: #c89c3c; */
+    width: 320px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#fundoAcertou{
+    width: 100vw;
+    height: 93vh;
+    background-color: rgba(12, 11, 11, 0.877);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    color: #A09B8C;
+    text-align: center;
+}
+
+#acertou{
+    z-index: 101;
+    background-image: url(../assets/teemo.png);
+    width: 27%;
+    height: 70%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 206px;
+    left: 742px;
+    justify-content: space-around;
+    display: flex;
+}

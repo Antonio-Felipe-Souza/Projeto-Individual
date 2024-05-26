@@ -9,7 +9,7 @@
 }
 
 body {
-    cursor: url('../assets/normal.cur'), auto;
+    cursor: url('assets/normal.cur'), auto;
     font-family: 'Beaufort';
     word-wrap: break-word;
     overflow-x: hidden;
@@ -18,7 +18,7 @@ body {
 }
 
 a {
-    cursor: url('../assets/link.cur'), auto;
+    cursor: url('assets/link.cur'), auto;
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -261,6 +261,7 @@ section {
     text-decoration: underline;
     font-size: 25px;
     transition: color 0.3s;
+    cursor: url(assets/link.cur), auto;
 }
 
 .textos6 p:last-child{

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerte a região | League of Legends</title>
+
+    <link rel="stylesheet" href="./jogo2.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/LoL icon.png">
+</head>
+
+<body onload="gerar(), verificar()">
+    <!-- Header inicio -->
+    <header>
+        <nav class="navbar">
+            <!-- lado esquerdo do header -->
+            <div class="esquerda">
+                <div class="logo">
+                    <a href="#topo"><img src="../assets/LoL icon.png" alt="LoL logo"></a>
+                </div>
+                <!-- fim do logo -->
+
+                <!-- atalhos da navbar -->
+                <div class="links">
+                    <ul class="nav-itens">
+                        <!-- <li><a href="#topo">INÍCIO</a></li> -->
+                        <li><a href="../index.html">O JOGO</a></li>
+                        <li><a href="../regioes.html">O UNIVERSO</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CENTRO -->
+
+            <div class="direita">
+                <div class="links" id="centro">
+                    <!-- <ul class="nav-itens">
+                        <li><a href="">INVOCADOR</a></li>
+                    </ul> -->
+                </div>
+            </div>
+
+
+            <!-- lado direito da navbar -->
+            <div class="direita">
+                <div class="links">
+                    <ul class="nav-itens">
+                        <li><a href="">RESULTADOS</a></li>
+                        <li><a onclick="redefinir()" href="../index.html">SAIR</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header fim -->
+
+    <!-- Preencher a tela toda com o "ranking/elo" -->
+    <div id="resultado">
+        <div class="paipdl">
+            <div id="pdl"><!-- ELO IRÁ APARECER AQUI --></div>
+            <div id="pontos2"><!-- PDL TOTAL IRÁ APARECER AQUI --></div>
+        </div>
+    </div>
+
+    <section class="imgs" id="imgfundo">
+        <!-- aqui vai aparecer o teemo -->
+        <div id="fundoAcertou" style="display: none;">
+            <div id="acertou">
+                <!-- <p>Teste acertou</p> -->
+
+                <div id="pontos"><!-- PDL GANHO (ALEATÓRIO )IRÁ APARECER AQUI --></div>
+
+            </div>
+        </div>
+
+        <section class="tela">
+
+            <div class="textos">
+                ADIVINHE A REGIÃO DO SEGUINTE PERSONAGEM:
+            </div>
+
+            <div id="imgChampion"> <!-- IMAGEM CENTRAL ALEATORIA --> </div>
+
+            <div class="textos">
+                <div class="btnipt">
+                    <input type="text" id="ipt_resposta">
+                    <button onclick="enviar()"> ENVIAR </button>
+                </div>
+            </div>
+
+            <!-- <div class="textos">
+                Quem é este personagem: <input type="text" oninput="verificar()" id="ipt_resposta">
+            </div> -->
+        </section>
+
+    </section>
+
+
+</body>
+
+<script>
+    // vetor com todas as imagens que serão utilizadas em json
+    var campeoes = [
+        { imagem: '../assets/PERSONAGENS/Bandopolis/Teemo_0.jpg', regiao: 'Bandopolis' },
+        { imagem: '../assets/PERSONAGENS/IlhaSombras/Gwen_0.jpg', regiao: 'Ilha das Sombras' },
+        { imagem: '../assets/PERSONAGENS/Targon/Pantheon_0.jpg', regiao: 'Monte Targon' },
+        { imagem: '../assets/PERSONAGENS/Demacia/Fiora_0.jpg', regiao: 'Demacia' },
+        { imagem: '../assets/PERSONAGENS/Freljord/Volibear_0.jpg', regiao: 'Freljord' },
+        { imagem: '../assets/PERSONAGENS/Freljord/Ornn_0.jpg', regiao: 'Freljord' },
+        { imagem: '../assets/PERSONAGENS/IlhaSombras/Yorick_0.jpg', regiao: 'Ilha das Sombras' },
+        { imagem: '../assets/PERSONAGENS/Ionia/Irelia_0.jpg', regiao: 'Ionia' },
+        { imagem: '../assets/PERSONAGENS/Ixtal/Malphite_0.jpg', regiao: 'Ixtal' },
+        { imagem: '../assets/PERSONAGENS/Noxus/Darius_0.jpg', regiao: 'Noxus' },
+        { imagem: '../assets/PERSONAGENS/Noxus/Sion_0.jpg', regiao: 'Noxus' },
+        { imagem: '../assets/PERSONAGENS/Shurima/KSante_0.jpg', regiao: 'Shurima' },
+        { imagem: '../assets/PERSONAGENS/Shurima/Renekton_0.jpg', regiao: 'Shurima' },
+        { imagem: '../assets/PERSONAGENS/Targon/Pantheon_0.jpg', regiao: 'Monte Targon' },
+        { imagem: '../assets/PERSONAGENS/Vazio/Chogath_0.jpg', regiao: 'Vazio' },
+        { imagem: '../assets/PERSONAGENS/Zaun/DrMundo_0.jpg', regiao: 'Zaun' },
+        { imagem: '../assets/PERSONAGENS/Zaun/Urgot_0.jpg', regiao: 'Zaun' },
+        { imagem: '../assets/PERSONAGENS/Zaun/Warwick_0.jpg', regiao: 'Zaun' },
+        { imagem: '../assets/PERSONAGENS/AguasSentina/TwistedFate_0.jpg', regiao: 'Aguas de Sentina' },
+        { imagem: '../assets/PERSONAGENS/Bandopolis/Veigar_0.jpg', regiao: 'Bandopolis' },
+        { imagem: '../assets/PERSONAGENS/Demacia/Lux_0.jpg', regiao: 'Demacia' },
+        { imagem: '../assets/PERSONAGENS/Demacia/Sylas_0.jpg', regiao: 'Demacia' },
+        { imagem: '../assets/PERSONAGENS/Demacia/Galio_0.jpg', regiao: 'Demacia' },
+        { imagem: '../assets/PERSONAGENS/Freljord/Lissandra_0.jpg', regiao: 'Freljord' },
+        { imagem: '../assets/PERSONAGENS/Ionia/Ahri_0.jpg', regiao: 'Ionia' },
+        { imagem: '../assets/PERSONAGENS/Ionia/Akali_0.jpg', regiao: 'Ionia' },
+        { imagem: '../assets/PERSONAGENS/Ionia/Yone_0.jpg', regiao: 'Ionia' },
+        { imagem: '../assets/PERSONAGENS/Ionia/Yasuo_0.jpg', regiao: 'Ionia' },
+        { imagem: '../assets/PERSONAGENS/Ixtal/Neeko_0.jpg', regiao: 'Ixtal' },
+        { imagem: '../assets/PERSONAGENS/Noxus/Leblanc_0.jpg', regiao: 'Noxus' },
+        { imagem: '../assets/PERSONAGENS/Noxus/Katarina_0.jpg', regiao: 'Noxus' },
+        { imagem: '../assets/PERSONAGENS/Piltover/Viktor_0.jpg', regiao: 'Piltover' },
+        { imagem: '../assets/PERSONAGENS/Piltover/Orianna_0.jpg', regiao: 'Piltover' },
+        { imagem: '../assets/PERSONAGENS/Shurima/Azir_0.jpg', regiao: 'Shurima' },
+        { imagem: '../assets/PERSONAGENS/Shurima/Taliyah_0.jpg', regiao: 'Shurima' },
+        { imagem: '../assets/PERSONAGENS/Targon/AurelionSol_0.jpg', regiao: 'Monte Targon' },
+        { imagem: '../assets/PERSONAGENS/Targon/Zoe_0.jpg', regiao: 'Monte Targon' },
+        { imagem: '../assets/PERSONAGENS/Vazio/Malzahar_0.jpg', regiao: 'Vazio' },
+        { imagem: '../assets/PERSONAGENS/Vazio/Velkoz_0.jpg', regiao: 'Vazio' },
+        { imagem: '../assets/PERSONAGENS/Zaun/Ekko_0.jpg', regiao: 'Zaun' },
+        { imagem: '../assets/PERSONAGENS/Zaun/Ziggs_0.jpg', regiao: 'Zaun' }
+    ];
+
+    // var aleatorio = ''
+    var imagemAtual = ''
+    var regiaoAtual = ''
+
+    // função para gerar um personagem aleatório
+    function gerar() {
+        var total_de_campeoes = campeoes.length; //pegar o total de indexs que o vetor/json contém
+        var aleatorio = (Math.random() * (total_de_campeoes)).toFixed(); //gerar um número aleatório que irá até o tamanho do vetor acima e arredonda o número em 0 casas - salva numa variavel global
+        imagemAtual = campeoes[aleatorio].imagem; //pega do vetor (campeoes) uma posição/indice aleatório, 'consumindo' somente a .imagem daquele indice
+        regiaoAtual = campeoes[aleatorio].regiao; //pega do vetor (campeoes) uma posição/indice aleatório, 'consumindo' somente a .regiao daquele indice
+
+        //Imagem de fundo do site
+        imgfundo.style.backgroundImage = `url('${imagemAtual}')`
+
+        //Imagem destacada central
+        imgChampion.style.backgroundImage = `url('${imagemAtual}')`
+    }
+
+
+    // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+
+    var tiers = ['./assets/prata.png', './assets/ouro.png', './assets/platina.png', './assets/diamante.png', './assets/mestre.png', './assets/gm.png', './assets/challenger.png']
+
+    var pdlTotal = 0;
+    var indiceTiers = 0;
+    var finalTemporada = './assets/prata.png';
+    var elo = tiers[indiceTiers];
+
+    function enviar() {
+        var resposta = ipt_resposta.value; //resposta do usuário na input
+
+        //se a resposta do usuário estiver igual a região (salva na var global) selecionada no vetor, acontece as seguintes ações:
+        if (resposta.toLowerCase() == regiaoAtual.toLowerCase()) {
+            // alert('VITORIA')
+
+            // gerando um número aleatório de 20 a 30 que será dado como pdl se acertar
+            var pdlGanhos = Number((Math.random() * 10 + 30).toFixed());
+
+            //somando os pdls conquistados numa var global
+            pdlTotal += pdlGanhos;
+
+            //se o total de pdl exceder 100 - pulará para um novo tier com os pdl zerados
+            if (pdlTotal >= 100 && indiceTiers < tiers.length - 1) {
+                pdlTotal = 0; // Reseta o pdlTotal // poderia ser pdlTotal = pdlTotal-100
+                
+                // se entrar na condição anterior... e se o indice estiver abaixo do tamanho do vetor de tiers
+                if (indiceTiers < tiers.length - 1) {
+                    indiceTiers++; // aumenta o índice do tier se ainda tiver tiers disponíveis
+                    elo = tiers[indiceTiers]; // atualiza o elo para o próximo tier
+                } else {
+                    alert('Você alcançou o elo mais alto!');
+                    elo = tiers[tiers.length - 1]; // mantem no challenger
+                }
+            }
+
+            //resultado em caso de acerto
+            document.getElementById('fundoAcertou').style.display = 'block';
+            
+            if(pdlTotal == 0){
+                document.getElementById('pontos').innerHTML = `+ ${pdlGanhos} PDLs <br> Parabéns, você subiu de Tier!`;
+            } else {
+                document.getElementById('pontos').innerHTML = `+ ${pdlGanhos} PDLs`;
+            }
+
+            //alterando o conteudo da div inserindo o texto de pdls ganhos e do total
+            document.getElementById('pontos2').innerHTML = `Total: ${pdlTotal} PDLs`;
+
+            // a cada 3s faz as seguintes coisas
+            setTimeout(() => {
+                //ocultando o teemo de acerto
+                document.getElementById('fundoAcertou').style.display = 'none';
+
+                // exibindo a div de resultado com o elo
+                document.getElementById('resultado').style.display = 'block';
+
+                //transformando a o fundo numa imagem do elo
+                document.getElementById('pdl').style.backgroundImage = `url('${elo}')`;
+
+            }, 3000);
+
+
+            console.log('url do elo aqui' + elo)
+            console.log(finalTemporada)
+
+
+            //a cada 3s oculta a div com os resultados e limpa o campo de inserção da região
+            setTimeout(() => {
+                gerar(); //chama novamente a função de gerar outra imagem aleatoria
+                limparinput(); //chama a função de limpar a input com a resposta anterior
+
+                //torna o display de resultado oculto
+                document.getElementById('resultado').style.display = 'none';
+
+            }, 6300);
+
+        } else {
+            alert('DERROTA')
+        }
+    }
+
+    //limpa o campo onde havia escrita
+    function limparinput() {
+        document.getElementById('ipt_resposta').value = '';
+    }
+
+    // verificar se há algum usuário logado
+    function verificar() {
+        var idUsuario = 1;
+        var nomeUsuario = sessionStorage.NOME_USUARIO;
+
+        // se houver, o nome dele aparecerá no centro como invocador
+        if (idUsuario >= 0) {
+            centro.innerHTML = `<ul class="nav-itens"><li><a>INVOCADOR: ${nomeUsuario}</a></li></ul>`
+        } else { //senão, será redirecionado ao index (só joga com login)
+            window.location = '../index.html'
+        }
+    }
+
+    //função que ao clicar em sair, limpa o id armazenado
+    function redefinir() {
+        sessionStorage.clear();
+    }
+</script>
+
+</html>

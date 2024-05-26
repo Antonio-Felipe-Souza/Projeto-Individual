@@ -10,7 +10,7 @@
 }
 
 body {
-    cursor: url('../assets/normal.cur'), auto;
+    cursor: url('assets/normal.cur'), auto;
     font-family: 'Beaufort';
     word-wrap: break-word;
     overflow-x: hidden;
@@ -20,7 +20,7 @@ body {
 }
 
 a {
-    cursor: url('../assets/link.cur'), auto;
+    cursor: url('assets/link.cur'), auto;
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -235,12 +235,17 @@ section {
     display: flex;
 }
 
-.champ1{
-    width: 150px;
-    height: 150px;
+.champ1, .champ2, .champ3, .champ4{
+    width: 100px;
+    height: 100px;
 }
 
 /* 
 .dragging{
     background-color: #c89c3c;
 } */
+
+
+
+
+

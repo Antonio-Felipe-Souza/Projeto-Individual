@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
 
-    <!-- INSERI CONFORME API -->
+  <!-- INSERI CONFORME API -->
   <script src="./js/sessao.js"></script>
-    <!-- INSERI CONFORME API -->
+  <!-- INSERI CONFORME API -->
 
 
   <link rel="stylesheet" href="cadastrostyle.css">
@@ -26,9 +26,9 @@
     <div class="inputsCadastro">
       <input type="text" placeholder="Usuário/Apelido" id="ipt_usuario">
       <!-- <div id="divErroUsuario"></div> -->
-      <input type="number" placeholder="CPF" id="ipt_cpf">
+      <!-- <input type="number" placeholder="CPF" id="ipt_cpf"> -->
       <!-- <div id="divErroCPF"></div> -->
-      <input type="number" placeholder="Telefone" id="ipt_telefone">
+      <!-- <input type="number" placeholder="Telefone" id="ipt_telefone"> -->
       <!-- <div id="divErroTelefone"></div> -->
       <input type="text" placeholder="Email" id="ipt_email">
       <!-- <div id="divErroEmail"></div> -->
@@ -54,26 +54,33 @@
     </div> -->
     <!-- INSERI CONFORME API -->
 
-    </div>
+  </div>
   </div>
 </body>
 
 </html>
 
 <script>
-  // EDITANDO CONFORME API
+
+  function verificar() {
+    var idUsuario = sessionStorage.ID_USUARIO;
+    var nomeUsuario = sessionStorage.NOME_USUARIO;
+  }
+  verificar()
+
+
   function cadastrar() {
 
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
-
     var usuarioVar = ipt_usuario.value;
-    var cpfVar = ipt_cpf.value;
-    var telefoneVar = ipt_telefone.value;
     var emailVar = ipt_email.value;
     var confirmcaoEmailVar = ipt_confEmail.value;
     var senhaVar = ipt_senha.value;
     var confirmacaoSenhaVar = ipt_confSenha.value;
+
+
+
 
     // if (
     //   usuario == "" ||
@@ -132,8 +139,6 @@
         // crie um atributo que recebe o valor recuperado aqui
         // Agora vá para o arquivo routes/usuario.js
         usuarioServer: usuarioVar,
-        cpfServer: cpfVar,
-        telefoneServer: telefoneVar,
         emailServer: emailVar,
         senhaServer: senhaVar
       }),

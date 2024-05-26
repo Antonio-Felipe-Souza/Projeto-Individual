@@ -2,7 +2,7 @@
 
 body{
     background-image: url(../assets/Backgrounds/fundo-login.svg);
-    cursor: url(../assets/normal.cur), auto;
+    cursor: url(assets/normal.cur), auto;
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
@@ -29,11 +29,11 @@ body{
     align-self: flex-start;
     margin-top: 15px;
     margin-left: 15px;
-    cursor: url(../assets/link.cur), auto;
+    cursor: url(assets/link.cur), auto;
 }
 
 .imgVoltar a{
-    cursor: url(../assets/link.cur), auto; 
+    cursor: url(assets/link.cur), auto; 
 }
 
 .tituloCadastro{
@@ -63,7 +63,7 @@ body{
     padding-top: 3px;
     padding-bottom: 3px;
     font-size: 16px; 
-    cursor: url(../assets/link.cur), auto;
+    cursor: url(assets/link.cur), auto;
 }
 
 .botaoEntrar {
@@ -78,7 +78,7 @@ body{
     justify-content: center;
     align-items: center;
     transition: 1s ease;
-    cursor: url(../assets/link.cur), auto;
+    cursor: url(assets/link.cur), auto;
 }
 
 .botaoEntrar img{
@@ -103,7 +103,7 @@ body{
 .linksabaixo a{
     text-decoration: none;
     color: black;
-    cursor: url(../assets/link.cur), auto;
+    cursor: url(assets/link.cur), auto;
 }
 
 .linksabaixo a:hover{

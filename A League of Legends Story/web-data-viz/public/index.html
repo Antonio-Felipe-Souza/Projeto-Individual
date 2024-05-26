@@ -10,7 +10,7 @@
     <script src="./js/sessao.js"></script>
 
     <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/LoL icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/LoL icon.png">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
             <!-- lado esquerdo do header -->
             <div class="esquerda">
                 <div class="logo">
-                    <a href="#topo"><img src="./assets/LoL icon.png" alt="LoL logo"></a>
+                    <a href="#topo"><img src="assets/LoL icon.png" alt="LoL logo"></a>
                 </div>
 
                 <div class="links">
@@ -30,13 +30,14 @@
                         <li><a href="#riot">RIOT GAMES</a></li>
                         <li><a href="#tituloDiferente">VALORES E PRINCÍPIOS</a></li>
                         <li><a href="./regioes.html">O UNIVERSO</a></li>
+                        <li><a href="./testando games/jogo2.html">JOGAR AGORA</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- lado direito do header -->
             <div class="direita">
-                <div class="links">
+                <div class="links" id="cadastroLogin">
                     <ul class="nav-itens">
                         <li><a href="login.html">LOGIN</a></li>
                         <li><a href="cadastro.html">REGISTRE-SE</a></li>
@@ -76,14 +77,18 @@
     </section>
 
     <section class="imgs img2" id="comoJogar">
-        
+
         <!-- SETA PARA DIV SECUNDARIA QUE ESTÁ ESCONDIDA -->
-        <a onclick="trocarDiv()"> <div class="seta"></div></a>
+        <a onclick="trocarDiv()">
+            <div class="seta"></div>
+        </a>
 
         <div class="tips tipnexus" id="tipnexus">
             <h1>Nexus</h1>
-            <p><span style="color: #0BC6E3;">Azul</span>: localizado em sua base, é a principal estrutura que deve ser defendida.</p>
-            <p><span style="color: #BF302A">Vermelho</span>: Avance pelo mapa e cause sua destruição para vencer o jogo!</p>
+            <p><span style="color: #0BC6E3;">Azul</span>: localizado em sua base, é a principal estrutura que deve ser
+                defendida.</p>
+            <p><span style="color: #BF302A">Vermelho</span>: Avance pelo mapa e cause sua destruição para vencer o jogo!
+            </p>
         </div>
 
         <!-- DIV SECUNDARIA QUE ESTÁ ESCONDIDA PARA TESTAR -->
@@ -107,11 +112,14 @@
         </p>
 
         <p>
-            À medida que a temporada avança, os jogadores enfrentam <b>desafios</b> cada vez mais intensos, aprimorando suas
+            À medida que a temporada avança, os jogadores enfrentam <b>desafios</b> cada vez mais intensos, aprimorando
+            suas
             habilidades e estratégias. O final da temporada é um momento crucial, quando os rankings são finalmente
-            definidos. Aqueles que se <b>destacaram</b> recebem <b>recompensas exclusivas</b>, como <b>skins</b>, <b>emblemas</b> e outros itens
+            definidos. Aqueles que se <b>destacaram</b> recebem <b>recompensas exclusivas</b>, como <b>skins</b>,
+            <b>emblemas</b> e outros itens
             dentro
-            do jogo, <b>reconhecendo seu desempenho</b> e <b>dedicação excepcionais</b> ao longo de toda a <b>temporada</b>.
+            do jogo, <b>reconhecendo seu desempenho</b> e <b>dedicação excepcionais</b> ao longo de toda a
+            <b>temporada</b>.
         </p>
     </section>
 
@@ -283,45 +291,59 @@
             <div class="rodape2"></div>
         </div>
     </footer>
- 
+
 
 
 </body>
 
 </html>
-    
-    <script>
-        // evento para navbar deixar de ser transparente
-        window.addEventListener("scroll", function () { // criando um evento/aviso ao js para que quando ocorra o scroll na pagina, criar a função.
-            var header = document.querySelector('.navbar') // Var 'header' criada para armazenar a class desejada q será alterada usando ponto para indicar a referencia de classe (.navbar) 
-            header.classList.toggle('rolagem', window.scrollY > 0) // chamando a variavel criada, adcionando dinamicamente uma classe nova ao arquivo html mais precisamente no header(.navbar) com o classList. Toggle indica que se a classe indicada já existir ela será removida e recriada (rolagem por exemplo). Ou seja, rolagem vai ser "adicionada/executada" sempre que a janela for scrollada no eixo Y e de posição maior que 0
-        })
 
-        function trocarDiv(){
-            if (tipnexus.style.display == "none") {
-                tipnexus.style.display = "block";
-                tiplanes.style.display = "none";
-            } else {
-                tipnexus.style.display = "none";
-                tiplanes.style.display = "block";
-            }
+<script>
+    //travar com login
+    function verificar() {
+        var idUsuario = sessionStorage.ID_USUARIO;
+        var nomeUsuario = sessionStorage.NOME_USUARIO;
+
+        if (idUsuario >= 0) {
+            cadastroLogin.innerHTML = `<a href="./testando games/jogo2.html"> JOGUE AGORA </a>`
+        } else {
+            cadastroLogin.innerHTML = `<ul class="nav-itens"><li><a href="login.html">LOGIN</a></li><li><a href="cadastro.html">REGISTRE-SE</a></li>`
         }
-
-        // evento para trocar a div na setinha
-        // var seta = document.querySelector(".seta");
-        // var tipNexus = document.querySelector(".tipnexus");
-        // var tipLanes = document.querySelector(".tiplanes");
-
-        // seta.addEventListener("click", function(){
-        //     if (tipNexus.style.display === "none"){
-        //         tipNexus.style.display = "block";
-        //         tipLanes.style.display = "none";
-        //     } else {
-        //         tipNexus.style.display = "none";
-        //         tipLanes.style.display = "block";
-        //     }
-        // });
+    }
+    verificar()
 
 
+    // evento para navbar deixar de ser transparente
+    window.addEventListener("scroll", function () { // criando um evento/aviso ao js para que quando ocorra o scroll na pagina, criar a função.
+        var header = document.querySelector('.navbar') // Var 'header' criada para armazenar a class desejada q será alterada usando ponto para indicar a referencia de classe (.navbar) 
+        header.classList.toggle('rolagem', window.scrollY > 0) // chamando a variavel criada, adcionando dinamicamente uma classe nova ao arquivo html mais precisamente no header(.navbar) com o classList. Toggle indica que se a classe indicada já existir ela será removida e recriada (rolagem por exemplo). Ou seja, rolagem vai ser "adicionada/executada" sempre que a janela for scrollada no eixo Y e de posição maior que 0
+    })
 
-    </script>
+    function trocarDiv() {
+        if (tipnexus.style.display == "none") {
+            tipnexus.style.display = "block";
+            tiplanes.style.display = "none";
+        } else {
+            tipnexus.style.display = "none";
+            tiplanes.style.display = "block";
+        }
+    }
+
+    // evento para trocar a div na setinha
+    // var seta = document.querySelector(".seta");
+    // var tipNexus = document.querySelector(".tipnexus");
+    // var tipLanes = document.querySelector(".tiplanes");
+
+    // seta.addEventListener("click", function(){
+    //     if (tipNexus.style.display === "none"){
+    //         tipNexus.style.display = "block";
+    //         tipLanes.style.display = "none";
+    //     } else {
+    //         tipNexus.style.display = "none";
+    //         tipLanes.style.display = "block";
+    //     }
+    // });
+
+
+
+</script>

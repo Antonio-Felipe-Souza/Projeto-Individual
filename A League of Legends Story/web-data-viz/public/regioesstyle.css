@@ -10,7 +10,7 @@
 }
 
 body {
-    cursor: url('../assets/normal.cur'), auto;
+    cursor: url('assets/normal.cur'), auto;
     font-family: 'Beaufort';
     word-wrap: break-word;
     overflow-x: hidden; /*ESCONDER DEPOIS*/
@@ -19,7 +19,7 @@ body {
 }
 
 a {
-    cursor: url('../assets/link.cur'), auto;
+    cursor: url('assets/link.cur'), auto;
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -275,6 +275,11 @@ section {
     text-decoration: underline;
     font-size: 25px;
     transition: color 0.3s;
+    cursor: url(assets/link.cur), auto;
+}
+
+.textos a:hover {
+    transform: scale(1.1);
 }
 
 .textos6 p:last-child {
@@ -444,12 +449,30 @@ footer .rodape1 {
     border: 4px solid #ffffff63; 
     transition: width 1s ease;
     border-radius: 15px;
+    position: relative;
 }
+
 
 .perso:hover {
     width: 25%; /* 350px anteriormente */
     /* scale: 1.2;  PENSAR DEPOIS*/
 }
+
+.perso h1{
+    opacity: 0;
+    color: #c89c3c;
+    text-shadow: 0px 4px 8px rgb(12, 11, 11);
+    transition: opacity 1s ease;
+    position: absolute;
+    top: 75%;
+    left: 10%;
+    font-size: 30px;
+}
+
+.perso:hover h1{
+    opacity: 1;
+}
+
 
 /* AREA VOLTADA PARA FRELJORD */
 
@@ -1370,3 +1393,21 @@ footer .rodape1 {
     transition: 5s;
     z-index: 10;
 } */
+
+
+/* .perso h3 {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    top:80%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    pointer-events: none; 
+} */
+
+
+
+.perso:hover h3 {
+    opacity: 1;
+}

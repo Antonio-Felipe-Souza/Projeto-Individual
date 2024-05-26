@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto individual | League of Legends</title>
+    <title>Acerte a rota | League of Legends</title>
 
     <link rel="stylesheet" href="./joguim.css">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/LoL icon.png">
@@ -20,7 +20,9 @@
                 <div class="logo">
                     <a href="#topo"><img src="../assets/LoL icon.png" alt="LoL logo"></a>
                 </div>
+            <!-- fim do logo -->
 
+            <!-- atalhos da navbar -->
                 <div class="links">
                     <ul class="nav-itens">
                         <!-- <li><a href="#topo">INÍCIO</a></li> -->
@@ -32,7 +34,7 @@
                 </div>
             </div>
 
-            <!-- lado direito do header -->
+            <!-- lado direito da navbar -->
             <div class="direita">
                 <div class="links">
                     <ul class="nav-itens">
@@ -45,86 +47,128 @@
     </header>
     <!-- Header fim -->
 
+
     <section class="imgs img2" id="comoJogar">
-
-        <!-- SETA PARA DIV SECUNDARIA QUE ESTÁ ESCONDIDA -->
-        <a onclick="trocarDiv()">
-            <div class="seta"></div>
-        </a>
-
-        <!-- <div class="tips tipnexus" id="tipnexus">
-            <h1>Nexus</h1>
-            <p><span style="color: #0BC6E3;">Azul</span>: localizado em sua base, é a principal estrutura que deve ser defendida.</p>
-            <p><span style="color: #BF302A">Vermelho</span>: Avance pelo mapa e cause sua destruição para vencer o jogo!</p>
-        </div> -->
-
-        <!-- DIV SECUNDARIA QUE ESTÁ ESCONDIDA PARA TESTAR -->
-        <!-- <div class="tips tiplanes" id="tiplanes" style="display: none;">
-            <h1>teste</h1>
-            <p><span style="color: #0BC6E3;">Azul</span>: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.</p>
-            <p><span style="color: #BF302A">Vermelho</span>: BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB</p>
-        </div> -->
 
         <section>
             <div id="div_top" class="lane top">
                 <!-- mask top lane -->
             </div>
-            <div class="lane mid">
+            <div id="div_mid" class="lane mid">
                 <!-- mask mid lane -->
             </div>
-            <div class="lane bot">
+            <div id="div_bot" class="lane bot">
                 <!-- mask bot lane -->
             </div>
         </section>
 
         <section class="lateralChamps">
             <div class="champs">
-                <div ondrag="testar(event)" class="foto champ1" id="div_1" draggable="true">A</div> 
-                <div class="foto champ2" id="div_2" draggable="true">BB</div>
-                <div class="foto champ3" id="div_3" draggable="true">CCC</div>
-                <div class="foto champ4" id="div_4" draggable="true">DDDD</div>
+                <div ondragend="testar(event)" class="foto champ1" id="div_1" draggable="true">A</div> 
+                <div ondragend="testar(event)" class="foto champ2" id="div_2" draggable="true">BB</div>
+                <div ondragend="testar(event)" class="foto champ3" id="div_3" draggable="true">CCC</div>
+                <div ondragend="testar(event)" class="foto champ4" id="div_4" draggable="true">DDDD</div>
             </div>
         </section>
 
         <div id="teste"></div>
 
-    </section>
+    </section>    
+</body>
 
 <script> 
     var champsTop = [
-    '../assets/PERSONAGENS/Freljord/Gnar_0.jpg',
-    '../assets/PERSONAGENS/Demacia/Garen_0.jpg',
     '../assets/PERSONAGENS/Bandopolis/Teemo_0.jpg',
     '../assets/PERSONAGENS/IlhaSombras/Gwen_0.jpg',
-    '../assets/PERSONAGENS/Targon/Pantheon_0.jpg'
+    '../assets/PERSONAGENS/Targon/Pantheon_0.jpg',
+    '../assets/PERSONAGENS/Demacia/Fiora_0.jpg',
+    '../assets/PERSONAGENS/Freljord/Volibear_0.jpg',
+    '../assets/PERSONAGENS/Freljord/Ornn_0.jpg',
+    '../assets/PERSONAGENS/IlhaSombras/Yorick_0.jpg',
+    '../assets/PERSONAGENS/Ionia/Irelia_0.jpg',
+    '../assets/PERSONAGENS/Ixtal/Malphite_0.jpg',
+    '../assets/PERSONAGENS/Noxus/Darius_0.jpg',
+    '../assets/PERSONAGENS/Noxus/Sion_0.jpg',
+    '../assets/PERSONAGENS/Shurima/KSante_0.jpg',
+    '../assets/PERSONAGENS/Shurima/Renekton_0.jpg',
+    '../assets/PERSONAGENS/Targon/Pantheon_0.jpg',
+    '../assets/PERSONAGENS/Vazio/Chogath_0.jpg',
+    '../assets/PERSONAGENS/Zaun/DrMundo_0.jpg',
+    '../assets/PERSONAGENS/Zaun/Urgot_0.jpg',
+    '../assets/PERSONAGENS/Zaun/Warwick_0.jpg'
+    ];
+
+    var champsMid = [
+    '../assets/PERSONAGENS/AguasSentina/TwistedFate_0.jpg',
+    '../assets/PERSONAGENS/Bandopolis/Veigar_0.jpg',
+    '../assets/PERSONAGENS/Demacia/Lux_0.jpg',
+    '../assets/PERSONAGENS/Demacia/Sylas_0.jpg',
+    '../assets/PERSONAGENS/Demacia/Galio_0.jpg',
+    '../assets/PERSONAGENS/Freljord/Lissandra_0.jpg',
+    '../assets/PERSONAGENS/Ionia/Ahri_0.jpg',
+    '../assets/PERSONAGENS/Ionia/Akali_0.jpg',
+    '../assets/PERSONAGENS/Ionia/Yone_0.jpg',
+    '../assets/PERSONAGENS/Ionia/Yasuo_0.jpg',
+    '../assets/PERSONAGENS/Ixtal/Neeko_0.jpg',
+    '../assets/PERSONAGENS/Noxus/Leblanc_0.jpg',
+    '../assets/PERSONAGENS/Noxus/Katarina_0.jpg',
+    '../assets/PERSONAGENS/Piltover/Viktor_0.jpg',
+    '../assets/PERSONAGENS/Piltover/Orianna_0.jpg',
+    '../assets/PERSONAGENS/Shurima/Azir_0.jpg',
+    '../assets/PERSONAGENS/Shurima/Taliyah_0.jpg',
+    '../assets/PERSONAGENS/Targon/AurelionSol_0.jpg',
+    '../assets/PERSONAGENS/Targon/Zoe_0.jpg',
+    '../assets/PERSONAGENS/Vazio/Malzahar_0.jpg',
+    '../assets/PERSONAGENS/Vazio/Velkoz_0.jpg',
+    '../assets/PERSONAGENS/Zaun/Ekko_0.jpg',
+    '../assets/PERSONAGENS/Zaun/Ziggs_0.jpg'
     ];
 
     var aleatorio = ''
-    var personagemAtual = ''
+    var personagemAtualTop = ''
+    var personagemAtualMid = ''
 
     // função para gerar um personagem aleatório
     function gerar() {
         teste.innerHTML = ``;
+
+        // Top
         var lista_champsTop = champsTop.length - 1;
         aleatorio = (Math.random() * (lista_champsTop)).toFixed();
-        personagemAtual = champsTop[aleatorio];
+        personagemAtualTop = champsTop[aleatorio];
 
-        console.log(aleatorio);
-        console.log(personagemAtual);
-        div_1.style.backgroundImage = `url('${personagemAtual}')`
+        // console.log(aleatorio);
+        // console.log(personagemAtualTop);
+        div_1.style.backgroundImage = `url('${personagemAtualTop}')`
         div_1.style.backgroundSize = 'cover';
         div_1.style.backgroundPosition = 'center';
+
+        // Mid
+        var lista_champsMid = champsMid.length - 1;
+        aleatorio = (Math.random() * (lista_champsMid)).toFixed();
+        personagemAtualMid = champsMid[aleatorio];
+
+        // console.log(aleatorio);
+        // console.log(personagemAtualMid);
+        div_2.style.backgroundImage = `url('${personagemAtualMid}')`
+        div_2.style.backgroundSize = 'cover';
+        div_2.style.backgroundPosition = 'center';
+
     }
 
+    
     // jp
     function testar(event) {
+        //notebook XTOP = 517 a 605 - YTOP = 178 a 266 
+        //PC XTOP = 647 a 647+88 - YTOP = 226 a 226+88
         var largDiv = 88;
         var altDiv = 88;
-        var xTopMin = 517;
-        var xTopMax = 517 + altDiv;
 
-        var yTopMin = 178;
-        var yTopMax = 178 + largDiv;
+        var xTopMin = 517; //647
+        var xTopMax = 517 + largDiv;
+
+        var yTopMin = 178; //226
+        var yTopMax = 178 + altDiv;
 
         //posição do ponteiro do mouse
         var Xmouse = event.pageX
@@ -132,52 +176,37 @@
 
         //se a posição do ponteiro estiver no quadrado = quadrado fica azul
         if (/*Eixo X*/(Xmouse >= xTopMin && Xmouse <= xTopMax) &&/*Eixo Y*/(Ymouse >= yTopMin && Ymouse <= yTopMax)){
-            div_top.style.backgroundImage = `url('${personagemAtual}')`; //verificar como eu trabalho as dimensões da imagem
+            div_top.style.backgroundImage = `url('${personagemAtualTop}')`; //verificar como eu trabalho as dimensões da imagem
             div_top.style.backgroundSize = 'cover';
             div_top.style.backgroundPosition = 'center';
-            // div_top.style.backgroundRepeat = 'no-repeat';
         } else { //se tiver fora da posição, fica v
             div_top.style.backgroundColor = 'red'
         }
 
+
+        //mid
+        var xMidMin = 778; //973 pc
+        var xMidMax = 778 + largDiv;
+
+        var yMidMin = 286; //360 pc
+        var yMidMax = 286 + altDiv;
+
+
+        if ((Xmouse >= xMidMin && Xmouse <= xMidMax) &&/*Eixo Y*/(Ymouse >= yMidMin && Ymouse <= yMidMax)){
+            div_mid.style.backgroundImage = `url('${personagemAtualMid}')`; //verificar como eu trabalho as dimensões da imagem
+            div_mid.style.backgroundSize = 'cover';
+            div_mid.style.backgroundPosition = 'center';
+        }
+
+        //consoles de verificação
         // console.log(event);
-        console.log("X: " + Xmouse)
-        console.log("Y: " + Ymouse)
+        // console.log("X: " + Xmouse) X do mouse
+        // console.log("Y: " + Ymouse) Y do mouse
 
         //div_top.getBoundingClientRect()
         //npm run dev
     }
-</script>
 
-</body>
+</script>
 
 </html>
-
-<script>
-
-    // var columns = document.querySelectorAll(".champs");
-    // document.addEventListener("dragStart", (e) => {
-    //     e.target.classList.add("dragging");
-    // });
-
-    // document.addEventListener("dragEnd", (e) => {
-    //     e.target.classList.add("dragging");
-    // });
-
-    // columns.forEach((foto) => {
-    //     foto.addEventListener("dragover", (e) => {
-    //         var dragging = document.querySelector(".dragging");
-    //         var applyAfter = getNewPosition(foto, e.clientY);
-    //     });
-    // });
-
-    //vetor com os personagens
-    // var personagens = ["Aatrox", "Ahri", "Akali", "Alistar", "Amumu", "Anivia", "Annie", "Aphelios", "Ashe", "Aurelion Sol", "Azir", "Bard", "Blitzcrank", "Brand", "Braum", "Caitlyn", "Camille", "Cassiopeia", "Cho'Gath", "Corki", "Darius", "Diana", "Dr. Mundo", "Draven", "Ekko", "Elise", "Evelynn", "Ezreal", "Fiddlesticks", "Fiora", "Fizz", "Galio", "Gangplank", "Garen", "Gnar", "Gragas", "Graves", "Hecarim", "Heimerdinger", "Illaoi", "Irelia", "Ivern", "Janna", "Jarvan IV", "Jax", "Jayce", "Jhin", "Jinx", "Kai'Sa", "Kalista", "Karma"];
-
-
-    
-
-    
-
-
-</script>
