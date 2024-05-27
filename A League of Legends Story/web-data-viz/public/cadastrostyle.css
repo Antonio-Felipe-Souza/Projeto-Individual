@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
 body{
-    background-image: url(../assets/Backgrounds/fundo-login.svg);
+    background-image: url(./assets/Backgrounds/fundo-login.svg);
     cursor: url(assets/normal.cur), auto;
     background-repeat: no-repeat;
     background-size: cover;

@@ -86,7 +86,7 @@
             <div class="textos">
                 <div class="btnipt">
                     <input type="text" id="ipt_resposta">
-                    <button onclick="enviar()"> ENVIAR </button>
+                    <button onclick="enviar(), inserir()"> ENVIAR </button>
                 </div>
             </div>
 
@@ -169,6 +169,7 @@
 
 
     var tiers = ['./assets/prata.png', './assets/ouro.png', './assets/platina.png', './assets/diamante.png', './assets/mestre.png', './assets/gm.png', './assets/challenger.png']
+    var nomeTier = ['Prata', 'Ouro', 'Platina', 'Diamante', 'Mestre', 'Grão-Mestre', 'Challenger'];
 
     var pdlTotal = 0;
     var indiceTiers = 0;
@@ -227,9 +228,10 @@
 
             }, 3000);
 
+            finalTemporada = nomeTier[indiceTiers];
 
             console.log('url do elo aqui' + elo)
-            console.log(finalTemporada)
+            console.log('RANK FINAL:' + finalTemporada)
 
 
             //a cada 3s oculta a div com os resultados e limpa o campo de inserção da região
@@ -254,7 +256,7 @@
 
     // verificar se há algum usuário logado
     function verificar() {
-        var idUsuario = 1;
+        var idUsuario = sessionStorage.ID_USUARIO; //alterar para sessionStorage.ID_USUARIO
         var nomeUsuario = sessionStorage.NOME_USUARIO;
 
         // se houver, o nome dele aparecerá no centro como invocador
@@ -269,6 +271,41 @@
     function redefinir() {
         sessionStorage.clear();
     }
+
+    // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+
+    function inserir() {
+    var fkUsuarioVar = sessionStorage.ID_USUARIO;
+
+    fetch("/jogo/inserir", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            eloServer: finalTemporada,
+            fkUsuarioServer: fkUsuarioVar
+        })
+    })
+    // .then(function (resposta) {
+    //     console.log("resposta: ", resposta);
+
+    //     if (resposta.ok) {
+    //         window.location = "../index.html";
+    //     } else {
+    //         return resposta.text().then(text => { throw new Error(text) });
+    //     }
+    // })
+    // .catch(function (erro) {
+    //     console.log(`#ERRO: ${erro}`);
+    // });
+}
+
+
+
+
+
 </script>
 
 </html>
