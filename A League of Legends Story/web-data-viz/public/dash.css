@@ -1,0 +1,122 @@
+@font-face {
+    /*FONTE GERAL*/
+    font-family: 'Beaufort';
+    src: url(./assets/Fonts_Package/BeaufortForLoL-OTF/BeaufortforLOL-Medium.otf);
+}
+
+@font-face {
+    font-family: 'BeaufortTitulos';
+    src: url(./assets/Fonts_Package/Spiegel-OTF/Spiegel-Regular.otf);
+}
+
+body {
+    cursor: url('assets/normal.cur'), auto;
+    font-family: 'Beaufort';
+    word-wrap: break-word;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: url('assets/link.cur'), auto;
+    color: #A09B8C;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+    color: black;
+}
+
+header .navbar {
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+    transition: .5s;
+}
+
+header .navbar .esquerda,
+header .navbar .direita {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar .logo img {
+    width: 50px;
+    height: 50px;
+}
+
+header .navbar .links {
+    display: flex;
+}
+
+header .nav-itens {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+header .navbar .nav-itens li {
+    margin: 0 15px;
+}
+
+header .navbar .nav-itens li a:hover {
+    color: #c89c3c;
+    text-shadow: 0 0 3px #c89c3ca9;
+    transition: .7s;
+}
+
+.esquerda .links {
+    margin-left: 50px;
+}
+
+.esquerda .links li:first-child {
+    margin-left: 0;
+}
+
+.direita {
+    margin-right: 60px;
+}
+
+/* HEADER FIM */
+
+#conteudoGrafico {
+    height: 92vh;
+    width: 100vw;
+    background-image: url(./assets/Backgrounds/wallpaper-dashboard-SR.png);
+    background-position: center;
+    background-size: cover;
+    /* background-color: rgb(82, 142, 165); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.graficoPai { /* fundo do chartJs */
+    background-color: rgba(36, 35, 34, 0.932);
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5%;
+    border-radius: 20px;
+    border: solid 5px rgba(0, 0, 0, 0.295);
+}
+
+#grafico1 {
+    width: 1300px;
+}

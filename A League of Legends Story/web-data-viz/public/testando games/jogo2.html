@@ -86,7 +86,7 @@
             <div class="textos">
                 <div class="btnipt">
                     <input type="text" id="ipt_resposta">
-                    <button onclick="enviar(), inserir()"> ENVIAR </button>
+                    <button onclick="enviar(), inserir(), atualizarPontos()"> ENVIAR </button>
                 </div>
             </div>
 
@@ -256,7 +256,7 @@
 
     // verificar se há algum usuário logado
     function verificar() {
-        var idUsuario = sessionStorage.ID_USUARIO; //alterar para sessionStorage.ID_USUARIO
+        var idUsuario = 1; //alterar para sessionStorage.ID_USUARIO
         var nomeUsuario = sessionStorage.NOME_USUARIO;
 
         // se houver, o nome dele aparecerá no centro como invocador
@@ -274,7 +274,7 @@
 
     // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
-
+//FUNÇÃO FUNCIONANDO, INSERINDO O ELO FINAL NO BANCO DE DADOS NA TABELA PARTIDA
     function inserir() {
     var fkUsuarioVar = sessionStorage.ID_USUARIO;
 
@@ -284,6 +284,7 @@
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
+            pontuacaoServer: pdlTotal,
             eloServer: finalTemporada,
             fkUsuarioServer: fkUsuarioVar
         })
@@ -300,6 +301,22 @@
     // .catch(function (erro) {
     //     console.log(`#ERRO: ${erro}`);
     // });
+}
+
+//TESTANDO
+function atualizarPontos() {
+    var fkUsuarioVar = sessionStorage.ID_USUARIO;
+
+    fetch("/jogo/atualizarPontos", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            pontuacaoServer: pdlTotal,
+            fkUsuarioServer: fkUsuarioVar
+        })
+    })
 }
 
 

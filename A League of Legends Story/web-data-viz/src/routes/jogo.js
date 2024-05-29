@@ -8,4 +8,8 @@ router.post("/inserir", function (req, res) {
     jogoController.inserir(req, res);
 });
 
+router.post("/atualizarPontos", function (req, res) {
+    jogoController.atualizarPontos(req, res);
+});
+
 module.exports = router;
