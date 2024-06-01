@@ -251,7 +251,7 @@ button:hover{
 
 #acertou{
     z-index: 101;
-    background-image: url(../assets/teemo.png);
+    background-image: url(../assets/lux.png);
     width: 27%;
     height: 70%;
     background-repeat: no-repeat;
@@ -260,4 +260,36 @@ button:hover{
     left: 742px;
     justify-content: space-around;
     display: flex;
+}
+
+#fundoErrou{
+    width: 100vw;
+    height: 93vh;
+    background-color: rgba(12, 11, 11, 0.877);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    color: #A09B8C;
+    text-align: center;
+}
+
+#errou{
+    z-index: 101;
+    background-image: url(../assets/sylas.png);
+    width: 27%;
+    height: 70%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 206px;
+    left: 742px;
+    justify-content: space-around;
+    display: flex;
+}
+
+#pontosD {
+    font-family: 'Beaufort';
+    font-weight: 600;
+    font-size: 35px;
+    margin-top: -32px;
 }

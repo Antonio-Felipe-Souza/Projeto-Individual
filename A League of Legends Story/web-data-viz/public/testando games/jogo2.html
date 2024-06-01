@@ -47,7 +47,7 @@
             <div class="direita">
                 <div class="links">
                     <ul class="nav-itens">
-                        <li><a href="">RESULTADOS</a></li>
+                        <li><a href="../dashboard.html">RESULTADOS</a></li>
                         <li><a onclick="redefinir()" href="../index.html">SAIR</a></li>
                     </ul>
                 </div>
@@ -68,9 +68,17 @@
         <!-- aqui vai aparecer o teemo -->
         <div id="fundoAcertou" style="display: none;">
             <div id="acertou">
-                <!-- <p>Teste acertou</p> -->
 
                 <div id="pontos"><!-- PDL GANHO (ALEATÓRIO )IRÁ APARECER AQUI --></div>
+
+            </div>
+
+        </div>
+
+        <div id="fundoErrou" style="display: none;">
+            <div id="errou">
+
+                <div id="pontosD"><!-- PDL GANHO (ALEATÓRIO )IRÁ APARECER AQUI --></div>
 
             </div>
         </div>
@@ -86,7 +94,7 @@
             <div class="textos">
                 <div class="btnipt">
                     <input type="text" id="ipt_resposta">
-                    <button onclick="enviar(), inserir(), atualizarPontos()"> ENVIAR </button>
+                    <button onclick="enviar(), inserir()"> ENVIAR </button>
                 </div>
             </div>
 
@@ -146,16 +154,16 @@
         { imagem: '../assets/PERSONAGENS/Zaun/Ziggs_0.jpg', regiao: 'Zaun' }
     ];
 
-    // var aleatorio = ''
+    //AQUI SERÃO ARMAZENADOS OS VALORES PUXADOS DO VETOR
     var imagemAtual = ''
     var regiaoAtual = ''
 
-    // função para gerar um personagem aleatório
+    // FUNÇÃO PARA SELECIONAR UM ITEM ALEATÓRIO DO VETOR... TANTO PARA IMAGEM QUANTO PARA REGIÃO
     function gerar() {
         var total_de_campeoes = campeoes.length; //pegar o total de indexs que o vetor/json contém
         var aleatorio = (Math.random() * (total_de_campeoes)).toFixed(); //gerar um número aleatório que irá até o tamanho do vetor acima e arredonda o número em 0 casas - salva numa variavel global
-        imagemAtual = campeoes[aleatorio].imagem; //pega do vetor (campeoes) uma posição/indice aleatório, 'consumindo' somente a .imagem daquele indice
-        regiaoAtual = campeoes[aleatorio].regiao; //pega do vetor (campeoes) uma posição/indice aleatório, 'consumindo' somente a .regiao daquele indice
+        imagemAtual = campeoes[aleatorio].imagem; //pega do vetor (campeoes) num indice aleatório, 'consumindo' somente a .imagem daquele indice
+        regiaoAtual = campeoes[aleatorio].regiao; //pega do vetor (campeoes) num indice aleatório, 'consumindo' somente a .regiao daquele indice
 
         //Imagem de fundo do site
         imgfundo.style.backgroundImage = `url('${imagemAtual}')`
@@ -173,30 +181,52 @@
 
     var pdlTotal = 0;
     var indiceTiers = 0;
-    var finalTemporada = './assets/prata.png';
+    var finalTemporada = 'Prata';
     var elo = tiers[indiceTiers];
+    var pdlGanhos = 0;
+    var rodadas = 0;
 
     function enviar() {
         var resposta = ipt_resposta.value; //resposta do usuário na input
 
-        //se a resposta do usuário estiver igual a região (salva na var global) selecionada no vetor, acontece as seguintes ações:
+        //se a resposta do usuário estiver igual a região (que está salva na var global 'regiaoAtual') selecionada no vetor, acontece as seguintes ações:
         if (resposta.toLowerCase() == regiaoAtual.toLowerCase()) {
-            // alert('VITORIA')
 
-            // gerando um número aleatório de 20 a 30 que será dado como pdl se acertar
-            var pdlGanhos = Number((Math.random() * 10 + 30).toFixed());
+            // gerando um número aleatório de 30 a 40 que será dado como pdl se acertar
+            pdlGanhos = Number((Math.random() * 10 + 30).toFixed());
 
             //somando os pdls conquistados numa var global
             pdlTotal += pdlGanhos;
 
             //se o total de pdl exceder 100 - pulará para um novo tier com os pdl zerados
             if (pdlTotal >= 100 && indiceTiers < tiers.length - 1) {
-                pdlTotal = 0; // Reseta o pdlTotal // poderia ser pdlTotal = pdlTotal-100
-                
+
                 // se entrar na condição anterior... e se o indice estiver abaixo do tamanho do vetor de tiers
                 if (indiceTiers < tiers.length - 1) {
-                    indiceTiers++; // aumenta o índice do tier se ainda tiver tiers disponíveis
-                    elo = tiers[indiceTiers]; // atualiza o elo para o próximo tier
+                    if (pdlTotal < 100) {
+                        elo = tiers[0];
+                        finalTemporada = nomeTier[0]
+                    } else if (pdlTotal < 200) {
+                        elo = tiers[1]
+                        finalTemporada = nomeTier[1]
+                    } else if (pdlTotal < 300) {
+                        elo = tiers[2]
+                        finalTemporada = nomeTier[2]
+                    } else if (pdlTotal < 400) {
+                        elo = tiers[3]
+                        finalTemporada = nomeTier[3]
+                    } else if (pdlTotal < 500) {
+                        elo = tiers[4]
+                        finalTemporada = nomeTier[4]
+                    } else if (pdlTotal < 600) {
+                        elo = tiers[5]
+                        finalTemporada = nomeTier[5]
+                    } else {
+                        elo = tiers[6]
+                        finalTemporada = nomeTier[6]
+                    }
+                    // indiceTiers++; // aumenta o índice do tier se ainda tiver tiers disponíveis
+                    // elo = tiers[indiceTiers]; // atualiza o elo para o próximo tier
                 } else {
                     alert('Você alcançou o elo mais alto!');
                     elo = tiers[tiers.length - 1]; // mantem no challenger
@@ -205,8 +235,8 @@
 
             //resultado em caso de acerto
             document.getElementById('fundoAcertou').style.display = 'block';
-            
-            if(pdlTotal == 0){
+
+            if (Math.floor(pdlTotal / 100) > Math.floor((pdlTotal - pdlGanhos) / 100)) {
                 document.getElementById('pontos').innerHTML = `+ ${pdlGanhos} PDLs <br> Parabéns, você subiu de Tier!`;
             } else {
                 document.getElementById('pontos').innerHTML = `+ ${pdlGanhos} PDLs`;
@@ -215,7 +245,7 @@
             //alterando o conteudo da div inserindo o texto de pdls ganhos e do total
             document.getElementById('pontos2').innerHTML = `Total: ${pdlTotal} PDLs`;
 
-            // a cada 3s faz as seguintes coisas
+            // a cada 1s faz as seguintes coisas
             setTimeout(() => {
                 //ocultando o teemo de acerto
                 document.getElementById('fundoAcertou').style.display = 'none';
@@ -226,26 +256,66 @@
                 //transformando a o fundo numa imagem do elo
                 document.getElementById('pdl').style.backgroundImage = `url('${elo}')`;
 
+            }, 1100);
+
+            setTimeout(() => {
+                //torna o display de resultado oculto
+                document.getElementById('resultado').style.display = 'none';
             }, 3000);
-
-            finalTemporada = nomeTier[indiceTiers];
-
-            console.log('url do elo aqui' + elo)
-            console.log('RANK FINAL:' + finalTemporada)
-
 
             //a cada 3s oculta a div com os resultados e limpa o campo de inserção da região
             setTimeout(() => {
                 gerar(); //chama novamente a função de gerar outra imagem aleatoria
                 limparinput(); //chama a função de limpar a input com a resposta anterior
+                atualizarPontos();
 
-                //torna o display de resultado oculto
-                document.getElementById('resultado').style.display = 'none';
 
-            }, 6300);
+            }, 500);
+
+            rodadas++
 
         } else {
-            alert('DERROTA')
+            if (pdlTotal > 15) {
+
+                pdlGanhos = Number((Math.random() * 5 + 10).toFixed());
+
+                pdlTotal -= pdlGanhos;
+
+                //resultado em caso de acerto
+                document.getElementById('fundoErrou').style.display = 'block';
+
+                document.getElementById('pontosD').innerHTML = `- ${pdlGanhos} PDLs`;
+
+                //alterando o conteudo da div inserindo o texto de pdls ganhos e do total
+                document.getElementById('pontos2').innerHTML = `Total: ${pdlTotal} PDLs`;
+
+                // a cada 1s faz as seguintes coisas
+                setTimeout(() => {
+                    //ocultando o teemo de acerto
+                    document.getElementById('fundoErrou').style.display = 'none';
+
+                    // exibindo a div de resultado com o elo
+                    document.getElementById('resultado').style.display = 'block';
+
+                    //transformando a o fundo numa imagem do elo
+                    document.getElementById('pdl').style.backgroundImage = `url('${elo}')`;
+
+                }, 1100);
+
+                setTimeout(() => {
+                    //torna o display de resultado oculto
+                    document.getElementById('resultado').style.display = 'none';
+                }, 3000);
+
+                //a cada 3s oculta a div com os resultados e limpa o campo de inserção da região
+                setTimeout(() => {
+                    gerar(); //chama novamente a função de gerar outra imagem aleatoria
+                    limparinput(); //chama a função de limpar a input com a resposta anterior
+                    atualizarPontos();
+
+                }, 500);
+            }
+            rodadas++
         }
     }
 
@@ -256,12 +326,12 @@
 
     // verificar se há algum usuário logado
     function verificar() {
-        var idUsuario = 1; //alterar para sessionStorage.ID_USUARIO
+        var idJogador = 1;
         var nomeUsuario = sessionStorage.NOME_USUARIO;
 
         // se houver, o nome dele aparecerá no centro como invocador
-        if (idUsuario >= 0) {
-            centro.innerHTML = `<ul class="nav-itens"><li><a>INVOCADOR: ${nomeUsuario}</a></li></ul>`
+        if (idJogador >= 0) {
+            centro.innerHTML = `<ul class="nav-itens"><li><a>INVOCADOR: ${nomeUsuario.toUpperCase()}</a></li></ul>`
         } else { //senão, será redirecionado ao index (só joga com login)
             window.location = '../index.html'
         }
@@ -270,59 +340,46 @@
     //função que ao clicar em sair, limpa o id armazenado
     function redefinir() {
         sessionStorage.clear();
+        var rodadas = 0;
+        console.log(rodadas);
     }
 
     // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
-//FUNÇÃO FUNCIONANDO, INSERINDO O ELO FINAL NO BANCO DE DADOS NA TABELA PARTIDA
+    //FUNÇÃO FUNCIONANDO, INSERINDO O ELO FINAL NO BANCO DE DADOS NA TABELA PARTIDA
     function inserir() {
-    var fkUsuarioVar = sessionStorage.ID_USUARIO;
+        var fkJogadorVar = sessionStorage.ID_USUARIO;
 
-    fetch("/jogo/inserir", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            pontuacaoServer: pdlTotal,
-            eloServer: finalTemporada,
-            fkUsuarioServer: fkUsuarioVar
+        fetch("/jogo/inserir", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                pontuacaoServer: pdlGanhos,
+                fkJogadorServer: fkJogadorVar,
+                rodadasServer: rodadas
+            })
         })
-    })
-    // .then(function (resposta) {
-    //     console.log("resposta: ", resposta);
+    }
 
-    //     if (resposta.ok) {
-    //         window.location = "../index.html";
-    //     } else {
-    //         return resposta.text().then(text => { throw new Error(text) });
-    //     }
-    // })
-    // .catch(function (erro) {
-    //     console.log(`#ERRO: ${erro}`);
-    // });
-}
 
-//TESTANDO
-function atualizarPontos() {
-    var fkUsuarioVar = sessionStorage.ID_USUARIO;
+    function atualizarPontos() {
+        var fkJogadorVar = sessionStorage.ID_USUARIO;
 
-    fetch("/jogo/atualizarPontos", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            pontuacaoServer: pdlTotal,
-            fkUsuarioServer: fkUsuarioVar
+        fetch("/jogo/atualizarPontos", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                pontosFinaisServer: pdlTotal,
+                fkJogadorServer: fkJogadorVar,
+                eloServer: finalTemporada,
+                rodadasServer: rodadas
+            })
         })
-    })
-}
-
-
-
-
-
+    }
 </script>
 
 </html>

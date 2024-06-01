@@ -25,18 +25,36 @@
 
                 <div class="links">
                     <ul class="nav-itens">
-                        <li><a href="./index.html">O JOGO</a></li>
-                        <li><a href="#map">MAPA</a></li>
-                        <!-- <li><a href="#riot">RIOT GAMES</a></li> -->
-                        <!-- <li><a href="#tituloDiferente">VALORES E PRINCÍPIOS</a></li> -->
-                        <!-- <li><a href="">DIVIRTA-SE</a></li> -->
+                        <li><a href="./index.html">SOBRE O JOGO</a></li>
+
+                        <li class="dropdown">
+                            <a href="#topo">SOBRE O UNIVERSO</a>
+
+                            <div class="dropdown-menu">
+                                <a href="#map">MAPA DAS REGIÕES</a>
+                                <a href="#freljord">FRELJORD</a>
+                                <a href="#demacia">DEMACIA</a>
+                                <a href="#noxus">NOXUS</a>
+                                <a href="#ionia">IONIA</a>
+                                <a href="#piltover">PILTOVER</a>
+                                <a href="#zaun">ZAUN</a>
+                                <a href="#aguasdesentina">ÁGUAS DE SENTINA</a>
+                                <a href="#ixtal">IXTAL</a>
+                                <a href="#shurima">SHURIMA</a>
+                                <a href="#targon">TARGON</a>
+                                <a href="#ilhadassombras">ILHA DAS SOMBRAS</a>
+                                <a href="#vazio">VAZIO</a>
+                                <a href="#bandópolis">BANDÓPOLIS</a>
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
             </div>
 
             <!-- lado direito do header -->
             <div class="direita">
-                <div class="links">
+                <div class="links" id="cadastroLogin">
                     <ul class="nav-itens">
                         <li><a href="login.html">LOGIN</a></li>
                         <li><a href="cadastro.html">REGISTRE-SE</a></li>
@@ -889,6 +907,19 @@
 </html>
 
 <script>
+    //travar com login
+    function verificar() {
+        var idJogador = sessionStorage.ID_USUARIO;
+        var nomeUsuario = sessionStorage.NOME_USUARIO;
+
+        if (idJogador >= 0) {
+            cadastroLogin.innerHTML = `<a href="./testando games/jogo2.html"> JOGUE AGORA </a>`
+        } else {
+            cadastroLogin.innerHTML = `<ul class="nav-itens"><li><a href="login.html">LOGIN</a></li><li><a href="cadastro.html">REGISTRE-SE</a></li>`
+        }
+    }
+    verificar()
+
     // evento para navbar deixar de ser transparente
     window.addEventListener("scroll", function () { // criando um evento/aviso ao js para que quando ocorra o scroll na pagina, criar a função.
         var header = document.querySelector('.navbar') // Var 'header' criada para armazenar a class desejada q será alterada usando ponto para indicar a referencia de classe (.navbar) 

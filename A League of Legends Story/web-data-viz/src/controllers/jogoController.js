@@ -2,10 +2,11 @@ var jogoModel = require("../models/jogoModel");
 
 function inserir(req,res){
     var pontuacao = req.body.pontuacaoServer;
-    var eloFinal = req.body.eloServer;
-    var fkUsuario = req.body.fkUsuarioServer;
+    var fkJogador = req.body.fkJogadorServer;
+    var rodadasServer = req.body.rodadasServer;
 
-    jogoModel.inserir(pontuacao, eloFinal, fkUsuario)
+
+    jogoModel.inserir(pontuacao, fkJogador, rodadasServer)
     .then(
         function (resultado) {
             res.json(resultado);
@@ -24,10 +25,11 @@ function inserir(req,res){
 }
 
 function atualizarPontos(req,res){
-    var pontuacao = req.body.pontuacaoServer;
-    var fkUsuario = req.body.fkUsuarioServer;
+    var pontosFinaisServer = req.body.pontosFinaisServer;
+    var eloServer = req.body.eloServer;
+    var rodadasServer = req.body.rodadasServer;
 
-    jogoModel.atualizarPontos(pontuacao, fkUsuario)
+    jogoModel.atualizarPontos(pontosFinaisServer, eloServer, rodadasServer)
     .then(
         function (resultado) {
             res.json(resultado);

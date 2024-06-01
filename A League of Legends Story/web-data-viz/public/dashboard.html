@@ -15,7 +15,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/LoL icon.png">
 </head>
 
-<body>
+<body onload="exibirGrafico()">
     <!-- Header inicio -->
     <header>
         <nav class="navbar">
@@ -46,54 +46,105 @@
     </header>
     <!-- Header fim -->
 
-    <!-- grafico -->
+
+    <!-- CHARTS -->
     <div id="conteudoGrafico">
         <div class="graficoPai">
-            <div>
-                <canvas id="grafico1"></canvas>
-            </div>
+
+            <div id="grafico"> <!-- GRÁFICO CONSUMIRÁ ESSA DIV --> </div>
+
         </div>
     </div>
-    <!-- fim do grafico -->
-
-
 
 </body>
 
 </html>
 
+
+
 <script>
 
-    //AQUI ESTÁ O GRÁFICO PADRÃO USITLIZANDO O CHART.JS E ALTERANDO NA DIV COM ID GRAFICO1
-    const ctx1 = document.getElementById('grafico1');
+var nomeUsuario = sessionStorage.NOME_USUARIO;
+var idUsuario = sessionStorage.ID_USUARIO;
 
-    new Chart(ctx1, {
-        type: 'line',
-        data: {
-            labels: ['12:00', '12:30', '13:00', '13:30', '14:00', '14:30'],
+
+
+    function exibirGrafico() {
+        document.getElementById("grafico").innerHTML +=
+
+            `<div id="graficoJogo">
+                <div class="graph">
+                    <canvas id="myChartCanvas"></canvas>
+                </div>
+            </div>`;
+
+        obterDadosGrafico();
+    }
+
+    function obterDadosGrafico(idUsuario) {
+
+        var fkJogadorVar = sessionStorage.ID_USUARIO;
+
+        fetch(`/medidas/ultimas?fkJogadorServer=${fkJogadorVar}`, { cache: 'no-store' })
+            .then(function (response) {
+                if (response.ok) {
+                    response.json().then(function (resposta) {
+                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                        resposta.reverse();
+                        plotarGrafico(resposta);
+                    });
+                } else {
+                    console.error('Nenhum dado encontrado ou erro na API');
+                }
+            })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    function plotarGrafico(resposta, idUsuario) {
+        console.log('iniciando plotagem do gráfico...');
+
+        let labels = [];
+        let dados = {
+            labels: labels,
             datasets: [{
-                label: 'PDL - Pontos de Liga',
-                data: [17, 19, 22, 18, 23, 40],
-                borderWidth: 4,
-                borderColor: '#EE7214',
-                backgroundColor: '#EE7214',
+                label: 'PDL - Pontos de liga',
+                data: [],
+                fill: false,
+                borderColor: '#c89c3c',
+                backgroundColor: '#c89c3c',
+                tension: 0.1
             }]
-        },
+        };
 
-        options: {
-            responsive: true,
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Acompanhe sua jornada',
-                    color: '#ffffff',
-                    font: {
-                        size: 24
-                    }
+        console.log('Dados recebidos para plotar o gráfico:', resposta);
+
+        for (let i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            labels.push(registro.idPartida);
+            dados.datasets[0].data.push(registro.pontosFinais);
+            // dados.datasets[1].data.push(registro.erros);
+        }
+
+        console.log('Labels:', labels);
+        console.log('Dados do Dataset:', dados.datasets);
+
+        const config = {
+            type: 'line',
+            data: dados,
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: `${nomeUsuario.toUpperCase()} - Acompanhe sua jornada`,
+                        color: '#ffffff',
+                        font: {
+                            size: 24
+                        }
+                    },
                 },
-            },
-
-            scales: {
+                scales: {
                 x: {
                     beginAtZero: true,
                     ticks: {
@@ -113,46 +164,10 @@
                     }
                 }
             },
-        },
-    });
-    // FIM DAS CONFIGURAÇÕES DO GRÁFICO
+            }
+        };
 
-
-    //MEXER NISSO
-    // function plotarGrafico(resposta) {
-    //     console.log('iniciando plotagem do gráfico...');
-
-    //     let labels = [];
-    //     let dados = {
-    //         labels: labels,
-    //         datasets: [{
-    //             label: 'Acertos',
-    //             data: [],
-    //             fill: false,
-    //             borderColor: '#97BE5A',
-    //             backgroundColor: '#97BE5A',
-    //             tension: 0.1
-    //         }]
-    //     };
-
-    //     console.log('Dados recebidos para plotar o gráfico:', resposta);
-
-    //     for (let i = 0; i < resposta.length; i++) {
-    //         var registro = resposta[i];
-    //         labels.push(registro.nomeUsuario);
-    //         dados.datasets[0].data.push(registro.acertos);
-    //         dados.datasets[1].data.push(registro.erros);
-    //     }
-
-    //     console.log('Labels:', labels);
-    //     console.log('Dados do Dataset:', dados.datasets);
-
-    //     const config = {
-    //         type: 'bar',
-    //         data: dados,
-    //     };
-
-    //     let ctx = document.getElementById('myChartCanvas').getContext('2d');
-    //     let myChart = new Chart(ctx, config);
-    // }
+        let ctx = document.getElementById('myChartCanvas').getContext('2d');
+        let myChart = new Chart(ctx, config);
+    }
 </script>

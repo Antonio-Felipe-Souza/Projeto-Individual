@@ -107,14 +107,14 @@
     }
 
     function publicar() {
-        var idUsuario = sessionStorage.ID_USUARIO;
+        var idJogador = sessionStorage.ID_USUARIO;
 
         var corpo = {
             titulo: form_postagem.titulo.value,
             descricao: form_postagem.descricao.value
         }
 
-        fetch(`/avisos/publicar/${idUsuario}`, {
+        fetch(`/avisos/publicar/${idJogador}`, {
             method: "post",
             headers: {
                 "Content-Type": "application/json"
@@ -125,7 +125,7 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
+                window.alert("Post realizado com sucesso pelo usuario de ID: " + idJogador + "!");
                 window.location = "/dashboard/mural.html";
                 limparFormulario();
                 finalizarAguardar();
