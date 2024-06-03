@@ -6,16 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
 
-  <!-- INSERI CONFORME API -->
   <script src="./js/sessao.js"></script>
-  <!-- INSERI CONFORME API -->
-
 
   <link rel="stylesheet" href="cadastrostyle.css">
-  <link rel="shortcut icon" type="image/x-icon" href="../assets/LoL icon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/LoL icon.png">
 </head>
 
-<body> <!-- onload="listar()" INSERI CONFORME API -->
+<body>
   <div class="conteudo">
     <div class="imgVoltar">
       <a href="./index.html"><img src="./assets/seta voltar.svg" alt=""></a>
@@ -25,34 +22,28 @@
     </div>
     <div class="inputsCadastro">
       <input type="text" placeholder="Usuário/Apelido" id="ipt_usuario">
-      <!-- <div id="divErroUsuario"></div> -->
-      <!-- <input type="number" placeholder="CPF" id="ipt_cpf"> -->
-      <!-- <div id="divErroCPF"></div> -->
-      <!-- <input type="number" placeholder="Telefone" id="ipt_telefone"> -->
-      <!-- <div id="divErroTelefone"></div> -->
+      <div id="divErroUsuario"></div>
+
       <input type="text" placeholder="Email" id="ipt_email">
-      <!-- <div id="divErroEmail"></div> -->
+      <div id="divErroEmail"></div>
+
       <input type="text" placeholder="Confirmar email" id="ipt_confEmail">
-      <!-- <div id="divErroEmail"></div> -->
+      <div id="divErroConfEmail"></div>
+
       <input type="password" placeholder="Senha" id="ipt_senha">
-      <!-- <div id="divErroSenha"></div> -->
+      <div id="divErroSenha"></div>
+
       <input type="password" placeholder="Confirmar senha" id="ipt_confSenha">
-      <!-- <div id="divErroSenha"></div> -->
+      <div id="divErroConfSenha"></div>
     </div>
     <div>
       <button onclick="cadastrar()" class="botaoEntrar">
-        <a href="login.html"><img src="./assets/Icons/Seta-Entrar.svg"></a>
+        <a><img src="./assets/Icons/Seta-Entrar.svg"></a>
       </button>
     </div>
     <div class="linksabaixo">
       <p>Já possui conta? <a href="./login.html">Entrar</a></p>
     </div>
-
-    <!-- INSERI CONFORME API -->
-    <!-- <div class="card_erro" id="cardErro" style="background-color: red; width: 500px; height: 500px; position: relative; display: none;">
-      <span id="mensagem_erro"></span>
-    </div> -->
-    <!-- INSERI CONFORME API -->
 
   </div>
   </div>
@@ -70,7 +61,6 @@
 
 
   function cadastrar() {
-
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
     var usuarioVar = ipt_usuario.value;
@@ -79,114 +69,80 @@
     var senhaVar = ipt_senha.value;
     var confirmacaoSenhaVar = ipt_confSenha.value;
 
+    divErroUsuario.innerHTML = "";
+    divErroEmail.innerHTML = "";
+    divErroConfEmail.innerHTML = "";
+    divErroSenha.innerHTML = "";
+    divErroConfSenha.innerHTML = "";
 
+    if (usuarioVar == "" || emailVar == "" || confirmcaoEmailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+      alert('Preencha todos os campos');
+    } 
+    
+    if (usuarioVar == "") {
+      divErroUsuario.innerHTML = `<span class="spnErro">Preencha corretamente seu usuário.</span>`;
+      return;
 
+    } else if (emailVar.length <= 5 || emailVar.indexOf('@') == -1) {
+      divErroEmail.innerHTML = `<span class="spnErro">Email inválido, verifique a quantidade de caracteres e/ou se há '@'.</span>`;
+      return;
 
-    // if (
-    //   usuario == "" ||
-    //   cpf == "" ||
-    //   telefone == "" ||
-    //   email == "" ||
-    //   confirmcaoEmail == "" ||
-    //   senha == "" ||
-    //   confirmacaoSenha == ""
-    // ) {
-    //   alert('Preencha todos os campos!')
-    //   divErroUsuario.innerHTML = `<span class="spnErro">Deve haver ao menos um @</span>`
-    //   divErroCPF.innerHTML = `<span class="spnErro">Deve haver ao menos um @</span>`
-    //   divErroTelefone.innerHTML = `<span class="spnErro">Deve haver ao menos um @</span>`
-    //   divErroEmail.innerHTML = `<span class="spnErro">Deve haver ao menos um @</span>`
-    //   divErroEmail.innerHTML = `<span class="spnErro">Deve haver ao menos um @</span>`
-    //   divErroSenha.innerHTML = `<span class="spnErro">Deve haver ao menos um @</span>`
-    //   divErroSenha.innerHTML = `<span class="spnErro">Deve haver ao menos um @</span>`
-    // } 
-    //FIM DA EDIÇÃO
+    } else if (confirmcaoEmailVar == '') {
+      divErroConfEmail.innerHTML = `<span class="spnErro">Campo vazio.</span>`;
+      return;
 
+    } else if (confirmcaoEmailVar != emailVar) {
+      divErroConfEmail.innerHTML = `<span class="spnErro">Os emails devem ser iguais.</span>`;
+      return;
 
-    //API ORIGINAL
+    } else if (senhaVar.length <= 5) {
+      divErroSenha.innerHTML = `<span class="spnErro">Insira uma senha de, no mínimo, 6 caracteres.</span>`;
+      return;
 
-    // var nomeVar = nome_input.value;
-    // var emailVar = email_input.value;
-    // var senhaVar = senha_input.value;
-    // var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    // var empresaVar = listaEmpresas.value
-    // var cpf = confirmacao_cpf_input.value
-    // if (
-    //   nomeVar == "" ||
-    //   emailVar == "" ||
-    //   senhaVar == "" ||
-    //   confirmacaoSenhaVar == "" ||
-    //   empresaVar == "" ||
-    //   cpf == ""
-    // ) {
-    //   cardErro.style.display = "block";
-    //   mensagem_erro.innerHTML =
-    //     "(Mensagem de erro para todos os campos em branco)";
+    } else if (confirmacaoSenhaVar == '') {
+      divErroConfSenha.innerHTML = `<span class="spnErro">Campo vazio.</span>`;
+      return;
 
-    //   finalizarAguardar();
-    //   return false;
-    // } else {
-    //   setInterval(sumirMensagem, 5000);
-    // }
+    } else if (confirmacaoSenhaVar != senhaVar) {
+      divErroConfSenha.innerHTML = `<span class="spnErro">As senhas devem ser iguais.</span>`;
+      return;
 
-    // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        usuarioServer: usuarioVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
+    } else {
 
-        if (resposta.ok) {
-          // cardErro.style.display = "block";
-
-          mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-          setTimeout(() => {
-            window.location = "./login.html";
-          }, "2000");
-
-          limparFormulario();
-          // finalizarAguardar();
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
-        }
+      // Enviando o valor da nova input
+      fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          usuarioServer: usuarioVar,
+          emailServer: emailVar,
+          senhaServer: senhaVar
+        }),
       })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        // finalizarAguardar();
-      });
+        .then(function (resposta) {
+          console.log("resposta: ", resposta);
 
-    return false;
+          if (resposta.ok) {
+
+            setTimeout(() => {
+              window.location = "./login.html";
+            }, "1000");
+
+            limparFormulario();
+          } else {
+            throw "Houve um erro ao tentar realizar o cadastro!";
+          }
+        })
+        .catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+        });
+
+      return false;
+    }
   }
 
-  // function listar() {
-  //   fetch("/empresas/listar", {
-  //     method: "GET",
-  //   })
-  //     .then(function (resposta) {
-  //       resposta.json().then((empresas) => {
-  //         empresas.forEach((empresa) => {
-  //           listaEmpresas.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
-  //         });
-  //       });
-  //     })
-  //     .catch(function (resposta) {
-  //       console.log(`#ERRO: ${resposta}`);
-  //     });
-  // }
-
-  // function sumirMensagem() {
-  //   cardErro.style.display = "none";
-  // }
 </script>

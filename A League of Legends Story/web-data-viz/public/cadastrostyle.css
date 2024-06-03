@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@font-face { /*FONTE GERAL*/
+    font-family: 'Beaufort';
+    src: url(./assets/Fonts_Package/BeaufortForLoL-OTF/BeaufortforLOL-Medium.otf);
+}
+
+@font-face {
+    font-family: 'BeaufortTitulos';
+    src: url(./assets/Fonts_Package/Spiegel-OTF/Spiegel-Regular.otf);
+}
 
 body{
     background-image: url(./assets/Backgrounds/fundo-login.svg);
@@ -37,8 +45,8 @@ body{
 }
 
 .tituloCadastro{
-    font-family:"Yusei Magic";
-    font-size: 30px;
+    font-family:'Beaufort';
+    font-size: 40px;
     text-align: center;
 }
 
@@ -55,15 +63,17 @@ body{
 .inputsCadastro input{
     width: 100%;
     height: 25px;
-    border: solid 1px;
+    border: none;
+    border-bottom: 2px solid #000;
     border-radius: 5px;
+    outline: none;
     background-color: #E8F0FE;
     color: #000000;
     padding-left: 12px;
     padding-top: 3px;
     padding-bottom: 3px;
     font-size: 16px; 
-    cursor: url(assets/link.cur), auto;
+    cursor: url(assets/link.cur), auto;      
 }
 
 .botaoEntrar {
@@ -72,13 +82,17 @@ body{
     background-color: #2a272799;
     border: none;
     border-radius: 10px;
-    margin-top: 22px;
+    margin-top: 45px;
     display: flex;
     align-content: center;
     justify-content: center;
     align-items: center;
     transition: 1s ease;
+}
+
+.botaoEntrar a{
     cursor: url(assets/link.cur), auto;
+
 }
 
 .botaoEntrar img{
@@ -97,7 +111,8 @@ body{
     justify-content: space-around;
     height: 50px;
     margin-top: 12px;
-    font-family:"Yusei Magic";
+    font-family:'Beaufort';
+    font-size: 22px;
 }
 
 .linksabaixo a{
@@ -112,12 +127,62 @@ body{
 }
 
 .spnErro{
-    font-family:"Yusei Magic";
-    color: red;
-    font-size: 12px;
+    font-family:'Beaufort';
+    color: rgba(255, 0, 0, 0.637);
+    font-size: 18px;
 }
 
 .erro{
     display: flex;
     flex-direction: column;
+}
+
+#divErroUsuario{
+    width: 27%;
+    height: 25px;
+    position: absolute;
+    /* background-color: aqua; */
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#divErroEmail{
+    width: 27%;
+    height: 25px;
+    position: absolute;
+    /* background-color: aqua; */
+    margin-top: 130px;
+    display: flex;
+    align-items: center;
+}
+
+#divErroConfEmail{
+    width: 27%;
+    height: 25px;
+    position: absolute;
+    /* background-color: aqua; */
+    margin-top: 217px;
+    display: flex;
+    align-items: center;
+}
+
+#divErroSenha{
+    width: 27%;
+    height: 25px;
+    position: absolute;
+    /* background-color: aqua; */
+    margin-top: 307px;
+    display: flex;
+    align-items: center;
+}
+
+#divErroConfSenha{
+    width: 27%;
+    height: 25px;
+    position: absolute;
+    /* background-color: aqua; */
+    margin-top: 395px;
+    display: flex;
+    align-items: center;
 }

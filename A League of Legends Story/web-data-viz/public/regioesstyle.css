@@ -303,21 +303,21 @@ footer .footerPai {
     padding: 0;
 }
 
-footer .rodape2 {
-    width: 50%;
-    height: 50vh;
-    background-image: url(./assets/porofeliz.png);
+footer .rodape2{
+    width: 50.5%;
+    height: 60vh;
+    background-image: url(./assets/poromaior.png);
     background-color: #DBD8D6;
     background-repeat: no-repeat;
     background-position: right;
-    background-size: contain;
+    background-size: cover;
     /* background-color: #67cce0; */
 }
 
-footer .rodape1 {
+footer .rodape1{
     width: 51%;
-    height: 50vh;
-    background-image: url(./assets/porofeliz.png);
+    height: 60vh;
+    /* background-image: url(./assets/porofeliz.png); */
     background-color: #DBD8D6;
     background-repeat: no-repeat;
     background-position: right;
@@ -1371,43 +1371,6 @@ footer .rodape1 {
 }
 /* FIM DE BANDÓPOLIS */
 
-
-
-
-
-
-/* USAR DEPOIS PARA QUE NO MAPA APAREÇA UM CARD SOBRE A REGIÃO
-.freljord:hover::after{
-    content: "Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top Freljord é top ";
-    display: block;
-    position: absolute;
-    top: -100%;
-    right: 150%;
-    margin-left: 0px;
-    background-color: #fff;
-    color: black;
-    padding: 5px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    width: 120px;
-    transition: 5s;
-    z-index: 10;
-} */
-
-
-/* .perso h3 {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    position: absolute;
-    top:80%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    pointer-events: none; 
-} */
-
-
-
 .perso:hover h3 {
     opacity: 1;
 }
@@ -1431,4 +1394,63 @@ footer .rodape1 {
 
 .dropdown:hover .dropdown-menu{
     display: block;
+}
+
+.sobreMim{
+    position: absolute;
+    width: 15%;
+    height: 45%;
+    margin-left: -1430px;
+    margin-top: 70px;
+    background-image: url(./assets/eu.jpeg);
+    background-position: center;
+    background-position-x: -25px;
+    background-size: cover;
+    border: solid 5px #81807fe1;
+    border-radius: 50%;
+}
+
+.sobreMim p{
+    position: absolute;
+    margin-left: 350px;
+    margin-top: 30px;
+    width: 1000px;
+    font-family: 'Beaufort';
+    font-size: 25px;
+}
+
+.sobreMim h1{
+    position: absolute;
+    margin-left: 670px;
+    margin-top: -60px;
+    width: 1000px;
+    font-family: 'Beaufort';
+    font-size: 40px;
+}
+
+.redes{
+    position: absolute;
+    /* background-color: #aa2e2e; */
+    width: 50vw;
+    height: 10vh;
+    margin-top: 23%;
+    margin-left: -5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.rede{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.rede a{
+    font-family: 'Beaufort';
+    font-size: 20px;
+    color: black;
+    font-weight: 800;
 }
