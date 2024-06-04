@@ -1,15 +1,15 @@
 @font-face { /*FONTE GERAL*/
     font-family: 'Beaufort';
-    src: url(./assets/Fonts_Package/BeaufortForLoL-OTF/BeaufortforLOL-Medium.otf);
+    src: url(../assets/Fonts_Package/BeaufortForLoL-OTF/BeaufortforLOL-Medium.otf);
 }
 
 @font-face {
     font-family: 'BeaufortTitulos';
-    src: url(./assets/Fonts_Package/Spiegel-OTF/Spiegel-Regular.otf);
+    src: url(../assets/Fonts_Package/Spiegel-OTF/Spiegel-Regular.otf);
 }
 
 body {
-    cursor: url('assets/normal.cur'), auto;
+    cursor: url('../assets/normal.cur'), auto;
     font-family: 'Beaufort';
     word-wrap: break-word;
     overflow-x: hidden;
@@ -18,7 +18,7 @@ body {
 }
 
 a {
-    cursor: url('assets/link.cur'), auto;
+    cursor: url('../assets/link.cur'), auto;
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -134,13 +134,13 @@ section {
 
 .img1 {
     height: 100vh;
-    background-image: url(./assets/Backgrounds/img.png);
-    /* background-image: url(./assets/FundoHeader.png); */
+    background-image: url(../assets/Backgrounds/img.png);
+    /* background-image: url(../assets/FundoHeader.png); */
     background-attachment: unset;
 }
 
 .img2 {
-    background-image: url(./assets/MapaNexus2.png);
+    background-image: url(../assets/MapaNexus2.png);
     background-attachment: unset;
     background-size: contain;
     background-color: #09161D;
@@ -148,7 +148,7 @@ section {
 }
 
 .img22 {
-    background-image: url(./assets/MapaLanes2.png);
+    background-image: url(../assets/MapaLanes2.png);
     position: absolute;
     background-attachment: unset;
     background-size: contain;
@@ -159,7 +159,7 @@ section {
 }
 
 .img23 {
-    background-image: url(./assets/MapaTorres2.png);
+    background-image: url(../assets/MapaTorres2.png);
     position: absolute;
     background-attachment: unset;
     background-size: contain;
@@ -170,14 +170,14 @@ section {
 }
 
 .img3 {
-    background-image: url(./assets/tiersFinal.png);
+    background-image: url(../assets/tiersFinal.png);
     background-attachment: unset;
     background-size: cover;
     background-color: #09161D;
 }
 
 .img4 {
-    background-image: url(./assets/campeonatos.png);
+    background-image: url(../assets/campeonatos.png);
     background-attachment: unset;
 }
 
@@ -189,12 +189,12 @@ section {
 }
 
 .img6{
-    background-image: url(./assets/LGBT\ E\ ONU.png);
+    background-image: url(../assets/LGBT\ E\ ONU.png);
     /* background-attachment: fixed; */
 }
 
 .img7{
-    background-image: url(./assets/SUSTENTABILIDADE\ E\ ONU.png);
+    background-image: url(../assets/SUSTENTABILIDADE\ E\ ONU.png);
     /* background-attachment: fixed; */
 }
 
@@ -288,7 +288,7 @@ section {
     text-decoration: underline;
     font-size: 25px;
     transition: color 0.3s;
-    cursor: url(assets/link.cur), auto;
+    cursor: url(../assets/link.cur), auto;
 }
 
 .textos6 p:last-child{
@@ -316,7 +316,7 @@ footer .footerPai{
 footer .rodape2{
     width: 50.5%;
     height: 60vh;
-    background-image: url(./assets/poromaior.png);
+    background-image: url(../assets/poromaior.png);
     background-color: #DBD8D6;
     background-repeat: no-repeat;
     background-position: right;
@@ -327,7 +327,7 @@ footer .rodape2{
 footer .rodape1{
     width: 51%;
     height: 60vh;
-    /* background-image: url(./assets/porofeliz.png); */
+    /* background-image: url(../assets/porofeliz.png); */
     background-color: #DBD8D6;
     background-repeat: no-repeat;
     background-position: right;
@@ -341,7 +341,7 @@ footer .rodape1{
     width: 70px;
     height: 100px;
     /* background-color: white; */
-    background-image: url(./assets/setaTips.png);
+    background-image: url(../assets/setaTips.png);
     background-repeat: no-repeat;
     z-index: 9;
     padding: 0;
@@ -355,7 +355,7 @@ footer .rodape1{
     width: 70px;
     height: 100px;
     /* background-color: white; */
-    background-image: url(./assets/setaTips.png);
+    background-image: url(../assets/setaTips.png);
     background-repeat: no-repeat;
     z-index: 9;
     padding: 0;
@@ -392,7 +392,7 @@ footer .rodape1{
     height: 45%;
     margin-left: -1430px;
     margin-top: 70px;
-    background-image: url(./assets/eu.jpeg);
+    background-image: url(../assets/eu.jpeg);
     background-position: center;
     background-position-x: -25px;
     background-size: cover;

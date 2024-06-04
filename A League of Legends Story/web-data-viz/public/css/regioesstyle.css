@@ -1,16 +1,16 @@
 @font-face {
     /*FONTE GERAL*/
     font-family: 'Beaufort';
-    src: url(./assets/Fonts_Package/BeaufortForLoL-OTF/BeaufortforLOL-Medium.otf);
+    src: url(../assets/Fonts_Package/BeaufortForLoL-OTF/BeaufortforLOL-Medium.otf);
 }
 
 @font-face {
     font-family: 'BeaufortTitulos';
-    src: url(./assets/Fonts_Package/Spiegel-OTF/Spiegel-Regular.otf);
+    src: url(../assets/Fonts_Package/Spiegel-OTF/Spiegel-Regular.otf);
 }
 
 body {
-    cursor: url('assets/normal.cur'), auto;
+    cursor: url('../assets/normal.cur'), auto;
     font-family: 'Beaufort';
     word-wrap: break-word;
     overflow-x: hidden; /*ESCONDER DEPOIS*/
@@ -19,7 +19,7 @@ body {
 }
 
 a {
-    cursor: url('assets/link.cur'), auto;
+    cursor: url('../assets/link.cur'), auto;
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -136,25 +136,25 @@ section {
 
 .img1 {
     height: 100vh;
-    background-image: url(./assets/mapa\ sem\ as\ regioes.png);
+    background-image: url(../assets/mapa\ sem\ as\ regioes.png);
     background-attachment: unset;
 }
 
 .img2 {
-    background-image: url(./assets/mapa.png);
+    background-image: url(../assets/mapa.png);
     background-attachment: unset;
     background-color: #09161D;
 }
 
 .img3 {
-    background-image: url(./assets/tiersFinal.png);
+    background-image: url(../assets/tiersFinal.png);
     background-attachment: unset;
     background-size: cover;
     background-color: #09161D;
 }
 
 .img4 {
-    background-image: url(./assets/campeonatos.png);
+    background-image: url(../assets/campeonatos.png);
     background-attachment: unset;
 }
 
@@ -166,12 +166,12 @@ section {
 }
 
 .img6 {
-    background-image: url(./assets/inclusaoLGBT2.jpg);
+    background-image: url(../assets/inclusaoLGBT2.jpg);
     /* background-attachment: fixed; */
 }
 
 .img7 {
-    background-image: url(./assets/sustentavel.jpg);
+    background-image: url(../assets/sustentavel.jpg);
     /* background-attachment: fixed; */
 }
 
@@ -254,7 +254,7 @@ section {
 .tituloDiferente {
     height: 45vh;
     background-color: #DBD8D6;
-    /* background-image: url(./assets/inclusaoLGBT.jpg); */
+    /* background-image: url(../assets/inclusaoLGBT.jpg); */
     font-size: 145px;
     font-family: 'Beaufort';
     color: rgba(0, 0, 0, 0.795);
@@ -275,7 +275,7 @@ section {
     text-decoration: underline;
     font-size: 25px;
     transition: color 0.3s;
-    cursor: url(assets/link.cur), auto;
+    cursor: url(../assets/link.cur), auto;
 }
 
 .textos a:hover {
@@ -306,7 +306,7 @@ footer .footerPai {
 footer .rodape2{
     width: 50.5%;
     height: 60vh;
-    background-image: url(./assets/poromaior.png);
+    background-image: url(../assets/poromaior.png);
     background-color: #DBD8D6;
     background-repeat: no-repeat;
     background-position: right;
@@ -317,7 +317,7 @@ footer .rodape2{
 footer .rodape1{
     width: 51%;
     height: 60vh;
-    /* background-image: url(./assets/porofeliz.png); */
+    /* background-image: url(../assets/porofeliz.png); */
     background-color: #DBD8D6;
     background-repeat: no-repeat;
     background-position: right;
@@ -331,7 +331,7 @@ footer .rodape1{
     width: 70px;
     height: 100px;
     /* background-color: white; */
-    background-image: url(./assets/setaTips.png);
+    background-image: url(../assets/setaTips.png);
     background-repeat: no-repeat;
     z-index: 9;
     padding: 0;
@@ -411,7 +411,7 @@ footer .rodape1{
 .tituloRegioes {
     height: 33vh;
     background-color: #DBD8D6;
-    /* background-image: url(./assets/Regioes/freljord.jpg); */
+    /* background-image: url(../assets/Regioes/freljord.jpg); */
     font-size: 145px;
     font-family: 'Beaufort';
     color: rgba(0, 0, 0, 0.795);
@@ -484,61 +484,61 @@ footer .rodape1{
 }
 
 .champsFreljord{
-    background-image: url(./assets/Regioes/freljord.jpg);
+    background-image: url(../assets/Regioes/freljord.jpg);
 }
 
 .champsFreljord .div1{
-    background-image: url(./assets/PERSONAGENS/Freljord/Ashe_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Freljord/Ashe_0.jpg);
     background-position-x: 68%;
 }
 
 .champsFreljord .div2 {
-    background-image: url(./assets/PERSONAGENS/Freljord/Braum_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Freljord/Braum_0.jpg);
     background-position-x: 80%;
 }
 
 .champsFreljord .div3 {
-    background-image: url(./assets/PERSONAGENS/Freljord/Udyr_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Freljord/Udyr_0.jpg);
     background-position-x: 55%;
 }
 
 .champsFreljord .div4 {
-    background-image: url(./assets/PERSONAGENS/Freljord/Nunu_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Freljord/Nunu_0.jpg);
     background-position-x: 68%;
 }
 
 .champsFreljord .div5 {
-    background-image: url(./assets/PERSONAGENS/Freljord/Sejuani_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Freljord/Sejuani_0.jpg);
     background-position-x: 58%;
 }
 
 .champsFreljord .div6 {
-    background-image: url(./assets/PERSONAGENS/Freljord/Gnar_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Freljord/Gnar_0.jpg);
     background-position-x: 80%;
 }
 
 .champsFreljord .div7 {
-    background-image: url(./assets/PERSONAGENS/Freljord/Anivia_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Freljord/Anivia_0.jpg);
     background-position-x: 54%;
 }
 
 .champsFreljord .div8 {
-    background-image: url(./assets/PERSONAGENS/Freljord/Olaf_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Freljord/Olaf_0.jpg);
     background-position-x: 65%;
 }
 
 .champsFreljord .div9 {
-    background-image: url(./assets/PERSONAGENS/Freljord/Lissandra_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Freljord/Lissandra_0.jpg);
     background-position-x: 76%;
 }
 
 .champsFreljord .div10 {
-    background-image: url(./assets/PERSONAGENS/Freljord/Volibear_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Freljord/Volibear_0.jpg);
     background-position-x: 58%;
 }
 
 .champsFreljord .div11 {
-    background-image: url(./assets/PERSONAGENS/Freljord/Ornn_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Freljord/Ornn_0.jpg);
     background-position-x: 50%;
 }
 /* FIM DE FRELJORD */
@@ -553,61 +553,61 @@ footer .rodape1{
 }
 
 .champsDemacia{
-    background-image: url(./assets/Regioes/demacia.jpg);
+    background-image: url(../assets/Regioes/demacia.jpg);
 }
 
 .champsDemacia .div1{
-    background-image: url(./assets/PERSONAGENS/Demacia/Fiora_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Demacia/Fiora_0.jpg);
     background-position-x: 73%;
 }
 
 .champsDemacia .div2 {
-    background-image: url(./assets/PERSONAGENS/Demacia/Garen_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Demacia/Garen_0.jpg);
     background-position-x: 84%;
 }
 
 .champsDemacia .div3 {
-    background-image: url(./assets/PERSONAGENS/Demacia/Galio_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Demacia/Galio_0.jpg);
     background-position-x: 50%;
 }
 
 .champsDemacia .div4 {
-    background-image: url(./assets/PERSONAGENS/Demacia/Poppy_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Demacia/Poppy_0.jpg);
     background-position-x: 70%;
 }
 
 .champsDemacia .div5 {
-    background-image: url(./assets/PERSONAGENS/Demacia/XinZhao_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Demacia/XinZhao_0.jpg);
     background-position-x: 52%;
 }
 
 .champsDemacia .div6 {
-    background-image: url(./assets/PERSONAGENS/Demacia/Lux_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Demacia/Lux_0.jpg);
     background-position-x: 64%;
 }
 
 .champsDemacia .div7 {
-    background-image: url(./assets/PERSONAGENS/Demacia/Kayle_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Demacia/Kayle_0.jpg);
     background-position-x: 15%;
 }
 
 .champsDemacia .div8 {
-    background-image: url(./assets/PERSONAGENS/Demacia/Kayle_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Demacia/Kayle_0.jpg);
     background-position-x: 85%;
 }
 
 .champsDemacia .div9 {
-    background-image: url(./assets/PERSONAGENS/Demacia/Vayne_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Demacia/Vayne_0.jpg);
     background-position-x: 88%;
 }
 
 .champsDemacia .div10 {
-    background-image: url(./assets/PERSONAGENS/Demacia/Sona_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Demacia/Sona_0.jpg);
     background-position-x: 73%;
 }
 
 .champsDemacia .div11 {
-    background-image: url(./assets/PERSONAGENS/Demacia/Sylas_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Demacia/Sylas_0.jpg);
     background-position-x: 53%;
 }
 /* FIM DE DEMACIA */
@@ -622,61 +622,61 @@ footer .rodape1{
 }
 
 .champsNoxus{
-    background-image: url(./assets/Regioes/noxus.jpg);
+    background-image: url(../assets/Regioes/noxus.jpg);
 }
 
 .champsNoxus .div1{
-    background-image: url(./assets/PERSONAGENS/Noxus/Mordekaiser_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Noxus/Mordekaiser_0.jpg);
     background-position-x: 43%;
 }
 
 .champsNoxus .div2 {
-    background-image: url(./assets/PERSONAGENS/Noxus/Sion_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Noxus/Sion_0.jpg);
     background-position-x: 70%;
 }
 
 .champsNoxus .div3 {
-    background-image: url(./assets/PERSONAGENS/Noxus/Leblanc_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Noxus/Leblanc_0.jpg);
     background-position-x: 73%;
 }
 
 .champsNoxus .div4 {
-    background-image: url(./assets/PERSONAGENS/Noxus/Rell_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Noxus/Rell_0.jpg);
     background-position-x: 46%;
 }
 
 .champsNoxus .div5 {
-    background-image: url(./assets/PERSONAGENS/Noxus/Katarina_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Noxus/Katarina_0.jpg);
     background-position-x: 66%;
 }
 
 .champsNoxus .div6 {
-    background-image: url(./assets/PERSONAGENS/Noxus/Swain_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Noxus/Swain_0.jpg);
     background-position-x: 71%;
 }
 
 .champsNoxus .div7 {
-    background-image: url(./assets/PERSONAGENS/Noxus/Darius_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Noxus/Darius_0.jpg);
     background-position-x: 58%;
 }
 
 .champsNoxus .div8 {
-    background-image: url(./assets/PERSONAGENS/Noxus/Samira_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Noxus/Samira_0.jpg);
     background-position-x: 60%;
 }
 
 .champsNoxus .div9 {
-    background-image: url(./assets/PERSONAGENS/Noxus/Riven_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Noxus/Riven_0.jpg);
     background-position-x: 83%;
 }
 
 .champsNoxus .div10 {
-    background-image: url(./assets/PERSONAGENS/Noxus/Talon_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Noxus/Talon_0.jpg);
     background-position-x: 70%;
 }
 
 .champsNoxus .div11 {
-    background-image: url(./assets/PERSONAGENS/Noxus/Draven_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Noxus/Draven_0.jpg);
     background-position-x: 78%;
 }
 /* FIM DE NOXUS */
@@ -692,61 +692,61 @@ footer .rodape1{
 }
 
 .champsIonia{
-    background-image: url(./assets/Regioes/ionia.jpg);
+    background-image: url(../assets/Regioes/ionia.jpg);
 }
 
 .champsIonia .div1{
-    background-image: url(./assets/PERSONAGENS/Ionia/Irelia_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ionia/Irelia_0.jpg);
     background-position-x: 51%;
 }
 
 .champsIonia .div2 {
-    background-image: url(./assets/PERSONAGENS/Ionia/Akali_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ionia/Akali_0.jpg);
     background-position-x: 50%;
 }
 
 .champsIonia .div3 {
-    background-image: url(./assets/PERSONAGENS/Ionia/Lillia_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ionia/Lillia_0.jpg);
     background-position-x: 43%;
 }
 
 .champsIonia .div4 {
-    background-image: url(./assets/PERSONAGENS/Ionia/Jhin_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ionia/Jhin_0.jpg);
     background-position-x: 61%;
 }
 
 .champsIonia .div5 {
-    background-image: url(./assets/PERSONAGENS/Ionia/Ahri_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ionia/Ahri_0.jpg);
     background-position-x: 64%;
 }
 
 .champsIonia .div6 {
-    background-image: url(./assets/PERSONAGENS/Ionia/Yone_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ionia/Yone_0.jpg);
     background-position-x: 60%;
 }
 
 .champsIonia .div7 {
-    background-image: url(./assets/PERSONAGENS/Ionia/Rakan_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ionia/Rakan_0.jpg);
     background-position-x: 33%;
 }
 
 .champsIonia .div8 {
-    background-image: url(./assets/PERSONAGENS/Ionia/Rakan_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ionia/Rakan_0.jpg);
     background-position-x: 60%;
 }
 
 .champsIonia .div9 {
-    background-image: url(./assets/PERSONAGENS/Ionia/LeeSin_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ionia/LeeSin_0.jpg);
     background-position-x: 70%;
 }
 
 .champsIonia .div10 {
-    background-image: url(./assets/PERSONAGENS/Ionia/Yasuo_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ionia/Yasuo_0.jpg);
     background-position-x: 83%;
 }
 
 .champsIonia .div11 {
-    background-image: url(./assets/PERSONAGENS/Ionia/Karma_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ionia/Karma_0.jpg);
     background-position-x: 78%;
 }
 /* FIM DE IONIA */
@@ -760,7 +760,7 @@ footer .rodape1{
 }
 
 .champsPiltover{
-    background-image: url(./assets/Regioes/piltover.jpg);
+    background-image: url(../assets/Regioes/piltover.jpg);
 }
 
 .champsPiltover .div1{
@@ -769,47 +769,47 @@ footer .rodape1{
 }
 
 .champsPiltover .div2 {
-    background-image: url(./assets/PERSONAGENS/Piltover/Jayce_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Piltover/Jayce_0.jpg);
     background-position-x: 82%;
 }
 
 .champsPiltover .div3 {
-    background-image: url(./assets/PERSONAGENS/Piltover/Seraphine_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Piltover/Seraphine_0.jpg);
     background-position-x: 46%;
 }
 
 .champsPiltover .div4 {
-    background-image: url(./assets/PERSONAGENS/Piltover/Camille_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Piltover/Camille_0.jpg);
     background-position-x: 90%;
 }
 
 .champsPiltover .div5 {
-    background-image: url(./assets/PERSONAGENS/Piltover/Vi_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Piltover/Vi_0.jpg);
     background-position-x: 73%;
 }
 
 .champsPiltover .div6 {
-    background-image: url(./assets/PERSONAGENS/Piltover/Orianna_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Piltover/Orianna_0.jpg);
     background-position-x: 78%;
 }
 
 .champsPiltover .div7 {
-    background-image: url(./assets/PERSONAGENS/Piltover/Viktor_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Piltover/Viktor_0.jpg);
     background-position-x: 68%;
 }
 
 .champsPiltover .div8 {
-    background-image: url(./assets/PERSONAGENS/Piltover/Heimerdinger_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Piltover/Heimerdinger_0.jpg);
     background-position-x: 74%;
 }
 
 .champsPiltover .div9 {
-    background-image: url(./assets/PERSONAGENS/Piltover/Ezreal_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Piltover/Ezreal_0.jpg);
     background-position-x: 67%;
 }
 
 .champsPiltover .div10 {
-    background-image: url(./assets/PERSONAGENS/Piltover/Caitlyn_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Piltover/Caitlyn_0.jpg);
     background-position-x: 83%;
 }
 
@@ -829,61 +829,61 @@ footer .rodape1{
 }
 
 .champsZaun{
-    background-image: url(./assets/Regioes/zaun.jpg);
+    background-image: url(../assets/Regioes/zaun.jpg);
 }
 
 .champsZaun .div1{
-    background-image: url(./assets/PERSONAGENS/Zaun/Zeri_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Zaun/Zeri_0.jpg);
     background-position-x: 56%;
 }
 
 .champsZaun .div2 {
-    background-image: url(./assets/PERSONAGENS/Zaun/Zac_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Zaun/Zac_0.jpg);
     background-position-x: 73%;
 }
 
 .champsZaun .div3 {
-    background-image: url(./assets/PERSONAGENS/Zaun/Renata_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Zaun/Renata_0.jpg);
     background-position-x: 57%;
 }
 
 .champsZaun .div4 {
-    background-image: url(./assets/PERSONAGENS/Zaun/Blitzcrank_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Zaun/Blitzcrank_0.jpg);
     background-position-x: 71%;
 }
 
 .champsZaun .div5 {
-    background-image: url(./assets/PERSONAGENS/Zaun/Urgot_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Zaun/Urgot_0.jpg);
     background-position-x: 58%;
 }
 
 .champsZaun .div6 {
-    background-image: url(./assets/PERSONAGENS/Zaun/Ekko_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Zaun/Ekko_0.jpg);
     background-position-x: 79%;
 }
 
 .champsZaun .div7 {
-    background-image: url(./assets/PERSONAGENS/Zaun/Jinx_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Zaun/Jinx_0.jpg);
     background-position-x: 70%;
 }
 
 .champsZaun .div8 {
-    background-image: url(./assets/PERSONAGENS/Zaun/Ziggs_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Zaun/Ziggs_0.jpg);
     background-position-x: 77%;
 }
 
 .champsZaun .div9 {
-    background-image: url(./assets/PERSONAGENS/Zaun/Warwick_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Zaun/Warwick_0.jpg);
     background-position-x: 71%;
 }
 
 .champsZaun .div10 {
-    background-image: url(./assets/PERSONAGENS/Zaun/DrMundo_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Zaun/DrMundo_0.jpg);
     background-position-x: 53%;
 }
 
 .champsZaun .div11 {
-    background-image: url(./assets/PERSONAGENS/Zaun/Janna_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Zaun/Janna_0.jpg);
     background-position-x: 88%;
 }
 /* FIM DE ZAUN */
@@ -898,7 +898,7 @@ footer .rodape1{
 }
 
 .champsAgua{
-    background-image: url(./assets/Regioes/aguasSentina.jpg);
+    background-image: url(../assets/Regioes/aguasSentina.jpg);
 }
 
 .champsAgua .div1{
@@ -912,47 +912,47 @@ footer .rodape1{
 }
 
 .champsAgua .div3 {
-    background-image: url(./assets/PERSONAGENS/AguasSentina/Gangplank_0.jpg);
+    background-image: url(../assets/PERSONAGENS/AguasSentina/Gangplank_0.jpg);
     background-position-x: 77%;
 }
 
 .champsAgua .div4 {
-    background-image: url(./assets/PERSONAGENS/AguasSentina/Illaoi_0.jpg);
+    background-image: url(../assets/PERSONAGENS/AguasSentina/Illaoi_0.jpg);
     background-position-x: 64%;
 }
 
 .champsAgua .div5 {
-    background-image: url(./assets/PERSONAGENS/AguasSentina/MissFortune_0.jpg);
+    background-image: url(../assets/PERSONAGENS/AguasSentina/MissFortune_0.jpg);
     background-position-x: 76%;
 }
 
 .champsAgua .div6 {
-    background-image: url(./assets/PERSONAGENS/AguasSentina/Nautilus_0.jpg);
+    background-image: url(../assets/PERSONAGENS/AguasSentina/Nautilus_0.jpg);
     background-position-x: 78%;
 }
 
 .champsAgua .div7 {
-    background-image: url(./assets/PERSONAGENS/AguasSentina/Pyke_0.jpg);
+    background-image: url(../assets/PERSONAGENS/AguasSentina/Pyke_0.jpg);
     background-position-x: 49%;
 }
 
 .champsAgua .div8 {
-    background-image: url(./assets/PERSONAGENS/AguasSentina/TahmKench_0.jpg);
+    background-image: url(../assets/PERSONAGENS/AguasSentina/TahmKench_0.jpg);
     background-position-x: 62%;
 }
 
 .champsAgua .div9 {
-    background-image: url(./assets/PERSONAGENS/AguasSentina/TwistedFate_0.jpg);
+    background-image: url(../assets/PERSONAGENS/AguasSentina/TwistedFate_0.jpg);
     background-position-x: 73%;
 }
 
 .champsAgua .div10 {
-    background-image: url(./assets/PERSONAGENS/AguasSentina/Graves_00_Base-Cigar.jpg);
+    background-image: url(../assets/PERSONAGENS/AguasSentina/Graves_00_Base-Cigar.jpg);
     background-position-x: 80%;
 }
 
 .champsAgua .div11 {
-    background-image: url(./assets/PERSONAGENS/AguasSentina/Fizz_0.jpg);
+    background-image: url(../assets/PERSONAGENS/AguasSentina/Fizz_0.jpg);
     background-position-x: 90%;
 }
 /* FIM DE AGUAS */
@@ -967,46 +967,46 @@ footer .rodape1{
 }
 
 .champsIxtal{
-    background-image: url(./assets/Regioes/ixtal.jpg);
+    background-image: url(../assets/Regioes/ixtal.jpg);
 }
 
 .champsIxtal .div1{
-    background-image: url(./assets/PERSONAGENS/Ixtal/Malphite_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ixtal/Malphite_0.jpg);
     background-position-x: 73%;
 }
 
 .champsIxtal .div2 {
-    background-image: url(./assets/PERSONAGENS/Ixtal/Milio_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ixtal/Milio_0.jpg);
     background-position-x: 50%;
 }
 
 .champsIxtal .div3 {
-    background-image: url(./assets/PERSONAGENS/Ixtal/Neeko_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ixtal/Neeko_0.jpg);
     background-position-x: 50%;
 }
 
 .champsIxtal .div4 {
-    background-image: url(./assets/PERSONAGENS/Ixtal/Nidalee_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ixtal/Nidalee_0.jpg);
     background-position-x: 83%;
 }
 
 .champsIxtal .div5 {
-    background-image: url(./assets/PERSONAGENS/Ixtal/Qiyana_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ixtal/Qiyana_0.jpg);
     background-position-x: 53%;
 }
 
 .champsIxtal .div6 {
-    background-image: url(./assets/PERSONAGENS/Ixtal/Rengar_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ixtal/Rengar_0.jpg);
     background-position-x: 72%;
 }
 
 .champsIxtal .div7 {
-    background-image: url(./assets/PERSONAGENS/Ixtal/Skarner_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ixtal/Skarner_0.jpg);
     background-position-x: 51%;
 }
 
 .champsIxtal .div8 {
-    background-image: url(./assets/PERSONAGENS/Ixtal/Zyra_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Ixtal/Zyra_0.jpg);
     background-position-x: 83%;
 }
 
@@ -1036,61 +1036,61 @@ footer .rodape1{
 }
 
 .champsShurima{
-    background-image: url(./assets/Regioes/shurima.jpg);
+    background-image: url(../assets/Regioes/shurima.jpg);
 }
 
 .champsShurima .div1{
-    background-image: url(./assets/PERSONAGENS/Shurima/Amumu_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Shurima/Amumu_0.jpg);
     background-position-x: 75%;
 }
 
 .champsShurima .div2 {
-    background-image: url(./assets/PERSONAGENS/Shurima/KSante_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Shurima/KSante_0.jpg);
     background-position-x: 35%;
 }
 
 .champsShurima .div3 {
-    background-image: url(./assets/PERSONAGENS/Shurima/Naafiri_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Shurima/Naafiri_0.jpg);
     background-position-x: 27%;
 }
 
 .champsShurima .div4 {
-    background-image: url(./assets/PERSONAGENS/Shurima/072221_AkshanChampionTheme_Banner.jpg);
+    background-image: url(../assets/PERSONAGENS/Shurima/072221_AkshanChampionTheme_Banner.jpg);
     background-position-x: 73%;
 }
 
 .champsShurima .div5 {
-    background-image: url(./assets/PERSONAGENS/Shurima/Rammus_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Shurima/Rammus_0.jpg);
     background-position-x: 67%;
 }
 
 .champsShurima .div6 {
-    background-image: url(./assets/PERSONAGENS/Shurima/Azir_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Shurima/Azir_0.jpg);
     background-position-x: 78%;
 }
 
 .champsShurima .div7 {
-    background-image: url(./assets/PERSONAGENS/Shurima/Sivir_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Shurima/Sivir_0.jpg);
     background-position-x: 58%;
 }
 
 .champsShurima .div8 {
-    background-image: url(./assets/PERSONAGENS/Shurima/Xerath_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Shurima/Xerath_0.jpg);
     background-position-x: 57%;
 }
 
 .champsShurima .div9 {
-    background-image: url(./assets/PERSONAGENS/Shurima/Nasus_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Shurima/Nasus_0.jpg);
     background-position-x: 70%;
 }
 
 .champsShurima .div10 {
-    background-image: url(./assets/PERSONAGENS/Shurima/Renekton_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Shurima/Renekton_0.jpg);
     background-position-x: 60%;
 }
 
 .champsShurima .div11 {
-    background-image: url(./assets/PERSONAGENS/Shurima/Taliyah_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Shurima/Taliyah_0.jpg);
     background-position-x: 82%;
 }
 /* FIM DE SHURIMA */
@@ -1104,47 +1104,47 @@ footer .rodape1{
 }
 
 .champsTargon{
-    background-image: url(./assets/Regioes/targon.jpg);
+    background-image: url(../assets/Regioes/targon.jpg);
 }
 
 .champsTargon .div1{
-    background-image: url(./assets/PERSONAGENS/Targon/Aphelios_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Targon/Aphelios_0.jpg);
     background-position-x: 55%;
 }
 
 .champsTargon .div2 {
-    background-image: url(./assets/PERSONAGENS/Targon/Pantheon_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Targon/Pantheon_0.jpg);
     background-position-x: 50%;
 }
 
 .champsTargon .div3 {
-    background-image: url(./assets/PERSONAGENS/Targon/Taric_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Targon/Taric_0.jpg);
     background-position-x: 84%;
 }
 
 .champsTargon .div4 {
-    background-image: url(./assets/PERSONAGENS/Targon/AurelionSol_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Targon/AurelionSol_0.jpg);
     background-position-x: 58%;
 }
 
 .champsTargon .div5 {
-    background-image: url(./assets/PERSONAGENS/Targon/Zoe_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Targon/Zoe_0.jpg);
     background-position-x: 53%;
     
 }
 
 .champsTargon .div6 {
-    background-image: url(./assets/PERSONAGENS/Targon/Diana_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Targon/Diana_0.jpg);
     background-position-x: 74%;
 }
 
 .champsTargon .div7 {
-    background-image: url(./assets/PERSONAGENS/Targon/Leona_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Targon/Leona_0.jpg);
     background-position-x: 83%;
 }
 
 .champsTargon .div8 {
-    background-image: url(./assets/PERSONAGENS/Targon/Soraka_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Targon/Soraka_0.jpg);
     background-position-x: 58%;
 }
 
@@ -1174,56 +1174,56 @@ footer .rodape1{
 }
 
 .champsIlhadasSombras{
-    background-image: url(./assets/Regioes/ilhaDasSombras.jpg);
+    background-image: url(../assets/Regioes/ilhaDasSombras.jpg);
 }
 
 .champsIlhadasSombras .div1{
-    background-image: url(./assets/PERSONAGENS/IlhaSombras/Viego_0.jpg);
+    background-image: url(../assets/PERSONAGENS/IlhaSombras/Viego_0.jpg);
     background-position-x: 78%;
 }
 
 .champsIlhadasSombras .div2 {
-    background-image: url(./assets/PERSONAGENS/IlhaSombras/Vex_0.jpg);
+    background-image: url(../assets/PERSONAGENS/IlhaSombras/Vex_0.jpg);
     background-position-x: 67%;
 }
 
 .champsIlhadasSombras .div3 {
-    background-image: url(./assets/PERSONAGENS/IlhaSombras/Thresh_0.jpg);
+    background-image: url(../assets/PERSONAGENS/IlhaSombras/Thresh_0.jpg);
     background-position-x: 64%;
 }
 
 .champsIlhadasSombras .div4 {
-    background-image: url(./assets/PERSONAGENS/IlhaSombras/Maokai_0.jpg);
+    background-image: url(../assets/PERSONAGENS/IlhaSombras/Maokai_0.jpg);
     background-position-x: 63%;
 }
 
 .champsIlhadasSombras .div5 {
-    background-image: url(./assets/PERSONAGENS/IlhaSombras/Karthus_0.jpg);
+    background-image: url(../assets/PERSONAGENS/IlhaSombras/Karthus_0.jpg);
     background-position-x: 73%;
 }
 
 .champsIlhadasSombras .div6 {
-    background-image: url(./assets/PERSONAGENS/IlhaSombras/Kalista_0.jpg);
+    background-image: url(../assets/PERSONAGENS/IlhaSombras/Kalista_0.jpg);
     background-position-x: 66%;
 }
 
 .champsIlhadasSombras .div7 {
-    background-image: url(./assets/PERSONAGENS/IlhaSombras/Gwen_0.jpg);
+    background-image: url(../assets/PERSONAGENS/IlhaSombras/Gwen_0.jpg);
     background-position-x: 50%;
 }
 
 .champsIlhadasSombras .div8 {
-    background-image: url(./assets/PERSONAGENS/IlhaSombras/Hecarim_0.jpg);
+    background-image: url(../assets/PERSONAGENS/IlhaSombras/Hecarim_0.jpg);
     background-position-x: 70%;
 }
 
 .champsIlhadasSombras .div9 {
-    background-image: url(./assets/PERSONAGENS/IlhaSombras/Elise_0.jpg);
+    background-image: url(../assets/PERSONAGENS/IlhaSombras/Elise_0.jpg);
     background-position-x: 75%;
 }
 
 .champsIlhadasSombras .div10 {
-    background-image: url(./assets/PERSONAGENS/IlhaSombras/Yorick_0.jpg);
+    background-image: url(../assets/PERSONAGENS/IlhaSombras/Yorick_0.jpg);
     background-position-x: 66%;
 }
 
@@ -1243,51 +1243,51 @@ footer .rodape1{
 }
 
 .champsVazio{
-    background-image: url(./assets/Regioes/vazio.jpg);
+    background-image: url(../assets/Regioes/vazio.jpg);
 }
 
 .champsVazio .div1{
-    background-image: url(./assets/PERSONAGENS/Vazio/Khazix_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Vazio/Khazix_0.jpg);
     background-position-x: 76%;
 }
 
 .champsVazio .div2 {
-    background-image: url(./assets/PERSONAGENS/Vazio/Chogath_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Vazio/Chogath_0.jpg);
     background-position-x: 57%;
 }
 
 .champsVazio .div3 {
-    background-image: url(./assets/PERSONAGENS/Vazio/KogMaw_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Vazio/KogMaw_0.jpg);
     background-position-x: 76%;
 }
 
 .champsVazio .div4 {
-    background-image: url(./assets/PERSONAGENS/Vazio/Malzahar_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Vazio/Malzahar_0.jpg);
     background-position-x: 65%;
 }
 
 .champsVazio .div5 {
-    background-image: url(./assets/PERSONAGENS/Vazio/RekSai_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Vazio/RekSai_0.jpg);
     background-position-x: 55%;
 }
 
 .champsVazio .div6 {
-    background-image: url(./assets/PERSONAGENS/Vazio/Kaisa_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Vazio/Kaisa_0.jpg);
     background-position-x: 48%;
 }
 
 .champsVazio .div7 {
-    background-image: url(./assets/PERSONAGENS/Vazio/Kassadin_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Vazio/Kassadin_0.jpg);
     background-position-x: 67%;
 }
 
 .champsVazio .div8 {
-    background-image: url(./assets/PERSONAGENS/Vazio/Belveth_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Vazio/Belveth_0.jpg);
     background-position-x: 50%;
 }
 
 .champsVazio .div9 {
-    background-image: url(./assets/PERSONAGENS/Vazio/Velkoz_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Vazio/Velkoz_0.jpg);
     background-position-x: 60%;
 }
 
@@ -1312,41 +1312,41 @@ footer .rodape1{
 }
 
 .champsBandopolis{
-    background-image: url(./assets/Regioes/bandopolis.jpg);
+    background-image: url(../assets/Regioes/bandopolis.jpg);
 }
 
 .champsBandopolis .div1{
-    background-image: url(./assets/PERSONAGENS/Bandopolis/Corki_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Bandopolis/Corki_0.jpg);
     background-position-x: 72%;
 }
 
 .champsBandopolis .div2 {
-    background-image: url(./assets/PERSONAGENS/Bandopolis/Lulu_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Bandopolis/Lulu_0.jpg);
     background-position-x: 72%;
 }
 
 .champsBandopolis .div3 {
-    background-image: url(./assets/PERSONAGENS/Bandopolis/Rumble_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Bandopolis/Rumble_0.jpg);
     background-position-x: 73%;
 }
 
 .champsBandopolis .div4 {
-    background-image: url(./assets/PERSONAGENS/Bandopolis/Tristana_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Bandopolis/Tristana_0.jpg);
     background-position-x: 66%;
 }
 
 .champsBandopolis .div5 {
-    background-image: url(./assets/PERSONAGENS/Bandopolis/Teemo_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Bandopolis/Teemo_0.jpg);
     background-position-x: 68%;
 }
 
 .champsBandopolis .div6 {
-    background-image: url(./assets/PERSONAGENS/Bandopolis/Veigar_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Bandopolis/Veigar_0.jpg);
     background-position-x: 67%;
 }
 
 .champsBandopolis .div7 {
-    background-image: url(./assets/PERSONAGENS/Bandopolis/Yuumi_0.jpg);
+    background-image: url(../assets/PERSONAGENS/Bandopolis/Yuumi_0.jpg);
     background-position-x: 45%;
 }
 
@@ -1402,7 +1402,7 @@ footer .rodape1{
     height: 45%;
     margin-left: -1430px;
     margin-top: 70px;
-    background-image: url(./assets/eu.jpeg);
+    background-image: url(../assets/eu.jpeg);
     background-position: center;
     background-position-x: -25px;
     background-size: cover;

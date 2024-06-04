@@ -1,16 +1,16 @@
 @font-face {
     /*FONTE GERAL*/
     font-family: 'Beaufort';
-    src: url(./assets/Fonts_Package/BeaufortForLoL-OTF/BeaufortforLOL-Medium.otf);
+    src: url(../assets/Fonts_Package/BeaufortForLoL-OTF/BeaufortforLOL-Medium.otf);
 }
 
 @font-face {
     font-family: 'BeaufortTitulos';
-    src: url(./assets/Fonts_Package/Spiegel-OTF/Spiegel-Regular.otf);
+    src: url(../assets/Fonts_Package/Spiegel-OTF/Spiegel-Regular.otf);
 }
 
 body {
-    cursor: url('assets/normal.cur'), auto;
+    cursor: url('../assets/normal.cur'), auto;
     font-family: 'Beaufort';
     word-wrap: break-word;
     overflow-x: hidden;
@@ -19,7 +19,7 @@ body {
 }
 
 a {
-    cursor: url('assets/link.cur'), auto;
+    cursor: url('../assets/link.cur'), auto;
     color: #A09B8C;
     text-decoration: none;
     font-size: 18px;
@@ -98,7 +98,7 @@ header .navbar .nav-itens li a:hover {
 #conteudoGrafico {
     height: 92vh;
     width: 100vw;
-    background-image: url(./assets/Backgrounds/wallpaper-dashboard-SR.png);
+    background-image: url(../assets/Backgrounds/wallpaper-dashboard-SR.png);
     background-position: center;
     background-size: cover;
     /* background-color: rgb(82, 142, 165); */
@@ -133,7 +133,7 @@ header .navbar .nav-itens li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    cursor: url('assets/link.cur'), auto;
+    cursor: url('../assets/link.cur'), auto;
 }
 
 #placarGlobal h1{
