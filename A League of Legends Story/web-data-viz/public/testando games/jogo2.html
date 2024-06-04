@@ -12,17 +12,13 @@
 </head>
 
 <body onload="gerar(), verificar()">
-    <!-- Header inicio -->
     <header>
         <nav class="navbar">
-            <!-- lado esquerdo do header -->
             <div class="esquerda">
                 <div class="logo">
                     <a href="#topo"><img src="../assets/LoL icon.png" alt="LoL logo"></a>
                 </div>
-                <!-- fim do logo -->
 
-                <!-- atalhos da navbar -->
                 <div class="links">
                     <ul class="nav-itens">
                         <li><a href="../index.html">O JOGO</a></li>
@@ -31,18 +27,14 @@
                 </div>
             </div>
 
-            <!-- CENTRO -->
-
             <div class="direita">
                 <div class="links" id="centro">
                     <!-- <ul class="nav-itens">
-                        <li><a href="">INVOCADOR</a></li>
+                        <li><a href="">INVOCADOR:</a></li>
                     </ul> -->
                 </div>
             </div>
 
-
-            <!-- lado direito da navbar -->
             <div class="direita">
                 <div class="links">
                     <ul class="nav-itens">
@@ -53,9 +45,7 @@
             </div>
         </nav>
     </header>
-    <!-- Header fim -->
 
-    <!-- Preencher a tela toda com o "ranking/elo" -->
     <div id="resultado">
         <div class="paipdl">
             <div id="pdl"><!-- ELO IRÁ APARECER AQUI --></div>
@@ -161,10 +151,8 @@
         imagemAtual = campeoes[aleatorio].imagem; 
         regiaoAtual = campeoes[aleatorio].regiao;
 
-        //Imagem de fundo do site
         imgfundo.style.backgroundImage = `url('${imagemAtual}')`
 
-        //Imagem destacada central
         imgChampion.style.backgroundImage = `url('${imagemAtual}')`
     }
 
@@ -184,16 +172,12 @@
     
         if (resposta.toLowerCase() == regiaoAtual.toLowerCase()) {
 
-            // gerando um número aleatório de 30 a 40 que será dado como pdl se acertar
             pdlGanhos = Number((Math.random() * 10 + 30).toFixed());
 
-            //somando os pdls conquistados numa var global
             pdlTotal += pdlGanhos;
 
-            //se o total de pdl exceder 100 - pulará para um novo tier com os pdl zerados
             if (pdlTotal >= 100 && indiceTiers < tiers.length - 1) {
 
-                // se entrar na condição anterior... e se o indice estiver abaixo do tamanho do vetor de tiers
                 if (indiceTiers < tiers.length - 1) {
                     if (pdlTotal < 100) {
                         elo = tiers[0];
@@ -220,11 +204,10 @@
             
                 } else {
                     alert('Você alcançou o elo mais alto!');
-                    elo = tiers[tiers.length - 1]; // mantem no challenger
+                    elo = tiers[tiers.length - 1]; 
                 }
             }
 
-            //resultado em caso de acerto
             document.getElementById('fundoAcertou').style.display = 'block';
 
             if (Math.floor(pdlTotal / 100) > Math.floor((pdlTotal - pdlGanhos) / 100)) {
@@ -236,28 +219,23 @@
             
             document.getElementById('pontos2').innerHTML = `Total: ${pdlTotal} PDLs`;
 
-            // a cada 1s faz as seguintes coisas
             setTimeout(() => {
-                //ocultando o teemo de acerto
                 document.getElementById('fundoAcertou').style.display = 'none';
 
-                // exibindo a div de resultado com o elo
                 document.getElementById('resultado').style.display = 'block';
 
-                //transformando o fundo numa imagem do elo
                 document.getElementById('pdl').style.backgroundImage = `url('${elo}')`;
 
             }, 1100);
 
             setTimeout(() => {
-                //torna o display de resultado oculto
                 document.getElementById('resultado').style.display = 'none';
             }, 3000);
 
            
             setTimeout(() => {
-                gerar(); //chama novamente a função de gerar outra imagem aleatoria
-                limparinput(); //chama a função de limpar a input com a resposta anterior
+                gerar(); 
+                limparinput();
                 atualizarPontos();
 
             }, 500);
@@ -301,25 +279,21 @@
         }
     }
 
-    //limpa o campo onde havia escrita
     function limparinput() {
         document.getElementById('ipt_resposta').value = '';
     }
 
-    // verificar se há algum usuário logado
     function verificar() {
         var idJogador = sessionStorage.ID_USUARIO;
         var nomeUsuario = sessionStorage.NOME_USUARIO;
 
-        // se houver, o nome dele aparecerá no centro como invocador
         if (idJogador >= 0) {
             centro.innerHTML = `<ul class="nav-itens"><li><a>INVOCADOR: ${nomeUsuario.toUpperCase()}</a></li></ul>`
-        } else { //senão, será redirecionado ao index (só joga com login)
+        } else {
             window.location = '../index.html'
         }
     }
 
-    //função que ao clicar em sair, limpa o id armazenado
     function redefinir() {
         sessionStorage.clear();
         var rodadas = 0;
@@ -335,7 +309,6 @@
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                // pontuacaoServer: pdlGanhos,
                 pontosFinaisServer: pdlTotal,
                 fkJogadorServer: fkJogadorVar,
                 rodadasServer: rodadas

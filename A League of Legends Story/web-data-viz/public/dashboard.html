@@ -16,10 +16,8 @@
 </head>
 
 <body onload="exibirGrafico()">
-    <!-- Header inicio -->
     <header>
         <nav class="navbar">
-            <!-- lado esquerdo do header -->
             <div class="esquerda">
                 <div class="logo">
                     <a href="#topo"><img src="assets/LoL icon.png" alt="LoL logo"></a>
@@ -33,7 +31,6 @@
                 </div>
             </div>
 
-            <!-- lado direito do header -->
             <div class="direita">
                 <div class="links">
                     <ul class="nav-itens">
@@ -43,10 +40,8 @@
             </div>
         </nav>
     </header>
-    <!-- Header fim -->
 
 
-    <!-- CHARTS -->
     <div id="conteudoGrafico">
         <div class="graficoPai">
 
@@ -73,8 +68,6 @@
 
 var nomeUsuario = sessionStorage.NOME_USUARIO;
 var idUsuario = sessionStorage.ID_USUARIO;
-
-
 
     function exibirGrafico() {
         document.getElementById("grafico").innerHTML +=

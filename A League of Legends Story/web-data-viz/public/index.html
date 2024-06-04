@@ -14,10 +14,8 @@
 </head>
 
 <body>
-    <!-- Header inicio -->
     <header>
         <nav class="navbar">
-            <!-- lado esquerdo do header -->
             <div class="esquerda">
                 <div class="logo">
                     <a href="#topo"><img src="assets/LoL icon.png" alt="LoL logo"></a>
@@ -40,7 +38,6 @@
                 </div>
             </div>
 
-            <!-- lado direito do header -->
             <div class="direita">
                 <div class="links" id="cadastroLogin">
                     <ul class="nav-itens">
@@ -52,7 +49,6 @@
             </div>
         </nav>
     </header>
-    <!-- Header fim -->
 
     <section class="imgs img1" id="topo">
         <section class="logoGold">
@@ -86,7 +82,6 @@
 
         <section id="tipnexus">
 
-            <!-- SETA PARA DIV SECUNDARIA QUE ESTÁ ESCONDIDA -->
             <a onclick="trocarDiv()">
                 <div class="seta"></div>
             </a>
@@ -106,7 +101,6 @@
 
         <section class="imgs2 img22" id="tiplanes">
 
-            <!-- SETA PARA DIV SECUNDARIA QUE ESTÁ ESCONDIDA -->
             <a onclick="trocarDiv2()">
                 <div class="setareverse"></div>
             </a>
@@ -124,7 +118,6 @@
 
         <section class="imgs2 img23" id="tiptorres">
 
-            <!-- SETA PARA DIV SECUNDARIA QUE ESTÁ ESCONDIDA -->
             <a onclick="trocarDiv()">
                 <div class="setareverse"></div>
             </a>
@@ -137,12 +130,6 @@
         </section>
 
     </section>
-
-
-
-
-
-
 
     <section class="textos texto2">
         <p>
@@ -212,15 +199,11 @@
     </section>
 
     <section class="imgs img5">
-        <!-- <iframe width="1903" height="847" src="https://www.youtube.com/embed/58Lz-UZcSMY" title="Riot Games Esports Intro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
         <video autoplay muted loop>
             <source src="assets/intro.mp4" type="video/mp4">
         </video>
     </section>
 
-
-
-    <!-- VERIFICAR FLOW DAQUI PRA BAIXO -->
 
     <section class="tituloDiferente" id="tituloDiferente">
         <p><b>VALORES E PRINCÍPIOS</b></p>
@@ -368,7 +351,6 @@
 </html>
 
 <script>
-    //travar com login
     function verificar() {
         var idJogador = sessionStorage.ID_USUARIO;
         var nomeUsuario = sessionStorage.NOME_USUARIO;
@@ -381,8 +363,6 @@
     }
     verificar()
 
-
-    // evento para navbar deixar de ser transparente
     window.addEventListener("scroll", function () {
         var header = document.querySelector('.navbar')  
         header.classList.toggle('rolagem', window.scrollY > 0)
