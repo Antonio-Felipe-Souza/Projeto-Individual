@@ -23,9 +23,3 @@ module.exports = {
     buscarUltimasMedidas,
     buscarUltimasMedidasEstat
 }
-
-// select usuario, sum(pontuacao) from jogador join partida on idJogador = fkJogador group by usuario
-
-
-// FUNCIONA MAS NAO 100%
-//select usuario, sum(pontuacao), idPartida from jogador join partida on idJogador = fkJogador where idJogador = '${idUsuario}' group by usuario, idPartida order by idPartida desc

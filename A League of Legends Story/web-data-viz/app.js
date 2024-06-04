@@ -17,12 +17,8 @@ var app = express();
 
 var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
-var jogoRouter = require("./src/routes/jogo"); //ADCIONEI 26/05
-
-// var avisosRouter = require("./src/routes/avisos");//talvez utilizar pra avisos
-var medidasRouter = require("./src/routes/medidas");//acho que pode apagar
-// var aquariosRouter = require("./src/routes/aquarios"); //acho que pode apagar
-// var empresasRouter = require("./src/routes/empresas");//acho que pode apagar
+var jogoRouter = require("./src/routes/jogo");
+var medidasRouter = require("./src/routes/medidas");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -32,11 +28,8 @@ app.use(cors());
 
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
-app.use("/jogo", jogoRouter); //VERIFICAR SE O testando games É A PASTA mesmo
-// app.use("/avisos", avisosRouter); //talvez utilizar pra avisos
-app.use("/medidas", medidasRouter); //acho que pode apagar
-// app.use("/aquarios", aquariosRouter); //acho que pode apagar
-// app.use("/empresas", empresasRouter); //acho que pode apagar
+app.use("/jogo", jogoRouter); 
+app.use("/medidas", medidasRouter);
 
 app.listen(PORTA_APP, function () {
     console.log(`
