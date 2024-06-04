@@ -90,12 +90,10 @@
         </section>
 
     </section>
-
-
 </body>
 
 <script>
-    
+
     var campeoes = [
         { imagem: '../assets/PERSONAGENS/Bandopolis/Teemo_0.jpg', regiao: 'Bandopolis' },
         { imagem: '../assets/PERSONAGENS/IlhaSombras/Gwen_0.jpg', regiao: 'Ilha das Sombras' },
@@ -137,18 +135,54 @@
         { imagem: '../assets/PERSONAGENS/Vazio/Malzahar_0.jpg', regiao: 'Vazio' },
         { imagem: '../assets/PERSONAGENS/Vazio/Velkoz_0.jpg', regiao: 'Vazio' },
         { imagem: '../assets/PERSONAGENS/Zaun/Ekko_0.jpg', regiao: 'Zaun' },
-        { imagem: '../assets/PERSONAGENS/Zaun/Ziggs_0.jpg', regiao: 'Zaun' }
+        { imagem: '../assets/PERSONAGENS/Zaun/Ziggs_0.jpg', regiao: 'Zaun' },
+        { imagem: '../assets/PERSONAGENS/Zaun/Zeri_0.jpg', regiao: 'Zaun' },
+        { imagem: '../assets/PERSONAGENS/Zaun/Zac_0.jpg', regiao: 'Zaun' },
+        { imagem: '../assets/PERSONAGENS/Zaun/Ekko_0.jpg', regiao: 'Zaun' },
+        { imagem: '../assets/PERSONAGENS/Zaun/Jinx_0.jpg', regiao: 'Zaun' },
+        { imagem: '../assets/PERSONAGENS/Zaun/Blitzcrank_0.jpg', regiao: 'Zaun' },
+        { imagem: '../assets/PERSONAGENS/Zaun/Renata_0.jpg', regiao: 'Zaun' },
+        { imagem: '../assets/PERSONAGENS/Zaun/DrMundo_0.jpg', regiao: 'Zaun' },
+        { imagem: '../assets/PERSONAGENS/Vazio/Belveth_0.jpg', regiao: 'Vazio' },
+        { imagem: '../assets/PERSONAGENS/Vazio/Kaisa_0.jpg', regiao: 'Vazio' },
+        { imagem: '../assets/PERSONAGENS/Vazio/RekSai_0.jpg', regiao: 'Vazio' },
+        { imagem: '../assets/PERSONAGENS/Targon/Taric_0.jpg', regiao: 'Monte targon' },
+        { imagem: '../assets/PERSONAGENS/Targon/Diana_0.jpg', regiao: 'Monte targon' },
+        { imagem: '../assets/PERSONAGENS/Targon/Aphelios_0.jpg', regiao: 'Monte targon' },
+        { imagem: '../assets/PERSONAGENS/Targon/Soraka_0.jpg', regiao: 'Monte targon' },
+        { imagem: '../assets/PERSONAGENS/Shurima/Amumu_0.jpg', regiao: 'Shurima' },
+        { imagem: '../assets/PERSONAGENS/Shurima/Sivir_0.jpg', regiao: 'Shurima' },
+        { imagem: '../assets/PERSONAGENS/Shurima/Rammus_0.jpg', regiao: 'Shurima' },
+        { imagem: '../assets/PERSONAGENS/Shurima/Renekton_0.jpg', regiao: 'Shurima' },
+        { imagem: '../assets/PERSONAGENS/Shurima/072221_AkshanChampionTheme_Banner.jpg', regiao: 'Shurima' },
+        { imagem: '../assets/PERSONAGENS/Piltover/Caitlyn_0.jpg', regiao: 'piltover' },
+        { imagem: '../assets/PERSONAGENS/Piltover/Vi_0.jpg', regiao: 'piltover' },
+        { imagem: '../assets/PERSONAGENS/Piltover/Seraphine_0.jpg', regiao: 'piltover' },
+        { imagem: '../assets/PERSONAGENS/Piltover/Jayce_0.jpg', regiao: 'piltover' },
+        { imagem: '../assets/PERSONAGENS/Piltover/Ezreal_0.jpg', regiao: 'piltover' },
+        { imagem: '../assets/PERSONAGENS/Noxus/Swain_0.jpg', regiao: 'noxus' },
+        { imagem: '../assets/PERSONAGENS/Noxus/Samira_0.jpg', regiao: 'noxus' },
+        { imagem: '../assets/PERSONAGENS/Noxus/Riven_0.jpg', regiao: 'noxus' },
+        { imagem: '../assets/PERSONAGENS/Noxus/Draven_0.jpg', regiao: 'noxus' },
+        { imagem: '../assets/PERSONAGENS/Ixtal/Qiyana_0.jpg', regiao: 'ixtal' },
+        { imagem: '../assets/PERSONAGENS/Ixtal/Nidalee_0.jpg', regiao: 'ixtal' },
+        { imagem: '../assets/PERSONAGENS/Freljord/Ashe_0.jpg', regiao: 'freljord' },
+        { imagem: '../assets/PERSONAGENS/Freljord/Braum_0.jpg', regiao: 'freljord' },
+        { imagem: '../assets/PERSONAGENS/Freljord/Nunu_0.jpg', regiao: 'freljord' },
+        { imagem: '../assets/PERSONAGENS/Freljord/Volibear_0.jpg', regiao: 'freljord' },
+        { imagem: '../assets/PERSONAGENS/Freljord/Gnar_0.jpg', regiao: 'freljord' }
+
     ];
 
-    
+
     var imagemAtual = ''
     var regiaoAtual = ''
 
-    
+
     function gerar() {
-        var total_de_campeoes = campeoes.length; 
+        var total_de_campeoes = campeoes.length;
         var aleatorio = (Math.random() * (total_de_campeoes)).toFixed();
-        imagemAtual = campeoes[aleatorio].imagem; 
+        imagemAtual = campeoes[aleatorio].imagem;
         regiaoAtual = campeoes[aleatorio].regiao;
 
         imgfundo.style.backgroundImage = `url('${imagemAtual}')`
@@ -169,10 +203,10 @@
     function enviar() {
         var resposta = ipt_resposta.value;
 
-    
+
         if (resposta.toLowerCase() == regiaoAtual.toLowerCase()) {
 
-            pdlGanhos = Number((Math.random() * 10 + 30).toFixed());
+            pdlGanhos = Number((Math.random() * 5 + 25).toFixed());
 
             pdlTotal += pdlGanhos;
 
@@ -201,10 +235,10 @@
                         elo = tiers[6]
                         finalTemporada = nomeTier[6]
                     }
-            
+
                 } else {
                     alert('Você alcançou o elo mais alto!');
-                    elo = tiers[tiers.length - 1]; 
+                    elo = tiers[tiers.length - 1];
                 }
             }
 
@@ -216,7 +250,7 @@
                 document.getElementById('pontos').innerHTML = `+ ${pdlGanhos} PDLs`;
             }
 
-            
+
             document.getElementById('pontos2').innerHTML = `Total: ${pdlTotal} PDLs`;
 
             setTimeout(() => {
@@ -232,9 +266,9 @@
                 document.getElementById('resultado').style.display = 'none';
             }, 3000);
 
-           
+
             setTimeout(() => {
-                gerar(); 
+                gerar();
                 limparinput();
                 atualizarPontos();
 
@@ -245,7 +279,7 @@
         } else {
             if (pdlTotal > 15) {
 
-                pdlGanhos = Number((Math.random() * 5 + 10).toFixed());
+                pdlGanhos = Number((Math.random() * 5 + 15).toFixed());
 
                 pdlTotal -= pdlGanhos;
 
@@ -299,7 +333,7 @@
         var rodadas = 0;
         console.log(rodadas);
     }
- 
+
     function inserir() {
         var fkJogadorVar = sessionStorage.ID_USUARIO;
 
