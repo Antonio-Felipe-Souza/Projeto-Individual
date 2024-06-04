@@ -139,11 +139,11 @@ header .navbar .nav-itens li a:hover {
 #placarGlobal h1{
     font-size: 22px;
     color: #A09B8C;
-    margin-top: 2px;
+    margin-top: -10px;
 }
 
 
 #placarGlobal a img{
-    scale: 1;
-    margin-left: 21%;
+    scale: .9;
+    margin-left: 20%;
 }

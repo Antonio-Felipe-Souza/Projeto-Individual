@@ -1,5 +1,5 @@
-// var ambiente_processo = 'producao'; //no notebook esse
-var ambiente_processo = 'desenvolvimento'; //em casa usar essa
+var ambiente_processo = 'producao'; //no notebook esse
+// var ambiente_processo = 'desenvolvimento'; //em casa usar essa
 
 var caminho_env = ambiente_processo === 'producao' ? '.env' : '.env.dev';
 // Acima, temos o uso do operador ternário para definir o caminho do arquivo .env

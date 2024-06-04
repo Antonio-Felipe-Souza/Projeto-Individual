@@ -46,6 +46,7 @@
                     <ul class="nav-itens">
                         <li><a href="login.html">LOGIN</a></li>
                         <li><a href="cadastro.html">REGISTRE-SE</a></li>
+                    </ul>
                 </div>
                 </ul>
             </div>
@@ -113,7 +114,6 @@
             <div class="tips tipnexus">
                 <h1>Rotas</h1>
                 <p><span style="color: #0BC6E3;">Sendo elas</span>: Top, jungle, mid e bot (sendo atirador e suporte).</p>
-                <p>São os caminhos principais, por onde surgem os minions, que junto aos players, combaterão, para derrubar as torres inimigas e, eventualmente chegar ao Nexus inimigo.</p>
             </div>
             
             <a onclick="trocarDiv3()">
@@ -362,8 +362,6 @@
             </div>
         </div>
     </footer>
-    <!-- OLÁ, ESTE SOU EU! ME CHAMO GUILHERME E ATUALMENTE TENHO 18 ANOS E CURSO ADS NA FACULDADE SPTECH, ONDE TENHO A ENORME OPORTUNIDADE DE IR ATRÁS DOS MEUS SONHOS. ESCOLHI STARDEW VALLEY COMO O MEU TEMA POR CONTA DE TODA A AJUDA QUE ELE JÁ ME PROPORCIONOU. POR SER UM JOGO CALMO, MUITAS VEZES, QUANDO ME ENCONTRAVA ESTRESSADO OU, NA MAIORIA DAS VEZES, TRISTE, EU SEMPRE JOGAVA PELO MENOS UM POUCO APENAS PARA ME ACALMAR. ISSO ACONTECEU TANTAS VEZES QUE HOJE TENHO 300 HORAS JOGADAS. COM ESTE PROJETO, ESPERO CONSEGUIR ESPALHAR ESSA AJUDA QUE RECEBI, PARA QUE EU POSSA AJUDAR AS PESSOAS, MESMO QUE INDIRETAMENTE. APROVEITEM O SITE! -->
-
 
 </body>
 
@@ -376,7 +374,7 @@
         var nomeUsuario = sessionStorage.NOME_USUARIO;
 
         if (idJogador >= 0) {
-            cadastroLogin.innerHTML = `<a href="./testando games/jogo2.html"> JOGUE AGORA </a>`
+            cadastroLogin.innerHTML = `<ul class="nav-itens"><li><a href="./testando games/jogo2.html"> JOGUE AGORA </a></li>`
         } else {
             cadastroLogin.innerHTML = `<ul class="nav-itens"><li><a href="login.html">LOGIN</a></li><li><a href="cadastro.html">REGISTRE-SE</a></li>`
         }
@@ -385,9 +383,9 @@
 
 
     // evento para navbar deixar de ser transparente
-    window.addEventListener("scroll", function () { // criando um evento/aviso ao js para que quando ocorra o scroll na pagina, criar a função.
-        var header = document.querySelector('.navbar') // Var 'header' criada para armazenar a class desejada q será alterada usando ponto para indicar a referencia de classe (.navbar) 
-        header.classList.toggle('rolagem', window.scrollY > 0) // chamando a variavel criada, adcionando dinamicamente uma classe nova ao arquivo html mais precisamente no header(.navbar) com o classList. Toggle indica que se a classe indicada já existir ela será removida e recriada (rolagem por exemplo). Ou seja, rolagem vai ser "adicionada/executada" sempre que a janela for scrollada no eixo Y e de posição maior que 0
+    window.addEventListener("scroll", function () {
+        var header = document.querySelector('.navbar')  
+        header.classList.toggle('rolagem', window.scrollY > 0)
     })
 
     function trocarDiv() {
@@ -405,22 +403,5 @@
         tiptorres.style.display = 'block';
         tiplanes.style.display = 'none';
     }
-
-    // evento para trocar a div na setinha
-    // var seta = document.querySelector(".seta");
-    // var tipNexus = document.querySelector(".tipnexus");
-    // var tipLanes = document.querySelector(".tiplanes");
-
-    // seta.addEventListener("click", function(){
-    //     if (tipNexus.style.display === "none"){
-    //         tipNexus.style.display = "block";
-    //         tipLanes.style.display = "none";
-    //     } else {
-    //         tipNexus.style.display = "none";
-    //         tipLanes.style.display = "block";
-    //     }
-    // });
-
-
 
 </script>

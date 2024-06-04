@@ -25,7 +25,6 @@
                 <!-- atalhos da navbar -->
                 <div class="links">
                     <ul class="nav-itens">
-                        <!-- <li><a href="#topo">INÍCIO</a></li> -->
                         <li><a href="../index.html">O JOGO</a></li>
                         <li><a href="../regioes.html">O UNIVERSO</a></li>
                     </ul>
@@ -98,9 +97,6 @@
                 </div>
             </div>
 
-            <!-- <div class="textos">
-                Quem é este personagem: <input type="text" oninput="verificar()" id="ipt_resposta">
-            </div> -->
         </section>
 
     </section>
@@ -109,7 +105,7 @@
 </body>
 
 <script>
-    // vetor com todas as imagens que serão utilizadas em json
+    
     var campeoes = [
         { imagem: '../assets/PERSONAGENS/Bandopolis/Teemo_0.jpg', regiao: 'Bandopolis' },
         { imagem: '../assets/PERSONAGENS/IlhaSombras/Gwen_0.jpg', regiao: 'Ilha das Sombras' },
@@ -154,16 +150,16 @@
         { imagem: '../assets/PERSONAGENS/Zaun/Ziggs_0.jpg', regiao: 'Zaun' }
     ];
 
-    //AQUI SERÃO ARMAZENADOS OS VALORES PUXADOS DO VETOR
+    
     var imagemAtual = ''
     var regiaoAtual = ''
 
-    // FUNÇÃO PARA SELECIONAR UM ITEM ALEATÓRIO DO VETOR... TANTO PARA IMAGEM QUANTO PARA REGIÃO
+    
     function gerar() {
-        var total_de_campeoes = campeoes.length; //pegar o total de indexs que o vetor/json contém
-        var aleatorio = (Math.random() * (total_de_campeoes)).toFixed(); //gerar um número aleatório que irá até o tamanho do vetor acima e arredonda o número em 0 casas - salva numa variavel global
-        imagemAtual = campeoes[aleatorio].imagem; //pega do vetor (campeoes) num indice aleatório, 'consumindo' somente a .imagem daquele indice
-        regiaoAtual = campeoes[aleatorio].regiao; //pega do vetor (campeoes) num indice aleatório, 'consumindo' somente a .regiao daquele indice
+        var total_de_campeoes = campeoes.length; 
+        var aleatorio = (Math.random() * (total_de_campeoes)).toFixed();
+        imagemAtual = campeoes[aleatorio].imagem; 
+        regiaoAtual = campeoes[aleatorio].regiao;
 
         //Imagem de fundo do site
         imgfundo.style.backgroundImage = `url('${imagemAtual}')`
@@ -171,10 +167,6 @@
         //Imagem destacada central
         imgChampion.style.backgroundImage = `url('${imagemAtual}')`
     }
-
-
-    // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
-
 
     var tiers = ['./assets/prata.png', './assets/ouro.png', './assets/platina.png', './assets/diamante.png', './assets/mestre.png', './assets/gm.png', './assets/challenger.png']
     var nomeTier = ['Prata', 'Ouro', 'Platina', 'Diamante', 'Mestre', 'Grão-Mestre', 'Challenger'];
@@ -187,9 +179,9 @@
     var rodadas = 0;
 
     function enviar() {
-        var resposta = ipt_resposta.value; //resposta do usuário na input
+        var resposta = ipt_resposta.value;
 
-        //se a resposta do usuário estiver igual a região (que está salva na var global 'regiaoAtual') selecionada no vetor, acontece as seguintes ações:
+    
         if (resposta.toLowerCase() == regiaoAtual.toLowerCase()) {
 
             // gerando um número aleatório de 30 a 40 que será dado como pdl se acertar
@@ -225,8 +217,7 @@
                         elo = tiers[6]
                         finalTemporada = nomeTier[6]
                     }
-                    // indiceTiers++; // aumenta o índice do tier se ainda tiver tiers disponíveis
-                    // elo = tiers[indiceTiers]; // atualiza o elo para o próximo tier
+            
                 } else {
                     alert('Você alcançou o elo mais alto!');
                     elo = tiers[tiers.length - 1]; // mantem no challenger
@@ -242,7 +233,7 @@
                 document.getElementById('pontos').innerHTML = `+ ${pdlGanhos} PDLs`;
             }
 
-            //alterando o conteudo da div inserindo o texto de pdls ganhos e do total
+            
             document.getElementById('pontos2').innerHTML = `Total: ${pdlTotal} PDLs`;
 
             // a cada 1s faz as seguintes coisas
@@ -253,7 +244,7 @@
                 // exibindo a div de resultado com o elo
                 document.getElementById('resultado').style.display = 'block';
 
-                //transformando a o fundo numa imagem do elo
+                //transformando o fundo numa imagem do elo
                 document.getElementById('pdl').style.backgroundImage = `url('${elo}')`;
 
             }, 1100);
@@ -263,12 +254,11 @@
                 document.getElementById('resultado').style.display = 'none';
             }, 3000);
 
-            //a cada 3s oculta a div com os resultados e limpa o campo de inserção da região
+           
             setTimeout(() => {
                 gerar(); //chama novamente a função de gerar outra imagem aleatoria
                 limparinput(); //chama a função de limpar a input com a resposta anterior
                 atualizarPontos();
-
 
             }, 500);
 
@@ -281,36 +271,28 @@
 
                 pdlTotal -= pdlGanhos;
 
-                //resultado em caso de acerto
                 document.getElementById('fundoErrou').style.display = 'block';
 
                 document.getElementById('pontosD').innerHTML = `- ${pdlGanhos} PDLs`;
 
-                //alterando o conteudo da div inserindo o texto de pdls ganhos e do total
                 document.getElementById('pontos2').innerHTML = `Total: ${pdlTotal} PDLs`;
 
-                // a cada 1s faz as seguintes coisas
                 setTimeout(() => {
-                    //ocultando o teemo de acerto
                     document.getElementById('fundoErrou').style.display = 'none';
 
-                    // exibindo a div de resultado com o elo
                     document.getElementById('resultado').style.display = 'block';
 
-                    //transformando a o fundo numa imagem do elo
                     document.getElementById('pdl').style.backgroundImage = `url('${elo}')`;
 
                 }, 1100);
 
                 setTimeout(() => {
-                    //torna o display de resultado oculto
                     document.getElementById('resultado').style.display = 'none';
                 }, 3000);
 
-                //a cada 3s oculta a div com os resultados e limpa o campo de inserção da região
                 setTimeout(() => {
-                    gerar(); //chama novamente a função de gerar outra imagem aleatoria
-                    limparinput(); //chama a função de limpar a input com a resposta anterior
+                    gerar();
+                    limparinput();
                     atualizarPontos();
 
                 }, 500);
@@ -326,7 +308,7 @@
 
     // verificar se há algum usuário logado
     function verificar() {
-        var idJogador = 1;
+        var idJogador = sessionStorage.ID_USUARIO;
         var nomeUsuario = sessionStorage.NOME_USUARIO;
 
         // se houver, o nome dele aparecerá no centro como invocador
@@ -343,10 +325,7 @@
         var rodadas = 0;
         console.log(rodadas);
     }
-
-    // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
-
-    //FUNÇÃO FUNCIONANDO, INSERINDO O ELO FINAL NO BANCO DE DADOS NA TABELA PARTIDA
+ 
     function inserir() {
         var fkJogadorVar = sessionStorage.ID_USUARIO;
 
@@ -356,13 +335,13 @@
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                pontuacaoServer: pdlGanhos,
+                // pontuacaoServer: pdlGanhos,
+                pontosFinaisServer: pdlTotal,
                 fkJogadorServer: fkJogadorVar,
                 rodadasServer: rodadas
             })
         })
     }
-
 
     function atualizarPontos() {
         var fkJogadorVar = sessionStorage.ID_USUARIO;

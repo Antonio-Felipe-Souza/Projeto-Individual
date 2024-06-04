@@ -7,4 +7,8 @@ router.get("/ultimas/", function (req, res) {
     medidaController.buscarUltimasMedidas(req, res);
 });
 
+router.get("/estatistica/", function (req, res) {
+    medidaController.buscarUltimasMedidasEstat(req, res);
+});
+
 module.exports = router;

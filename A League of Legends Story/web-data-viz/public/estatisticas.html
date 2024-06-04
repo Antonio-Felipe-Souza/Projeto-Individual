@@ -11,11 +11,11 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
-    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="estatisticas.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/LoL icon.png">
 </head>
 
-<body onload="exibirGrafico()">
+<body onload="exibirGraficoEstat()">
     <!-- Header inicio -->
     <header>
         <nav class="navbar">
@@ -55,9 +55,9 @@
         </div>
 
         <div id="placarGlobal">
-            <a href="./estatisticas.html">
-            <img src="./assets/rankIcon.png">
-            <h1>Estatísticas</h1>
+            <a href="./dashboard.html">
+            <img src="./assets/indivIcon.png">
+            <h1>Sua jornada</h1>
             </a>
         </div>
     </div>
@@ -74,9 +74,7 @@
 var nomeUsuario = sessionStorage.NOME_USUARIO;
 var idUsuario = sessionStorage.ID_USUARIO;
 
-
-
-    function exibirGrafico() {
+    function exibirGraficoEstat() {
         document.getElementById("grafico").innerHTML +=
 
             `<div id="graficoJogo">
@@ -85,20 +83,20 @@ var idUsuario = sessionStorage.ID_USUARIO;
                 </div>
             </div>`;
 
-        obterDadosGrafico();
+        obterDadosGraficoEstat();
     }
 
-    function obterDadosGrafico(idUsuario) {
+    function obterDadosGraficoEstat(idUsuario) {
 
         var fkJogadorVar = sessionStorage.ID_USUARIO;
 
-        fetch(`/medidas/ultimas?fkJogadorServer=${fkJogadorVar}`, { cache: 'no-store' })
+        fetch(`/medidas/estatistica?fkJogadorServer=${fkJogadorVar}`, { cache: 'no-store' })
             .then(function (response) {
                 if (response.ok) {
                     response.json().then(function (resposta) {
                         console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                         resposta.reverse();
-                        plotarGrafico(resposta);
+                        plotarGraficoEstat(resposta);
                     });
                 } else {
                     console.error('Nenhum dado encontrado ou erro na API');
@@ -109,18 +107,18 @@ var idUsuario = sessionStorage.ID_USUARIO;
             });
     }
 
-    function plotarGrafico(resposta, idUsuario) {
+    function plotarGraficoEstat(resposta, idUsuario) {
         console.log('iniciando plotagem do gráfico...');
 
         let labels = [];
         let dados = {
             labels: labels,
             datasets: [{
-                label: 'PDL - Pontos de liga',
+                label: 'Quantidade de usuários',
                 data: [],
                 fill: false,
-                borderColor: '#c89c3c',
-                backgroundColor: '#c89c3c',
+                borderColor: '#64a3afab',
+                backgroundColor: '#64a3afab',
                 tension: 0.1
             }]
         };
@@ -129,21 +127,21 @@ var idUsuario = sessionStorage.ID_USUARIO;
 
         for (let i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
-            labels.push(registro.idPartida);
-            dados.datasets[0].data.push(registro.pontuacao);
+            labels.push(registro.nomeElo);
+            dados.datasets[0].data.push(registro.contagem);
         }
 
         console.log('Labels:', labels);
         console.log('Dados do Dataset:', dados.datasets);
 
         const config = {
-            type: 'line',
+            type: 'bar',
             data: dados,
             options: {
                 plugins: {
                     title: {
                         display: true,
-                        text: `${nomeUsuario.toUpperCase()} - Acompanhe sua jornada`,
+                        text: `Quantidade de jogadores por tier`,
                         color: '#ffffff',
                         font: {
                             size: 24
@@ -166,7 +164,8 @@ var idUsuario = sessionStorage.ID_USUARIO;
                         color: '#ffffff',
                         font: {
                             size: 18
-                        }
+                        },
+                        stepSize: 1
                     }
                 }
             },
