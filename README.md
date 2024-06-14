@@ -1,4 +1,4 @@
-## Repositório destinado ao meu projeto individual pela SPTech School
+<h2 align="center"> Repositório destinado ao meu projeto individual pela SPTech School </h2>
 
 <br>
 
